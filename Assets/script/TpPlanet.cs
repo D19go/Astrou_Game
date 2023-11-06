@@ -7,7 +7,7 @@ public class TpPlanet : MonoBehaviour
 {
      void OnCollisionEnter(Collision colisao){
         if (colisao.gameObject.tag == "nave"){
-            SceneManager.LoadScene("Planet_1");
+            SceneManager.LoadScene("Planet1");
         }
    }
 }

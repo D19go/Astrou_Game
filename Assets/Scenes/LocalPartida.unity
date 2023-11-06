@@ -3449,9 +3449,6 @@ PrefabInstance:
       addedObject: {fileID: 1983352223}
     - targetCorrespondingSourceObject: {fileID: 3368916564331560363, guid: b3c0a61dfe701344d819eb701e83f4b7, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1983352222}
-    - targetCorrespondingSourceObject: {fileID: 3368916564331560363, guid: b3c0a61dfe701344d819eb701e83f4b7, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 1983352226}
   m_SourcePrefab: {fileID: 100100000, guid: b3c0a61dfe701344d819eb701e83f4b7, type: 3}
 --- !u!1 &746489689
@@ -6065,7 +6062,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1632810548}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.082694896, y: -0.000000004286862, z: 3.5571993e-10, w: 0.99657494}
+  m_LocalRotation: {x: 0.082694896, y: 0.000000004286862, z: -3.5571993e-10, w: 0.99657494}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -7405,25 +7402,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.40005657, y: 0.32853347, z: 1.3358217}
   m_Center: {x: -0.015322924, y: 0.16425987, z: 0}
---- !u!114 &1983352222
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1983352214}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e2d4bb2ce0119dd449bfee6707f62476, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  giroCima: -2
-  giroBaixo: 2
-  giroEsq: 2
-  giroDir: -2
-  velocidadeMaxima: 900
-  forca: 100
-  voando: 0
 --- !u!54 &1983352223
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -7446,8 +7424,8 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -7463,9 +7441,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f729ed402652b04c86a0918418c0e23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedFly: 10
-  MoveGiro: 1
-  SDpower: 5
+  speedFly: 50
+  MoveGiro: 90
+  SDpower: 15
 --- !u!1001 &1991528756
 PrefabInstance:
   m_ObjectHideFlags: 0

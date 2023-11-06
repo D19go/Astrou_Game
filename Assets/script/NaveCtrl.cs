@@ -10,13 +10,17 @@ public class NaveCtrl : MonoBehaviour
     public int MoveGiro = 1;
     public int SDpower = 5;
 
+    Rigidbody rb;
+
     void Start()
     {
+        rb = GetComponent<Rigidbody>();
+        rb.freezeRotation = true;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
 
-    void Update()
+    void FixedUpdate()
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
