@@ -9,6 +9,7 @@ public class CarController : MonoBehaviour
     private float horizontalInput, verticalInput;
     private float currentSteerAngle, currentBrakeForce;
     private bool isBraking;
+    Rigidbody rb;
 
     public bool ativo = false;
 
@@ -24,6 +25,7 @@ public class CarController : MonoBehaviour
     {
         UnityEngine.Cursor.lockState = CursorLockMode.Locked;
         UnityEngine.Cursor.visible = false;
+        rb = GetComponent<Rigidbody>();
     }
 
     public void CarroAtivo(bool CarroEstaAtivo)
@@ -64,6 +66,8 @@ public class CarController : MonoBehaviour
         UpdateSingleWheel(frontRightWheelCollider, frontRightWheelTransform);
         UpdateSingleWheel(rearRightWheelCollider, rearRightWheelTransform);
         UpdateSingleWheel(rearLeftWheelCollider, rearLeftWheelTransform);
+
+        // transform.rotation = new  Quaternion(0f,transform.rotation.y,transform.rotation.z, transform.rotation.w);
     }
 
     private void UpdateSingleWheel(WheelCollider wheelCollider, Transform wheelTransform)
