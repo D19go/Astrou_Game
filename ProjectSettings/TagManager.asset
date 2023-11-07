@@ -6,6 +6,10 @@ TagManager:
   tags:
   - Car
   - nave
+  - PeRadio1
+  - PeRadio2
+  - PeRadio3
+  - PeRadio4
   layers:
   - Default
   - TransparentFX

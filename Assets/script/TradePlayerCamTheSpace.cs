@@ -49,7 +49,7 @@ public class TrdaePlayerCamTheSpace : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.F))
         {
             CarData closestCar = FindClosestCar();
             if (closestCar != null)
@@ -96,7 +96,7 @@ public class TrdaePlayerCamTheSpace : MonoBehaviour
         {
             float distance = Vector3.Distance(player.transform.position, carData.carTransform.position);
 
-            if (distance <= 15 && distance < closestDistance)
+            if (distance <= 10 && distance < closestDistance)
             {
                 closestCar = carData;
                 closestDistance = distance;
