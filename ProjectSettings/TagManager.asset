@@ -16,6 +16,8 @@ TagManager:
   - ArvoreMae
   - piso
   - Enemy
+  - BossEnemy
+  - objeto
   layers:
   - Default
   - TransparentFX

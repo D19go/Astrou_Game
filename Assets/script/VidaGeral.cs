@@ -10,15 +10,16 @@ public class VidaGeral : MonoBehaviour
     {
         Debug.Log("tomou");
         vida -= dano;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
         if(vida <= 0){
             
             Destroy(gameObject);
         }
 
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
     }
 }

@@ -5,18 +5,22 @@ using UnityEngine;
 public class DanoGeral : MonoBehaviour
 {
     public int dano = 10;
-    void OnTriggerEnter(Collider collide)
-    {
-        Debug.Log("foi");
-        if(collide.gameObject.tag == "EnemyIA"){
-            collide.GetComponent<VidaGeral>().TomaToma(dano);
+    // void OnTriggerEnter(Collider collide)
+    void OnCollisionEnter(Collision collide)
+    {   
+        
+        if(collide.gameObject.tag == "EnemyPurple"){
+            collide.gameObject.GetComponent<VidaGeral>().TomaToma(dano);
         }
-        if(collide.gameObject.tag == "Enemy"){
-            Debug.Log("asds");
-            collide.GetComponent<VidaGeral>().TomaToma(dano);
+        if(collide.gameObject.tag == "EnemyRed"){
+            collide.gameObject.GetComponent<VidaGeral>().TomaToma(dano);
         }
-        if(collide.gameObject.tag == "Enemy2"){
-            collide.GetComponent<VidaGeral>().TomaToma(dano);
+        if(collide.gameObject.tag == "EnemyGreen"){
+            collide.gameObject.GetComponent<VidaGeral>().TomaToma(dano);
         }
+        if(collide.gameObject.tag == "BossEnemy"){
+            collide.gameObject.GetComponent<VidaGeral>().TomaToma(dano);
+        }
+
     }
 }
