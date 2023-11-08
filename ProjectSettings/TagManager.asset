@@ -10,6 +10,12 @@ TagManager:
   - PeRadio2
   - PeRadio3
   - PeRadio4
+  - EnemyPurple
+  - EnemyRed
+  - EnemyGreen
+  - ArvoreMae
+  - piso
+  - Enemy
   layers:
   - Default
   - TransparentFX
