@@ -18,6 +18,7 @@ TagManager:
   - Enemy
   - BossEnemy
   - objeto
+  - Aranha
   layers:
   - Default
   - TransparentFX
