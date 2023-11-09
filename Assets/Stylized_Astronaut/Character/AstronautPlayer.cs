@@ -5,7 +5,7 @@ namespace AstronautPlayer
     public class AstronautPlayer : MonoBehaviour
     {
         private CharacterController controller;
-		bool anda = true;
+		
         public float speed = 6.0f;
         public float turnSpeed = 400.0f;
         public float jumpSpeed = 8.0f;
