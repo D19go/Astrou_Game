@@ -9,15 +9,12 @@ public class TrdaePlayerCamTheSpace : MonoBehaviour
     {
         public Transform carTransform;
         public GameObject carGameObject;
-        // Adicione outros campos específicos do carro, se necessário
     }
-    
+
+    private CarData currentCar; // Adicione uma variável para rastrear o carro atual
     private List<CarData> cars = new List<CarData>();
     private GameObject player;
-    private Transform playerCamera;
     private CinemachineFreeLook freeLook;
-    public bool TanoPlayer = true;
-    private Vector3 carroPosition;
     public Transform Perso;
     public GameObject demoinho;
     public bool CarroEstaAtivo = false;
@@ -26,9 +23,7 @@ public class TrdaePlayerCamTheSpace : MonoBehaviour
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
-        playerCamera = Camera.main.transform; // Assumindo que você está usando a câmera principal
 
-        // Encontre os objetos com a tag "Car" e adicione cada um deles a CarData
         GameObject[] carObjects = GameObject.FindGameObjectsWithTag("Car");
         foreach (var carObject in carObjects)
         {
@@ -43,48 +38,69 @@ public class TrdaePlayerCamTheSpace : MonoBehaviour
         Ptrade = false;
         CarroEstaAtivo = false;
         freeLook = GetComponent<CinemachineFreeLook>();
-
-        // Não é necessário verificar o objeto do carro aqui
     }
 
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.F))
         {
+            ToggleCar();
+        }
+
+        // Verifica se o jogador quer sair do carro a qualquer momento
+        if (Input.GetKeyDown(KeyCode.G) && CarroEstaAtivo)
+        {
+            Ptrade = false;
+            CarroEstaAtivo = false;
+            demoinho.SetActive(true);
+            SwitchCameraToPlayer();
+        }
+    }
+
+    void ToggleCar()
+    {
+        if (CarroEstaAtivo)
+        {
+            Ptrade = false;
+            CarroEstaAtivo = false;
+            demoinho.SetActive(true);
+            SwitchCameraToPlayer();
+        }
+        else
+        {
             CarData closestCar = FindClosestCar();
+
             if (closestCar != null)
             {
                 Ptrade = true;
-                CarroEstaAtivo = !CarroEstaAtivo;
-                if (TanoPlayer == true)
-                {   
-                    demoinho.SetActive(false);
-                    freeLook.Follow = closestCar.carTransform;
-                    freeLook.LookAt = closestCar.carTransform;
-                    closestCar.carGameObject.GetComponent<CarController>().CarroAtivo(CarroEstaAtivo);
-                }
-                else
-                {
-                    demoinho.SetActive(true);
-                    freeLook.Follow = Perso;
-                    freeLook.LookAt = Perso;
-                    carroPosition = closestCar.carTransform.position;
-                    demoinho.transform.position = carroPosition;
-                    closestCar.carGameObject.GetComponent<CarController>().CarroAtivo(CarroEstaAtivo);
-                }
-                
-                TanoPlayer = !TanoPlayer;
-            }
-            else
-            {
-                Ptrade = false;
+                CarroEstaAtivo = true;
+
+                // Entrar no carro
+                demoinho.SetActive(false);
+                SwitchCameraToCar(closestCar);
             }
         }
     }
 
-    public void DentroCarro(bool car)
+    void SwitchCameraToCar(CarData carData)
     {
-        Ptrade = car;
+        freeLook.Follow = carData.carTransform;
+        freeLook.LookAt = carData.carTransform;
+        carData.carGameObject.GetComponent<CarController>().CarroAtivo(CarroEstaAtivo);
+        currentCar = carData; // Atualiza o carro atual
+        Debug.Log("Entrou no carro");
+    }
+
+    void SwitchCameraToPlayer()
+    {
+        freeLook.Follow = Perso;
+        freeLook.LookAt = Perso;
+        if (currentCar != null)
+        {
+            currentCar.carGameObject.GetComponent<CarController>().CarroAtivo(CarroEstaAtivo);
+            currentCar = null; // Limpa o carro atual
+        }
+        Debug.Log("Saiu do carro");
     }
 
     CarData FindClosestCar()

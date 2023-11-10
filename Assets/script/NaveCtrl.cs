@@ -1,6 +1,4 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class NaveCtrl : MonoBehaviour
@@ -12,12 +10,20 @@ public class NaveCtrl : MonoBehaviour
 
     Rigidbody rb;
 
+    public Transform naveTransform; // Referência à transformação da nave
+    public Transform cameraTransform; // Referência à transformação da câmera
+
+    private Vector3 cameraOffset; // Offset inicial da câmera em relação à nave
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+
+        // Calcula o offset inicial da câmera em relação à nave
+        cameraOffset = cameraTransform.position - naveTransform.position;
     }
 
     void FixedUpdate()
@@ -26,28 +32,38 @@ public class NaveCtrl : MonoBehaviour
         {
             voando = !voando;
         }
-        
-        if(voando){
-            transform.Translate(0, 0, speedFly * Time.deltaTime); 
+
+        if (voando)
+        {
+            naveTransform.Translate(0, 0, speedFly * Time.deltaTime);
         }
-        
-        if(Input.GetKey(KeyCode.W)){
-            transform.Rotate(-(MoveGiro * Time.deltaTime),0,0);
+
+        if (Input.GetKey(KeyCode.W))
+        {
+            naveTransform.Rotate(-(MoveGiro * Time.deltaTime), 0, 0);
         }
-        if(Input.GetKey(KeyCode.S)){
-            transform.Rotate(MoveGiro * Time.deltaTime,0,0);
+        if (Input.GetKey(KeyCode.S))
+        {
+            naveTransform.Rotate(MoveGiro * Time.deltaTime, 0, 0);
         }
-        if(Input.GetKey(KeyCode.D)){
-            transform.Rotate(0,0,-(MoveGiro * Time.deltaTime));
+        if (Input.GetKey(KeyCode.D))
+        {
+            naveTransform.Rotate(0, 0, -(MoveGiro * Time.deltaTime));
         }
-        if(Input.GetKey(KeyCode.A)){
-            transform.Rotate(0,0,MoveGiro * Time.deltaTime);
+        if (Input.GetKey(KeyCode.A))
+        {
+            naveTransform.Rotate(0, 0, MoveGiro * Time.deltaTime);
         }
-        if(Input.GetKey(KeyCode.E)){
-            transform.Translate(0, SDpower * Time.deltaTime, 0);
+        if (Input.GetKey(KeyCode.E))
+        {
+            naveTransform.Translate(0, SDpower * Time.deltaTime, 0);
         }
-        if(Input.GetKey(KeyCode.Q)){
-            transform.Translate(0, -(SDpower * Time.deltaTime), 0);
+        if (Input.GetKey(KeyCode.Q))
+        {
+            naveTransform.Translate(0, -(SDpower * Time.deltaTime), 0);
         }
+
+        // Atualiza a posição da câmera para seguir a nave, mas sem girar lateralmente
+        cameraTransform.position = naveTransform.position + cameraOffset;
     }
 }
