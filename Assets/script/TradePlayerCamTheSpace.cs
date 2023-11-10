@@ -42,6 +42,8 @@ public class TrdaePlayerCamTheSpace : MonoBehaviour
 
     void Update()
     {
+
+        
         if (Input.GetKeyDown(KeyCode.F))
         {
             ToggleCar();

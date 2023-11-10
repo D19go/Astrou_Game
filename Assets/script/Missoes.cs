@@ -28,23 +28,23 @@ public class Missoes : MonoBehaviour
 
     public void checarMissoes(){
         if( missao_pegar_moedas == true ){
-            textoTela.text = "<b>Pegue todas as moedas!</b>\nMoedas "+moedas_pegas+"/"+moedas_objetivo;
-            if( moedas_pegas >= moedas_objetivo ){
-                missao_pegar_moedas = false;
-                missaoo_dar_pulos = true;
-            }
+            textoTela.text = "<b>Escolha um carro e ache o tunel!\n Caso o carro capote você pode desvirar o carro apertando R, mas isso ira custar uma vida</b>";
+            // if( moedas_pegas >= moedas_objetivo ){
+            //     missao_pegar_moedas = false;
+            //     missaoo_dar_pulos = true;
+            // }
         }
         if( missaoo_dar_pulos == true ){
             textoTela.text = "<b>Dê três pulinhos!</b>\nPulos "+pulos_dados+"/"+pulos_objetivo;
         }
-        if( missao_chegar_final == true ){
+        // if( missao_chegar_final == true ){
 
-        }
+        // }
     }
 
-    public void pegaMoeda(){
-        moedas_pegas += 1;
-        checarMissoes();
-    }
+    // public void pegaMoeda(){
+    //     moedas_pegas += 1;
+    //     checarMissoes();
+    // }
 
 }

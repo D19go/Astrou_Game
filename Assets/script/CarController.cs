@@ -1,14 +1,17 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UIElements;
 
 public class CarController : MonoBehaviour
 {
+    
     private float horizontalInput, verticalInput;
     private float currentSteerAngle, currentBrakeForce;
     private bool isBraking;
+    public int dano = 1;
     Rigidbody rb;
 
     public bool ativo = false;
@@ -41,6 +44,7 @@ public class CarController : MonoBehaviour
         }
         if(Input.GetKeyDown(KeyCode.R)){
             transform.rotation = new  Quaternion(0,transform.rotation.y,0, transform.rotation.w);
+            gameObject.GetComponent<VidaGeral>().TomaToma(dano);
         }
         // Steering Input
         horizontalInput = Input.GetAxis("Horizontal");

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028334, g: 0.2257134, b: 0.30692226, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2264,6 +2264,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37f7522fe2a49db429b7e3587534a01b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  vidaT: {fileID: 0}
   vida: 250
 --- !u!65 &252543141
 BoxCollider:
@@ -4604,6 +4605,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37f7522fe2a49db429b7e3587534a01b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  vidaT: {fileID: 0}
   vida: 200
 --- !u!1001 &596898754
 PrefabInstance:
@@ -5142,7 +5144,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 618242960}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.33075252, y: 0.32553765, z: -0.12273889, w: 0.8772475}
+  m_LocalRotation: {x: 0.33075252, y: 0.32553762, z: -0.12273889, w: 0.8772475}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -6079,6 +6081,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37f7522fe2a49db429b7e3587534a01b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  vidaT: {fileID: 0}
   vida: 500
 --- !u!4 &716705906 stripped
 Transform:
@@ -6957,7 +6960,7 @@ MonoBehaviour:
     m_DecelTime: 0.1
     m_InputAxisName: Mouse Y
     m_InputAxisValue: 0
-    m_InvertInput: 0
+    m_InvertInput: 1
     m_MinValue: 0
     m_MaxValue: 1
     m_Wrap: 0
@@ -7720,7 +7723,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 890244152}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.35109946, y: 0.32258993, z: -0.13028947, w: 0.8693041}
+  m_LocalRotation: {x: 0.3510995, y: 0.32258993, z: -0.13028947, w: 0.8693041}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -8616,6 +8619,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37f7522fe2a49db429b7e3587534a01b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  vidaT: {fileID: 0}
   vida: 350
 --- !u!4 &1055989561 stripped
 Transform:
@@ -9325,7 +9329,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1082499324}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.3510995, y: 0.32258987, z: -0.13028945, w: 0.8693041}
+  m_LocalRotation: {x: 0.3510995, y: 0.3225899, z: -0.13028948, w: 0.86930406}
   m_LocalPosition: {x: 315.558, y: -515.3734, z: 448.95966}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -13425,6 +13429,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37f7522fe2a49db429b7e3587534a01b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  vidaT: {fileID: 0}
   vida: 150
 --- !u!136 &1823387891
 CapsuleCollider:
@@ -14285,6 +14290,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37f7522fe2a49db429b7e3587534a01b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  vidaT: {fileID: 0}
   vida: 50
 --- !u!65 &2026904933
 BoxCollider:
