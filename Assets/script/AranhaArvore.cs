@@ -4,26 +4,50 @@ using UnityEngine;
 
 public class AranhaArvore : MonoBehaviour
 {
-    private UnityEngine.AI.NavMeshAgent navMesh;
-    private GameObject player;
+    public UnityEngine.AI.NavMeshAgent navMesh;
+    public GameObject player;
     public float velocidadeInimigo;
 
     // Start is called before the first frame update
     void Start()
     {
         navMesh = GetComponent<UnityEngine.AI.NavMeshAgent>();
-        player = GameObject.FindGameObjectWithTag("Aranha");
-        navMesh.speed = velocidadeInimigo;
+        player = GameObject.FindGameObjectWithTag("Player");
+        
+        if (navMesh == null)
+        {
+            Debug.LogError("NavMeshAgent not found on " + gameObject.name);
+        }
+
+        if (player == null)
+        {
+            Debug.LogError("Player with tag 'ArvoreMae' not found");
+        }
+
+        if (navMesh != null)
+        {
+            navMesh.speed = velocidadeInimigo;
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        navMesh.destination = player.transform.position;
-
-        if(Vector3.Distance(transform.position, player.transform.position) < 1.5f)
+        if (navMesh != null && player != null)
         {
-            navMesh.speed = 0;
+            if (navMesh.isOnNavMesh) // Verifica se o NavMeshAgent está no NavMesh
+            {
+                navMesh.destination = player.transform.position;
+
+                if (Vector3.Distance(transform.position, player.transform.position) < 1.5f)
+                {
+                    navMesh.speed = 0;
+                }
+            }
+            else
+            {
+                Debug.LogError("NavMeshAgent is not on the NavMesh");
+            }
         }
     }
 }

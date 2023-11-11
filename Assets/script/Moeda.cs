@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Moeda : MonoBehaviour
 {
-    // void OnTriggerEnter(Collider collider){
-    //     GameObject.Find("Canvas").GetComponent<Missoes>().pegaMoeda();                  
-    //     Destroy(transform.gameObject);
-    // }
+    void OnTriggerEnter(Collider collider){
+        GameObject.Find("Canvas").GetComponent<MissoesP1>().pegaPedras();                  
+        Destroy(transform.gameObject);
+    }
 }

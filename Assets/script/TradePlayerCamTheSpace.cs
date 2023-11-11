@@ -18,7 +18,6 @@ public class TrdaePlayerCamTheSpace : MonoBehaviour
     public Transform Perso;
     public GameObject demoinho;
     public bool CarroEstaAtivo = false;
-    bool Ptrade = false;
 
     void Start()
     {
@@ -35,7 +34,6 @@ public class TrdaePlayerCamTheSpace : MonoBehaviour
             cars.Add(carData);
         }
 
-        Ptrade = false;
         CarroEstaAtivo = false;
         freeLook = GetComponent<CinemachineFreeLook>();
     }
@@ -52,7 +50,6 @@ public class TrdaePlayerCamTheSpace : MonoBehaviour
         // Verifica se o jogador quer sair do carro a qualquer momento
         if (Input.GetKeyDown(KeyCode.G) && CarroEstaAtivo)
         {
-            Ptrade = false;
             CarroEstaAtivo = false;
             demoinho.SetActive(true);
             SwitchCameraToPlayer();
@@ -63,7 +60,6 @@ public class TrdaePlayerCamTheSpace : MonoBehaviour
     {
         if (CarroEstaAtivo)
         {
-            Ptrade = false;
             CarroEstaAtivo = false;
             demoinho.SetActive(true);
             SwitchCameraToPlayer();
@@ -74,7 +70,6 @@ public class TrdaePlayerCamTheSpace : MonoBehaviour
 
             if (closestCar != null)
             {
-                Ptrade = true;
                 CarroEstaAtivo = true;
 
                 // Entrar no carro

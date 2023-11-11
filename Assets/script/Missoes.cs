@@ -10,15 +10,14 @@ public class Missoes : MonoBehaviour
 
     bool missao_pegar_moedas = true;
     bool missaoo_dar_pulos = false;
-    bool missao_chegar_final = false;
+    // bool missao_chegar_final = false;
 
-    int moedas_pegas = 0;
-    int moedas_objetivo = 5;
+    // int moedas_pegas = 0;
+    // int moedas_objetivo = 5;
 
     int pulos_dados = 0;
     int pulos_objetivo = 3;
 
-    bool plataforma_alcancada = false;
 
     // Start is called before the first frame update
     void Start()

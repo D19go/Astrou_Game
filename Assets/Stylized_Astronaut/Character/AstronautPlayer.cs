@@ -1,5 +1,4 @@
 using UnityEngine;
-using System.Collections;
 
 namespace AstronautPlayer
 {
@@ -9,10 +8,11 @@ namespace AstronautPlayer
         private CharacterController controller;
 
         public float speed = 6.0f;
+        public float sprintSpeedMultiplier = 2.0f; // Fator de multiplicação para a velocidade de corrida
         public float turnSpeed = 400.0f;
-        public float jumpSpeed = 8.0f; // Velocidade de salto adicionada
+        public float jumpSpeed = 8.0f;
         private Vector3 moveDirection = Vector3.zero;
-        private bool isJumping = false; // Variável para rastrear se o personagem está pulando
+        private bool isJumping = false;
         public float gravity = 20.0f;
 
         void Start()
@@ -27,13 +27,20 @@ namespace AstronautPlayer
         {
             if (controller.isGrounded)
             {
-                moveDirection = transform.forward * Input.GetAxis("Vertical") * speed;
+                float currentSpeed = speed;
+
+                // Verificar se a tecla "SHIFT" e "W" estão pressionadas para aumentar a velocidade
+                if (Input.GetKey(KeyCode.LeftShift) && Input.GetKey("w"))
+                {
+                    currentSpeed *= sprintSpeedMultiplier;
+                }
+
+                moveDirection = transform.forward * Input.GetAxis("Vertical") * currentSpeed;
                 isJumping = false;
 
-                if (Input.GetKeyDown(KeyCode.Space)) // Verificar se a tecla de espaço foi pressionada
+                if (Input.GetKeyDown(KeyCode.Space))
                 {
-                    moveDirection.y = jumpSpeed; // Aplicar a velocidade de salto
-                    isJumping = true;
+                    moveDirection.y = jumpSpeed;
                 }
             }
 
@@ -45,13 +52,12 @@ namespace AstronautPlayer
 
             controller.Move(moveDirection * Time.deltaTime);
             moveDirection.y -= gravity * Time.deltaTime;
-            
-            // Configurar a animação com base na velocidade vertical para pular
+
             if (isJumping)
             {
-                anim.SetInteger("AnimationPar", 2); // Defina o estado de pulo na animação
+                anim.SetInteger("AnimationPar", 2);
             }
-            else if (Input.GetKey("w"))
+            else if (Input.GetKey("w") || (Input.GetKey(KeyCode.LeftShift) && Input.GetKey("w")))
             {
                 anim.SetInteger("AnimationPar", 1);
             }

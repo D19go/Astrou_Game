@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class spanw : MonoBehaviour
@@ -7,6 +6,8 @@ public class spanw : MonoBehaviour
     public GameObject inimigo;
     public GameObject inimigo2;
     public GameObject inimigo3;
+
+    public bool PodeWave = false;
     public int total = 0;
 
     // Start is called before the first frame update
@@ -18,11 +19,19 @@ public class spanw : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (total >= 4)
+        if (!PodeWave)
         {
-            SpawnEnemy(inimigo, 1);
-            SpawnEnemy(inimigo2, 2);
-            SpawnEnemy(inimigo3, 3);
+            return;
+        }
+
+        if (total >= 18)  // Alterado para gerar 9 inimigos no total
+        {
+            for (int i = 0; i < 3; i++)
+            {
+                SpawnEnemy(inimigo, i);
+                SpawnEnemy(inimigo2, i);
+                SpawnEnemy(inimigo3, i);
+            }
 
             total = 0;
             spawnNewMob();
@@ -35,11 +44,18 @@ public class spanw : MonoBehaviour
         GameObject newEnemy = Instantiate(enemyPrefab, transform.position, Quaternion.identity);
 
         // Ajuste as coordenadas de deslocamento
-        float offsetX = positionIndex; // Altere conforme necessário
-        newEnemy.transform.Translate(offsetX, 0, 0);
+        float offsetX = Random.Range(20f, 900f); // Altere conforme necessário
+        float offsetZ = Random.Range(20f, 900f); // Altere conforme necessário
+
+        newEnemy.transform.position = new Vector3(offsetX, 11, offsetZ);
 
         // Adicione a força
         newEnemy.GetComponent<Rigidbody>().AddForce(Vector3.up * 2000);
+    }
+
+    public void Comeca(bool missaoDarPulos)
+    {
+        PodeWave = missaoDarPulos;
     }
 
     public void Quantos(int menos1)
@@ -49,13 +65,6 @@ public class spanw : MonoBehaviour
 
     void spawnNewMob()
     {
-        Vector3 inicio_mapa = new Vector3(20, 11, 21);
-        Vector3 fim_mapa = new Vector3(900, 11, 900);
-
-        transform.position = new Vector3(
-            Random.Range(inicio_mapa.x, fim_mapa.x),
-            11,
-            Random.Range(inicio_mapa.z, fim_mapa.z)
-        );
+        // Não é mais necessário ajustar a posição do transform
     }
 }

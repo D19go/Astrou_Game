@@ -8,24 +8,27 @@ public class MissoesP1 : MonoBehaviour
 
     public TextMeshProUGUI textoTela;
 
+    public GameObject spanwEnemy;
+    public GameObject Enemy;
+
     bool missao_pegar_moedas = true;
     bool missaoo_dar_pulos = false;
-    bool missao_chegar_final = false;
+    // bool missao_chegar_final = false;
 
     int Pedras_pegas = 0;
-    int Pedras_objetivo = 5;
+    int Pedras_objetivo = 4;
 
-    int pulos_dados = 0;
-    int pulos_objetivo = 3;
-    int Boss_dados = 0;
-    int Boss_objetivo = 3;
+    int Waves_Total = 0;
+    int Waves_objetivo = 5;
+
+    // int Boss_dados = 0;
+    // int Boss_objetivo = 3;
     
-
-    bool plataforma_alcancada = false;
 
     // Start is called before the first frame update
     void Start()
     {
+        Enemy.SetActive(false);
         ListaMissoes();
     }
 
@@ -33,19 +36,28 @@ public class MissoesP1 : MonoBehaviour
         if( missao_pegar_moedas == true ){
             textoTela.text = "<b>Ache 4 Pedras espalhadas pelo mapa</b>\nPedras "+Pedras_pegas+"/"+Pedras_objetivo;
             if( Pedras_pegas >= Pedras_objetivo ){
-                missao_pegar_moedas = false;
                 missaoo_dar_pulos = true;
+                spanwEnemy.GetComponent<spanw>().Comeca(missaoo_dar_pulos);
+                
+                Enemy.SetActive(true);
             }
         }
         if( missaoo_dar_pulos == true ){
-            textoTela.text = "<b>Proteja a Árvore Mãe!</b>\nPulos "+pulos_dados+"/"+pulos_objetivo;
-        }
-        if( missao_chegar_final == true ){
-            textoTela.text = "<b>Mate todos os Bosses!</b>\nPulos "+Boss_dados+"/";/*Boss_objetivo;*/
+            textoTela.text = "<b>Proteja a Árvore Mãe!</b>\nPulos "+Waves_Total+"/"+Waves_objetivo;
+            Enemy.SetActive(false);
+            if(Waves_Total >= Waves_objetivo){
+                textoTela.text = "<b>PARABÉNS VOCÊ CONSEGUIU</b>";
+            }
         }
     }
 
-    public void pegaMoeda(){
+    public void pegaPedras(){
+        Pedras_pegas += 1;
+        ListaMissoes();
+    }
+
+    public void Wave(){
+        Waves_Total += 1;
         ListaMissoes();
     }
 

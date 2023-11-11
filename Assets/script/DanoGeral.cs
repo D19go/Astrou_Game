@@ -12,26 +12,38 @@ public class DanoGeral : MonoBehaviour
         if(collide.gameObject.tag == "EnemyPurple"){
             collide.gameObject.GetComponent<LigaSpanw>().TomaToma2(dano);
              Destroy(gameObject);
+        
         }
         if(collide.gameObject.tag == "EnemyRed"){
             collide.gameObject.GetComponent<LigaSpanw>().TomaToma2(dano);
              Destroy(gameObject);
+
         }
         if(collide.gameObject.tag == "EnemyGreen"){
             collide.gameObject.GetComponent<LigaSpanw>().TomaToma2(dano);
              Destroy(gameObject);
+
         }
         if(collide.gameObject.tag == "BossEnemy"){
             collide.gameObject.GetComponent<VidaGeral>().TomaToma(dano);
              Destroy(gameObject);
+
         }
-        // if(collide.gameObject.tag == "ArvoreMae"){
-        //     collide.gameObject.GetComponent<VidaGeral>().TomaToma(dano);
-        //      Destroy(gameObject);
-        // }
+        if(collide.gameObject.tag == "ArvoreMae"){
+            collide.gameObject.GetComponent<VidaGeral>().TomaToma(dano);
+             Destroy(gameObject);
+
+        }
         if(collide.gameObject.tag == "piso"){
             Destroy(gameObject);
+
         }
+        F();
+    }
+
+    IEnumerator F(){
+    
+        yield return new WaitForSeconds(3f);
         Destroy(gameObject);
     }
 }
