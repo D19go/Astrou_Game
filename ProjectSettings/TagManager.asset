@@ -19,6 +19,7 @@ TagManager:
   - BossEnemy
   - objeto
   - Aranha
+  - TestOBJ
   layers:
   - Default
   - TransparentFX

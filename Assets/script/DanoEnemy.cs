@@ -13,7 +13,7 @@ public class DanoEnemy : MonoBehaviour
             collide.gameObject.GetComponent<VidaPlayer>().TomaToma(dano);
         }
         if(collide.gameObject.tag == "ArvoreMae"){
-            collide.gameObject.GetComponent<VidaGeral>().TomaToma(dano);
+            collide.gameObject.GetComponent<VidaPlayer>().TomaToma(dano);
         }
     }
 }

@@ -16,9 +16,12 @@ public class VidaPlayer : MonoBehaviour
         if(vida <= 0){
             
             vidaT.text = vida.ToString();
-            Debug.Log("tomou"); 
             SceneManager.LoadScene("Planet1");
             Destroy(gameObject);
+        }
+        if (vidaT != null)
+        {
+            vidaT.text = " " +vida.ToString();
         }
 
     }

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AranhaArvore : MonoBehaviour
+public class FocoArvore : MonoBehaviour
 {
     public UnityEngine.AI.NavMeshAgent navMesh;
     public GameObject player;
@@ -12,7 +12,7 @@ public class AranhaArvore : MonoBehaviour
     void Start()
     {
         navMesh = GetComponent<UnityEngine.AI.NavMeshAgent>();
-        player = GameObject.FindGameObjectWithTag("Player");
+        player = GameObject.FindGameObjectWithTag("ArvoreMae");
         
         if (navMesh == null)
         {

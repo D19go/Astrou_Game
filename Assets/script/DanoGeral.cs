@@ -30,13 +30,17 @@ public class DanoGeral : MonoBehaviour
 
         }
         if(collide.gameObject.tag == "ArvoreMae"){
-            collide.gameObject.GetComponent<VidaGeral>().TomaToma(dano);
+            collide.gameObject.GetComponent<VidaPlayer>().TomaToma(dano);
              Destroy(gameObject);
 
         }
         if(collide.gameObject.tag == "piso"){
             Destroy(gameObject);
 
+        }
+        if(collide.gameObject.tag == "TestOBJ"){
+            // Destroy(gameObject);
+            Debug.Log("acertou");
         }
         F();
     }

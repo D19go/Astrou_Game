@@ -52,7 +52,7 @@ public class nhao : MonoBehaviour
         nova_bola.GetComponent<Rigidbody>().AddForce(direcao * Forca); // Ajuste a força conforme necessário
     }
 
-    public void M1Concluida(){
-        
+    public void M1Concluida(bool ok){
+        CanhaoPronto = true;
     }
 }

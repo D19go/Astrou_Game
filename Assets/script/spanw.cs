@@ -6,8 +6,10 @@ public class spanw : MonoBehaviour
     public GameObject inimigo;
     public GameObject inimigo2;
     public GameObject inimigo3;
+    public GameObject canvas;
 
     public bool PodeWave = false;
+    public int Wave = 0;
     public int total = 0;
 
     // Start is called before the first frame update
@@ -24,7 +26,7 @@ public class spanw : MonoBehaviour
             return;
         }
 
-        if (total >= 18)  // Alterado para gerar 9 inimigos no total
+        if (total >= 9)  // Alterado para gerar 9 inimigos no total
         {
             for (int i = 0; i < 3; i++)
             {
@@ -32,8 +34,10 @@ public class spanw : MonoBehaviour
                 SpawnEnemy(inimigo2, i);
                 SpawnEnemy(inimigo3, i);
             }
-
+            Wave += 1;
             total = 0;
+            canvas.GetComponent<MissoesP1>().Wave();
+
             spawnNewMob();
         }
     }
