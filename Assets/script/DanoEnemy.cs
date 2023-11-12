@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DanoEnemy : MonoBehaviour
 {
-     public int dano = 10;
+     public float dano = 10;
     // void OnTriggerEnter(Collider collide)
     void OnCollisionStay(Collision collide)
     {   

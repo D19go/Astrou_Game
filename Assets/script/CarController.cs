@@ -44,7 +44,7 @@ public class CarController : MonoBehaviour
         }
         if(Input.GetKeyDown(KeyCode.R)){
             transform.rotation = new  Quaternion(0,transform.rotation.y,0, transform.rotation.w);
-            gameObject.GetComponent<VidaGeral>().TomaToma(dano);
+            gameObject.GetComponent<VidaPlayer>().TomaToma(dano);
         }
         // Steering Input
         horizontalInput = Input.GetAxis("Horizontal");

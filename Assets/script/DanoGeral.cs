@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class DanoGeral : MonoBehaviour
 {
+    void Start(){
+        F();
+    }
     public int dano = 10;
     // void OnTriggerEnter(Collider collide)
     void OnCollisionEnter(Collision collide)
@@ -29,11 +32,11 @@ public class DanoGeral : MonoBehaviour
              Destroy(gameObject);
 
         }
-        if(collide.gameObject.tag == "ArvoreMae"){
-            collide.gameObject.GetComponent<VidaPlayer>().TomaToma(dano);
-             Destroy(gameObject);
+        // if(collide.gameObject.tag == "ArvoreMae"){
+        //     collide.gameObject.GetComponent<VidaPlayer>().TomaToma(dano);
+        //      Destroy(gameObject);
 
-        }
+        // }
         if(collide.gameObject.tag == "piso"){
             Destroy(gameObject);
 

@@ -8,14 +8,14 @@ public class VidaPlayer : MonoBehaviour
 {
     public TextMeshProUGUI vidaT;
     public SceneManager cenaAtual;
-    public int vida = 10;
+    public float vida = 10;
     // Start is called before the first frame update
-    public void TomaToma(int dano)
+    public void TomaToma(float dano)
     {
         vida -= dano;
         if(vida <= 0){
             
-            vidaT.text = vida.ToString();
+            vidaT.text = " " +vida.ToString();
             SceneManager.LoadScene("Planet1");
             Destroy(gameObject);
         }

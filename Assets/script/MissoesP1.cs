@@ -9,7 +9,8 @@ public class MissoesP1 : MonoBehaviour
     public TextMeshProUGUI textoTela;
 
     public GameObject spanwEnemy;
-    public GameObject Enemy;
+    public GameObject Enemy;    
+
 
     public GameObject Arma;
     bool missao_pegar_moedas = true;
@@ -19,7 +20,7 @@ public class MissoesP1 : MonoBehaviour
     int Pedras_objetivo = 4;
 
     int Waves_Total = 0;
-    int Waves_objetivo = 2;
+    int Waves_objetivo = 7;
 
     // int Boss_dados = 0;
     // int Boss_objetivo = 3;
@@ -46,7 +47,6 @@ public class MissoesP1 : MonoBehaviour
         if( missaoo_dar_pulos == true ){
             textoTela.text = "<b>Proteja a Árvore</b>\nWaves "+Waves_Total+"/"+Waves_objetivo;
             if(Waves_Total >= Waves_objetivo){
-                Enemy.SetActive(false);
                 spanwEnemy.SetActive(false);
                 textoTela.text = "<b>PARABÉNS VOCÊ CONSEGUIU</b>";
             }

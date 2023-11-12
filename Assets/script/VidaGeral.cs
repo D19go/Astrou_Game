@@ -15,7 +15,7 @@ public class VidaGeral : MonoBehaviour
         vida -= dano;
         if(vida <= 0){
             
-            // vidaT.text = vida.ToString();
+            vidaT.text = ""+vida.ToString();
             Debug.Log("tomou"); 
             // SceneManager.LoadScene("Começo");
             Destroy(gameObject);
