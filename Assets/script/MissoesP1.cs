@@ -48,8 +48,11 @@ public class MissoesP1 : MonoBehaviour
             textoTela.text = "<b>Proteja a Árvore</b>\nWaves "+Waves_Total+"/"+Waves_objetivo;
             if(Waves_Total >= Waves_objetivo){
                 spanwEnemy.SetActive(false);
-                textoTela.text = "<b>PARABÉNS VOCÊ CONSEGUIU</b>";
+                if(Waves_Total == 7){
+                    textoTela.text = "<b>PARABÉNS VOCÊ CONSEGUIU</b>";
+                }
             }
+
         }
     }
 

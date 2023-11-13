@@ -6,7 +6,7 @@ public class nhao : MonoBehaviour
 {
     public GameObject bola;
     public GameObject bolaForte;
-    bool CanhaoPronto = false;
+    public bool CanhaoPronto = false;
     public int Forca = 15000000;
 
     Camera mainCamera;
@@ -23,7 +23,7 @@ public class nhao : MonoBehaviour
             return;
         }
         
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButton(0))
         {
             CriarBolaELancar();
         }
@@ -55,4 +55,6 @@ public class nhao : MonoBehaviour
     public void M1Concluida(bool ok){
         CanhaoPronto = true;
     }
+
+
 }

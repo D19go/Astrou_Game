@@ -15,8 +15,12 @@ public class GameManager : MonoBehaviour
     // public static int porcentagem = 0;
 
     void Update(){
-        if(Input.GetKeyDown(KeyCode.P) && Input.GetKeyDown(KeyCode.I) && Input.GetKeyDown(KeyCode.O)){
-            SceneManager.LoadScene("Começo");
+        if(Input.GetKeyDown(KeyCode.P)){
+            if(Input.GetKeyDown(KeyCode.O)){
+                if(Input.GetKeyDown(KeyCode.I)){
+                    SceneManager.LoadScene("Começo");
+                }
+            }
         }
         // if(Input.GetKeyDown(KeyCode.O)){
         //     SceneManager.LoadScene("Lvl2");

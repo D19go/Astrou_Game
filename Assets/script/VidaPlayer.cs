@@ -16,7 +16,7 @@ public class VidaPlayer : MonoBehaviour
         if(vida <= 0){
             
             vidaT.text = " " +vida.ToString();
-            SceneManager.LoadScene("Planet1");
+            SceneManager.LoadScene("Começo");
             Destroy(gameObject);
         }
         if (vidaT != null)
