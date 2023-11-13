@@ -10,7 +10,6 @@ public class Manual: MonoBehaviour
     public Button botaoJogar;
     public Button botaoSair;
     public Button botaoManual;
-    int indiceCenaAtual = SceneManager.GetActiveScene().buildIndex;
 
     void Start()
     {
@@ -26,17 +25,4 @@ public class Manual: MonoBehaviour
         });
     }
 
-}
-
-public class TrocarCena : MonoBehaviour
-{
-    // Chamado quando o bot�o � clicado ou outro evento de desencadeamento ocorre
-    public void PularParaProximaCena()
-    {
-        // Obt�m o �ndice da cena atual
-        int indiceCenaAtual = SceneManager.GetActiveScene().buildIndex;
-
-        // Pula para a pr�xima cena (aumenta o �ndice em 1)
-        SceneManager.LoadScene(indiceCenaAtual + 1);
-    }
 }

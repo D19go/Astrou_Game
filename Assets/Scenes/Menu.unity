@@ -254,7 +254,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   botaoJogar: {fileID: 319919112}
   botaoSair: {fileID: 707203349}
-  botaoManual: {fileID: 0}
+  botaoManual: {fileID: 707203349}
 --- !u!1 &86618707
 GameObject:
   m_ObjectHideFlags: 0
@@ -430,7 +430,7 @@ GameObject:
   - component: {fileID: 319919113}
   - component: {fileID: 319919112}
   m_Layer: 5
-  m_Name: botao
+  m_Name: play
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -687,7 +687,7 @@ GameObject:
   - component: {fileID: 707203350}
   - component: {fileID: 707203349}
   m_Layer: 5
-  m_Name: botao (1)
+  m_Name: instr
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -808,7 +808,7 @@ GameObject:
   - component: {fileID: 722674393}
   - component: {fileID: 722674392}
   m_Layer: 5
-  m_Name: botao (2)
+  m_Name: nada
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

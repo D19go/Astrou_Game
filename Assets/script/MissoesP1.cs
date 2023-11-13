@@ -7,6 +7,7 @@ public class MissoesP1 : MonoBehaviour
 {
 
     public TextMeshProUGUI textoTela;
+    public TextMeshProUGUI Instrucoes;
 
     public GameObject spanwEnemy;
     public GameObject Enemy;    
@@ -35,7 +36,7 @@ public class MissoesP1 : MonoBehaviour
 
     public void ListaMissoes(){
         if( missao_pegar_moedas == true ){
-            textoTela.text = "<b>Ache 4 Pedras espalhadas próximas a grande árvore</b>\nPedras "+Pedras_pegas+"/"+Pedras_objetivo;
+            textoTela.text = "<b>Ache 4 Pedras espalhadas próximas a grande árvore \n Ache as pedras para poder ligar o canhão acima de você</b>\nPedras "+Pedras_pegas+"/"+Pedras_objetivo;
             if( Pedras_pegas >= Pedras_objetivo ){
                 missaoo_dar_pulos = true;
                 spanwEnemy.GetComponent<spanw>().Comeca(missaoo_dar_pulos);
