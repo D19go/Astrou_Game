@@ -1,13 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;    
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class VidaPlayer : MonoBehaviour
 {
     public TextMeshProUGUI vidaT;
-    public SceneManager cenaAtual;
     public float vida = 10;
     // Start is called before the first frame update
     public void TomaToma(float dano)
