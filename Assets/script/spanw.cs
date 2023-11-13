@@ -30,7 +30,7 @@ public class spanw : MonoBehaviour
             return;
         }
 
-        if (total >= 8)  // Alterado para gerar 9 inimigos no total
+        if (total >= 9)  // Alterado para gerar 9 inimigos no total
         {
             // timeSpanw();
             for (int i = 0; i < 3; i++)
@@ -58,7 +58,7 @@ public class spanw : MonoBehaviour
     }
     void SpawnEnemy(GameObject enemyPrefab, int positionIndex)
     {
-        
+        if(total >= 9){
 
             // Instancie o inimigo
             GameObject newEnemy = Instantiate(enemyPrefab, transform.position, Quaternion.identity);
@@ -71,7 +71,7 @@ public class spanw : MonoBehaviour
 
             // Adicione a força
             newEnemy.GetComponent<Rigidbody>().AddForce(Vector3.up * 2000);
-        
+        }
     }
 
     // IEnumerator timeSpanw(){

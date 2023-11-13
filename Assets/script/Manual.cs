@@ -10,6 +10,7 @@ public class Manual: MonoBehaviour
     public Button botaoJogar;
     public Button botaoSair;
     public Button botaoManual;
+    public Button botaovoltar;
 
     void Start()
     {
@@ -21,6 +22,9 @@ public class Manual: MonoBehaviour
             SceneManager.LoadScene("Instruções");
         });
         botaoSair.onClick.AddListener(() =>{
+            SceneManager.LoadScene("Menu");
+        });
+        botaovoltar.onClick.AddListener(() =>{
             SceneManager.LoadScene("Menu");
         });
     }

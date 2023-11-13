@@ -21,7 +21,7 @@ public class MissoesP1 : MonoBehaviour
     int Pedras_objetivo = 4;
 
     int Waves_Total = 0;
-    int Waves_objetivo = 7;
+    int Waves_objetivo = 6;
 
     // int Boss_dados = 0;
     // int Boss_objetivo = 3;
