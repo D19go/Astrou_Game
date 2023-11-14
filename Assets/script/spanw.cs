@@ -58,7 +58,7 @@ public class spanw : MonoBehaviour
     }
     void SpawnEnemy(GameObject enemyPrefab, int positionIndex)
     {
-        if(Wave >= 6){
+        if(total >= 9){
 
             // Instancie o inimigo
             GameObject newEnemy = Instantiate(enemyPrefab, transform.position, Quaternion.identity);
@@ -71,10 +71,6 @@ public class spanw : MonoBehaviour
 
             // Adicione a força
             newEnemy.GetComponent<Rigidbody>().AddForce(Vector3.up * 2000);
-        }else{
-            Wave += 1;
-            canvas.GetComponent<MissoesP1>().Wave();
-
         }
     }
 

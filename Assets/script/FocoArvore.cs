@@ -5,7 +5,7 @@ using UnityEngine;
 public class FocoArvore : MonoBehaviour
 {
     public UnityEngine.AI.NavMeshAgent navMesh;
-    public GameObject player;
+    GameObject player;
     public float velocidadeInimigo;
 
     // Start is called before the first frame update

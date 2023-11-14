@@ -5,7 +5,7 @@ using UnityEngine;
 public class FocoPlayer : MonoBehaviour
 {
     public UnityEngine.AI.NavMeshAgent navMesh;
-    public GameObject player;
+    GameObject player;
     public float velocidadeInimigo;
 
     // Start is called before the first frame update
@@ -13,21 +13,6 @@ public class FocoPlayer : MonoBehaviour
     {
         navMesh = GetComponent<UnityEngine.AI.NavMeshAgent>();
         player = GameObject.FindGameObjectWithTag("Player");
-        
-        if (navMesh == null)
-        {
-            Debug.LogError("NavMeshAgent not found on " + gameObject.name);
-        }
-
-        if (player == null)
-        {
-            Debug.LogError("Player with tag 'ArvoreMae' not found");
-        }
-
-        if (navMesh != null)
-        {
-            navMesh.speed = velocidadeInimigo;
-        }
     }
 
     // Update is called once per frame
