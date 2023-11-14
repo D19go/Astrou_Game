@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028334, g: 0.2257134, b: 0.30692226, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -133,6 +133,7 @@ GameObject:
   - component: {fileID: 36898573}
   - component: {fileID: 36898572}
   - component: {fileID: 36898576}
+  - component: {fileID: 36898577}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -239,6 +240,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02c880155f32f1a48ae2cb98c1dccf4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &36898577
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 36898571}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 998138b0df64d3f4e8af2ea4d7c8b07d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  botaoJogar: {fileID: 319919112}
+  botaoSair: {fileID: 707203349}
+  botaoManual: {fileID: 707203349}
 --- !u!1 &86618707
 GameObject:
   m_ObjectHideFlags: 0
@@ -414,7 +430,7 @@ GameObject:
   - component: {fileID: 319919113}
   - component: {fileID: 319919112}
   m_Layer: 5
-  m_Name: botao
+  m_Name: play
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -429,7 +445,7 @@ RectTransform:
   m_GameObject: {fileID: 319919110}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.8125, y: 2.5, z: 1}
+  m_LocalScale: {x: 3.1640625, y: 3.25, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 556140391}
@@ -671,7 +687,7 @@ GameObject:
   - component: {fileID: 707203350}
   - component: {fileID: 707203349}
   m_Layer: 5
-  m_Name: botao (1)
+  m_Name: instr
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -686,7 +702,7 @@ RectTransform:
   m_GameObject: {fileID: 707203347}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.6875, y: 2.5, z: 1}
+  m_LocalScale: {x: 2.9226563, y: 3.3125, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 861550641}
@@ -792,7 +808,7 @@ GameObject:
   - component: {fileID: 722674393}
   - component: {fileID: 722674392}
   m_Layer: 5
-  m_Name: botao (2)
+  m_Name: nada
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1264,6 +1280,50 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1050319932
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1050319934}
+  - component: {fileID: 1050319933}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1050319933
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1050319932}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7caa8b7532e80264881b8a2747059940, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1050319934
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1050319932}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1253.1819, y: 533.6681, z: 1.237793}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1666551131
 GameObject:
   m_ObjectHideFlags: 0
@@ -1419,3 +1479,4 @@ SceneRoots:
   - {fileID: 86618709}
   - {fileID: 36898575}
   - {fileID: 102446104}
+  - {fileID: 1050319934}
