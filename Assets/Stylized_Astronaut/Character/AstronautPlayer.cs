@@ -1,19 +1,28 @@
 using UnityEngine;
+using Unity.Netcode;
 
 namespace AstronautPlayer
 {
-    public class AstronautPlayer : MonoBehaviour
+    public class AstronautPlayer : NetworkBehaviour
     {
         private Animator anim;
         private CharacterController controller;
 
         public float speed = 6.0f;
-        public float sprintSpeedMultiplier = 2.0f; // Fator de multiplicação para a velocidade de corrida
+        public float sprintSpeedMultiplier = 2.0f;
         public float turnSpeed = 400.0f;
         public float jumpSpeed = 8.0f;
         private Vector3 moveDirection = Vector3.zero;
         private bool isJumping = false;
         public float gravity = 20.0f;
+
+        public override void OnNetworkSpawn()
+        {
+            if (!IsOwner)
+            {
+                Destroy(this);
+            }
+        }
 
         void Start()
         {
@@ -25,11 +34,18 @@ namespace AstronautPlayer
 
         void Update()
         {
+            if (IsOwner)
+            {
+                HandleMovement();
+            }
+        }
+
+        private void HandleMovement()
+        {
             if (controller.isGrounded)
             {
                 float currentSpeed = speed;
 
-                // Verificar se a tecla "SHIFT" e "W" estão pressionadas para aumentar a velocidade
                 if (Input.GetKey(KeyCode.LeftShift) && Input.GetKey("w"))
                 {
                     currentSpeed *= sprintSpeedMultiplier;
@@ -41,6 +57,7 @@ namespace AstronautPlayer
                 if (Input.GetKeyDown(KeyCode.Space))
                 {
                     moveDirection.y = jumpSpeed;
+                    isJumping = true;
                 }
             }
 

@@ -5,7 +5,6 @@ using UnityEngine;
 public class DanoGeral : MonoBehaviour
 {
     void Start(){
-        StartCoroutine(F());
     }
     public int dano = 10;
     // void OnTriggerEnter(Collider collide)

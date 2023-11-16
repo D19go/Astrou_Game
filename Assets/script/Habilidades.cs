@@ -10,8 +10,8 @@ public class Habilidades : MonoBehaviour
     private bool Skill3 = true;
     public GameObject  LancaChamas;
     public GameObject  TpOBJ;
-    public GameObject  TpOBJ2;
-    public GameObject  esc;
+    public GameObject  portal;
+    public GameObject  SaidaTP;
     private Animator anim;
     public int Forca = 5;
     Camera mainCamera;
@@ -46,11 +46,24 @@ public class Habilidades : MonoBehaviour
             StartCoroutine(timeSkill2());
         }
 
-        if(Input.GetKeyDown(KeyCode.R) && Skill3){
-            GameObject tele = Instantiate(TpOBJ, transform.position, Quaternion.identity);
-            // Obter a direção olhando para o ponto em que a câmera está apontando
+        if(Input.GetKeyDown(KeyCode.E) && Skill3){
+          // Obter a direção olhando para o ponto em que a câmera está apontando
             Vector3 direcao = playerCamera.transform.forward;
-            tele.GetComponent<Rigidbody>().AddForce(direcao * Forca);
+            // Configurar a posição desejada para a bola
+            TpOBJ.transform.position = SaidaTP.transform.position;
+            TpOBJ.GetComponent<Rigidbody>().isKinematic = false;
+            // Reinicializar a velocidade para garantir que não haja influência anterior
+            TpOBJ.GetComponent<Rigidbody>().velocity = Vector3.zero;
+            // Adicionar força para lançar a bola na direção da câmera
+            TpOBJ.GetComponent<Rigidbody>().AddForce(direcao * Forca);
+
+        }
+
+        if(Input.GetKeyDown(KeyCode.Q)){
+          // Obter a direção olhando para o ponto em que a câmera está apontando
+            Vector3 direcao = playerCamera.transform.forward;
+            // Configurar a posição desejada para a bola
+            portal.transform.position = SaidaTP.transform.position;
 
         }
     }

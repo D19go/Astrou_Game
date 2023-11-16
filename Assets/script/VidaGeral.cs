@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 
 public class VidaGeral : MonoBehaviour
 {
-    public TextMeshProUGUI vidaT;
     public SceneManager cenaAtual;
     public int vida = 10;
     // Start is called before the first frame update

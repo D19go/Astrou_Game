@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu.unity
     guid: 0d3c331a02eedef43ace81c57d4016c3
   - enabled: 1
-    path: "Assets/Scenes/Instru\xE7\xF5es.unity"
+    path: Assets/Scenes/Intruscoes.unity
     guid: 56d7975bd90cae549b779dbd2ccb3775
   - enabled: 1
     path: "Assets/Scenes/Come\xE7o.unity"
@@ -23,5 +23,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Planet1.unity
     guid: 3282c1ef5aed9f44c88f693c18af8994
+  - enabled: 1
+    path: Assets/Scenes/MultiPlayer.unity
+    guid: 30f08ce1356682e43aa8a50a8850c385
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0
