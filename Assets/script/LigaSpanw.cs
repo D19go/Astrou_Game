@@ -12,6 +12,15 @@ public class LigaSpanw : MonoBehaviour
     {
         
     }
+
+    public void chamas(int i){
+        Debug.Log("tomou");
+        vida -= i;
+        if(vida <= 0){
+            Spawner.GetComponent<spanw>().Quantos(menos1);
+            Destroy(gameObject);
+        }
+    }
     
     // Start is called before the first frame update
     public void TomaToma2(int dano)

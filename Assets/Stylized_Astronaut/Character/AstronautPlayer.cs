@@ -1,9 +1,7 @@
 using UnityEngine;
-using Unity.Netcode;
 
-namespace AstronautPlayer
-{
-    public class AstronautPlayer : NetworkBehaviour
+
+    public class AstronautPlayer : MonoBehaviour
     {
         private Animator anim;
         private CharacterController controller;
@@ -16,15 +14,9 @@ namespace AstronautPlayer
         private bool isJumping = false;
         public float gravity = 20.0f;
 
-        public override void OnNetworkSpawn()
-        {
-            if (!IsOwner)
-            {
-                Destroy(this);
-            }
-        }
+  
 
-        void Start()
+    void Start()
         {
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
@@ -33,14 +25,6 @@ namespace AstronautPlayer
         }
 
         void Update()
-        {
-            if (IsOwner)
-            {
-                HandleMovement();
-            }
-        }
-
-        private void HandleMovement()
         {
             if (controller.isGrounded)
             {
@@ -83,5 +67,5 @@ namespace AstronautPlayer
                 anim.SetInteger("AnimationPar", 0);
             }
         }
+
     }
-}

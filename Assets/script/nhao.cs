@@ -1,9 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Unity.Netcode;
 
-public class nhao : NetworkBehaviour
+public class nhao : MonoBehaviour
 {
     public GameObject bola;
     public GameObject bolaForte;
@@ -20,34 +19,25 @@ public class nhao : NetworkBehaviour
 
     void Update()
     {
-        if(!IsOwner)
+        
+        if(!CanhaoPronto)
             return;
+
         
         
         if (Input.GetMouseButton(0))
         {
             CriarBolaELancar();
-            FireServerRPC();
+       
         }
         if (Input.GetMouseButtonDown(1))
         {
             CriarBolaForteELancar();
-            FireServerRPC();
+          
         }
     }
 
-    [ServerRpc]
-    void FireServerRPC(){
-        FireClientRPC();
-    }
-
-    [ClientRpc]
-    void FireClientRPC(){
-        if(!IsOwner){
-        CriarBolaForteELancar();
-        CriarBolaELancar();
-        }
-    }
+    
     void CriarBolaELancar()
     {
         GameObject nova_bola = Instantiate(bola, transform.position, Quaternion.identity);

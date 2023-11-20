@@ -6,6 +6,7 @@ public class FixaTP : MonoBehaviour
 
     void Start()
     {
+        
         // Certifique-se de que temos um Rigidbody
         rb = GetComponent<Rigidbody>();
 
@@ -26,7 +27,9 @@ public class FixaTP : MonoBehaviour
             rb.angularVelocity = Vector3.zero; // Zerar também a velocidade angular
             rb.isKinematic = true;
         }
-
+        if(collision.gameObject.tag == "Player"){
+            gameObject.GetComponent<MeshRenderer>().enabled = false;
+        }
         // Você também pode adicionar outras lógicas aqui, se necessário
     }
 }
