@@ -45,15 +45,15 @@ public class spanw : MonoBehaviour
             // spawnNewMob();
         }
         
-        if(Wave == 3){
-            CriarBoss();
-        }
-        if(Wave == 4){
-            CriarBoss();
-        }
-        if(Wave == 6){
-            CriarBoss();
-        }
+        // if(Wave == 3){
+        //     CriarBoss();
+        // }
+        // if(Wave == 4){
+        //     CriarBoss();
+        // }
+        // if(Wave == 6){
+        //     CriarBoss();
+        // }
         
     }
     void SpawnEnemy(GameObject enemyPrefab, int positionIndex)

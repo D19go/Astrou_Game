@@ -32,22 +32,22 @@ public class Habilidades : MonoBehaviour
     void Update(){
         
         if (Input.GetKeyDown(KeyCode.G) && Skill1)
-        {
-            // Obtém a direção para a qual a câmera está olhando
-            Vector3 cameraDirection = playerCamera.transform.forward;
-            // Inverte a direção
-            Vector3 jumpDirection = -cameraDirection;
-            // Aplica a força na direção oposta
-            controller.Move(jumpDirection * jumpSpeed * Time.deltaTime);
+        {   // Dash para trás
+            
+            Vector3 cameraDirection = playerCamera.transform.forward; /* Obtém a direção para a qual a câmera está olhando*/            
+            Vector3 jumpDirection = -cameraDirection; // Inverte a direção            
+            controller.Move(jumpDirection * jumpSpeed * Time.deltaTime); // Aplica a força na direção oposta
             StartCoroutine(timeSkill());
         }
 
         if(Input.GetKeyDown(KeyCode.F) && Skill2){
+            //Lança Chamas
             LancaChamas.SetActive(true);
             StartCoroutine(timeSkill2());
         }
 
         if(Input.GetKeyDown(KeyCode.E) ){
+            //Teleporte
             if(!LancaTP && Skill3){
                 // Obter a direção olhando para o ponto em que a câmera está apontando
                 Vector3 direcao = playerCamera.transform.forward;

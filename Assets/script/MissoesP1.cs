@@ -21,7 +21,7 @@ public class MissoesP1 : MonoBehaviour
     int Pedras_objetivo = 4;
 
     int Waves_Total = 0;
-    int Waves_objetivo = 6;
+    int Waves_objetivo = 3;
 
     // int Boss_dados = 0;
     // int Boss_objetivo = 3;
@@ -49,7 +49,8 @@ public class MissoesP1 : MonoBehaviour
             textoTela.text = "<b>Proteja a Árvore</b>\nWaves "+Waves_Total+"/"+Waves_objetivo;
             if(Waves_Total >= Waves_objetivo){
                 spanwEnemy.SetActive(false);
-                if(Waves_Total == 7){
+                Waves_Total++;
+                if(Waves_Total == 4){
                     textoTela.text = "<b>PARABÉNS VOCÊ CONSEGUIU</b>";
                 }
             }

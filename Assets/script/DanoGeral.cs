@@ -7,40 +7,51 @@ public class DanoGeral : MonoBehaviour
     void Start(){
     }
     public int dano = 10;
-    // void OnTriggerEnter(Collider collide)
-    void OnCollisionEnter(Collision collide)
+    void OnTriggerEnter(Collider colidiu){
+        if(colidiu.gameObject.tag == "Enemy"){
+            colidiu.gameObject.GetComponent<LigaSpanw>().TomaToma2(dano);
+             Destroy(gameObject);
+        
+        }  
+
+        if(colidiu.gameObject.tag == "TestOBJ"){
+            // Destroy(gameObject);
+            Debug.Log("acertou");
+        }
+    }
+    void OnCollisionEnter(Collision colidiu)
     {   
         
-        if(collide.gameObject.tag == "Enemy"){
-            collide.gameObject.GetComponent<LigaSpanw>().TomaToma2(dano);
+        if(colidiu.gameObject.tag == "Enemy"){
+            colidiu.gameObject.GetComponent<LigaSpanw>().TomaToma2(dano);
              Destroy(gameObject);
         
         }   
-        // if(collide.gameObject.tag == "EnemyRed"){
-        //     collide.gameObject.GetComponent<LigaSpanw>().TomaToma2(dano);
+        // if(colidiu.gameObject.tag == "EnemyRed"){
+        //     colidiu.gameObject.GetComponent<LigaSpanw>().TomaToma2(dano);
         //      Destroy(gameObject);
 
         // }
-        // if(collide.gameObject.tag == "EnemyGreen"){
-        //     collide.gameObject.GetComponent<LigaSpanw>().TomaToma2(dano);
+        // if(colidiu.gameObject.tag == "EnemyGreen"){
+        //     colidiu.gameObject.GetComponent<LigaSpanw>().TomaToma2(dano);
         //      Destroy(gameObject);
 
         // }
-        // if(collide.gameObject.tag == "BossEnemy"){
-        //     collide.gameObject.GetComponent<VidaGeral>().TomaToma(dano);
+        // if(colidiu.gameObject.tag == "BossEnemy"){
+        //     colidiu.gameObject.GetComponent<VidaGeral>().TomaToma(dano);
         //      Destroy(gameObject);
 
         // }
-        // if(collide.gameObject.tag == "ArvoreMae"){
-        //     collide.gameObject.GetComponent<VidaPlayer>().TomaToma(dano);
+        // if(colidiu.gameObject.tag == "ArvoreMae"){
+        //     colidiu.gameObject.GetComponent<VidaPlayer>().TomaToma(dano);
         //      Destroy(gameObject);
 
         // }
-        if(collide.gameObject.tag == "piso"){
+        if(colidiu.gameObject.tag == "piso"){
             Destroy(gameObject);
 
         }
-        if(collide.gameObject.tag == "TestOBJ"){
+        if(colidiu.gameObject.tag == "TestOBJ"){
             // Destroy(gameObject);
             Debug.Log("acertou");
         }
@@ -52,4 +63,6 @@ public class DanoGeral : MonoBehaviour
         yield return new WaitForSeconds(3f);
         Destroy(gameObject);
     }
+
+    
 }
