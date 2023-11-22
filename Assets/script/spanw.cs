@@ -30,7 +30,7 @@ public class spanw : MonoBehaviour
             return;
         }
 
-        if (total >= 9)  // Alterado para gerar 9 inimigos no total
+        if (total == 9)  // Alterado para gerar 9 inimigos no total
         {
             // timeSpanw();
             for (int i = 0; i < 3; i++)
@@ -48,12 +48,12 @@ public class spanw : MonoBehaviour
         // if(Wave == 3){
         //     CriarBoss();
         // }
-        // if(Wave == 4){
-        //     CriarBoss();
-        // }
-        // if(Wave == 6){
-        //     CriarBoss();
-        // }
+        if(Wave == 4){
+            CriarBoss();
+        }
+        if(Wave == 6){
+            CriarBoss();
+        }
         
     }
     void SpawnEnemy(GameObject enemyPrefab, int positionIndex)

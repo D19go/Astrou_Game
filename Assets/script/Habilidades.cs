@@ -92,7 +92,7 @@ public class Habilidades : MonoBehaviour
 
     IEnumerator timeSkill3(){
         Skill3 = false;
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(2f);
         Skill3 = true;
     }
 }

@@ -7,18 +7,6 @@ public class DanoGeral : MonoBehaviour
     void Start(){
     }
     public int dano = 10;
-    void OnTriggerEnter(Collider colidiu){
-        if(colidiu.gameObject.tag == "Enemy"){
-            colidiu.gameObject.GetComponent<LigaSpanw>().TomaToma2(dano);
-             Destroy(gameObject);
-        
-        }  
-
-        if(colidiu.gameObject.tag == "TestOBJ"){
-            // Destroy(gameObject);
-            Debug.Log("acertou");
-        }
-    }
     void OnCollisionEnter(Collision colidiu)
     {   
         
