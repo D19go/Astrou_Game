@@ -8,16 +8,17 @@ public class Habilidades : MonoBehaviour
     private bool Skill1 = true;
     private bool Skill2 = true;
     private bool Skill3 = true;
-    public GameObject  LancaChamas;
-    public GameObject  TpOBJ;
+    [SerializeField] private GameObject  escudo;
+    [SerializeField] private float escudoLIFE = 10;
+    [SerializeField] private GameObject  TpOBJ;
     private bool LancaTP = false;
-    public GameObject  portal;
-    public GameObject  SaidaTP;
+    [SerializeField] private GameObject  portal;
+    [SerializeField] private GameObject  SaidaTP;
     private Animator anim;
-    public int Forca = 5;
+    [SerializeField] private int Forca = 5;
     Camera mainCamera;
     private CharacterController controller;
-    public float jumpSpeed = 8.0f; // Velocidade de salto adicionada
+    [SerializeField] private float jumpSpeed = 8.0f; // Velocidade de salto adicionada
     private Vector3 moveDirection = Vector3.zero;
         
     public Camera playerCamera;
@@ -41,9 +42,12 @@ public class Habilidades : MonoBehaviour
         }
 
         if(Input.GetKeyDown(KeyCode.F) && Skill2){
-            //Lança Chamas
-            LancaChamas.SetActive(true);
+            //escudo
+            escudo.SetActive(true);
             StartCoroutine(timeSkill2());
+            
+
+
         }
 
         if(Input.GetKeyDown(KeyCode.E) ){
@@ -86,8 +90,8 @@ public class Habilidades : MonoBehaviour
     IEnumerator timeSkill2(){
         Skill2 = false;
         yield return new WaitForSeconds(5f);
+        escudo.SetActive(false);    
         Skill2 = true;
-        LancaChamas.SetActive(false);
     }
 
     IEnumerator timeSkill3(){

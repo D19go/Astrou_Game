@@ -19,34 +19,33 @@ public class nhao : MonoBehaviour
 
     void Update()
     {
-        
-        if(!CanhaoPronto)
+        if (!CanhaoPronto)
             return;
 
-        
-        
         if (Input.GetMouseButton(0))
         {
             CriarBolaELancar();
-       
         }
         if (Input.GetMouseButtonDown(1))
         {
             CriarBolaForteELancar();
-          
         }
     }
 
-    
     void CriarBolaELancar()
     {
         GameObject nova_bola = Instantiate(bola, transform.position, Quaternion.identity);
 
         // Obter a direção olhando para o ponto em que a câmera está apontando
         Vector3 direcao = mainCamera.transform.forward;
-    
+
+        // Rotacionar a bola para que ela aponte para a direção correta
+        Quaternion rotacao = Quaternion.LookRotation(direcao);
+        nova_bola.transform.rotation = rotacao * Quaternion.Euler(90, 0, 0);
+
         nova_bola.GetComponent<Rigidbody>().AddForce(direcao * Forca); // Ajuste a força conforme necessário
     }
+
     void CriarBolaForteELancar()
     {
         GameObject nova_bola = Instantiate(bolaForte, transform.position, Quaternion.identity);
@@ -54,12 +53,15 @@ public class nhao : MonoBehaviour
         // Obter a direção olhando para o ponto em que a câmera está apontando
         Vector3 direcao = mainCamera.transform.forward;
 
+        // Rotacionar a bola para que ela aponte para a direção correta
+        Quaternion rotacao = Quaternion.LookRotation(direcao);
+        nova_bola.transform.rotation = rotacao * Quaternion.Euler(90, 0, 0);
+
         nova_bola.GetComponent<Rigidbody>().AddForce(direcao * Forca); // Ajuste a força conforme necessário
     }
 
-    public void M1Concluida(bool ok){
+    public void M1Concluida(bool ok)
+    {
         CanhaoPronto = true;
     }
-
-
 }
