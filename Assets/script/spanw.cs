@@ -30,7 +30,7 @@ public class spanw : MonoBehaviour
             return;
         }
 
-        if (total == 9)  // Alterado para gerar 9 inimigos no total
+        if (total >= 9)  // Alterado para gerar 9 inimigos no total
         {
             // timeSpanw();
             for (int i = 0; i < 3; i++)

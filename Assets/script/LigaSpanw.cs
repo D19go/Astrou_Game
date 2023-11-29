@@ -14,7 +14,7 @@ public class LigaSpanw : MonoBehaviour
     }
 
     public void chamas(int i){
-        Debug.Log("tomou");
+        Debug.Log("tomou2");
         vida -= i;
         if(vida <= 0){
             Spawner.GetComponent<spanw>().Quantos(menos1);

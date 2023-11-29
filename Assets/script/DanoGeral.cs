@@ -12,27 +12,27 @@ public class DanoGeral : MonoBehaviour
         
         if(colidiu.gameObject.tag == "Enemy"){
             colidiu.gameObject.GetComponent<LigaSpanw>().TomaToma2(dano);
-             Destroy(gameObject);
+            Destroy(gameObject);
         
         }   
         // if(colidiu.gameObject.tag == "EnemyRed"){
         //     colidiu.gameObject.GetComponent<LigaSpanw>().TomaToma2(dano);
-        //      Destroy(gameObject);
+        //     Destroy(gameObject);
 
         // }
         // if(colidiu.gameObject.tag == "EnemyGreen"){
         //     colidiu.gameObject.GetComponent<LigaSpanw>().TomaToma2(dano);
-        //      Destroy(gameObject);
+        //     Destroy(gameObject);
 
         // }
-        // if(colidiu.gameObject.tag == "BossEnemy"){
-        //     colidiu.gameObject.GetComponent<VidaGeral>().TomaToma(dano);
-        //      Destroy(gameObject);
+        if(colidiu.gameObject.tag == "BossEnemy"){
+            colidiu.gameObject.GetComponent<VidaGeral>().TomaToma(dano);
+            Destroy(gameObject);
 
-        // }
+        }
         // if(colidiu.gameObject.tag == "ArvoreMae"){
         //     colidiu.gameObject.GetComponent<VidaPlayer>().TomaToma(dano);
-        //      Destroy(gameObject);
+        //     Destroy(gameObject);
 
         // }
         if(colidiu.gameObject.tag == "piso"){
@@ -40,15 +40,8 @@ public class DanoGeral : MonoBehaviour
 
         }
         if(colidiu.gameObject.tag == "TestOBJ"){
-            // Destroy(gameObject);
             Debug.Log("acertou");
         }
-        F();
-    }
-
-    IEnumerator F(){
-    
-        yield return new WaitForSeconds(3f);
         Destroy(gameObject);
     }
 
