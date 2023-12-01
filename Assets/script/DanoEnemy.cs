@@ -6,7 +6,7 @@ public class DanoEnemy : MonoBehaviour
 {
      public float dano = 10;
     // void OnTriggerEnter(Collider collide)
-    void OnCollisionStay(Collision collide)
+    void OnTriggerEnter(Collider collide)
     {   
         
         if(collide.gameObject.tag == "Player"){

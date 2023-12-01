@@ -4,15 +4,11 @@ using UnityEngine;
 
 public class CampoDetect : MonoBehaviour
 {
-    // public Animator bezoro;
-    public float velo = 5f;
+    [SerializeField] private Animator bezoro;
 
     void OnTriggerStay(Collider colisao){
         if(colisao.gameObject.tag == "Player"){
-            Vector3 Alvo = colisao.transform.position - transform.parent.position;
-            Alvo.Normalize();
-            transform.parent.position += Alvo * velo * Time.deltaTime;
-            transform.parent.LookAt(colisao.transform);
+            bezoro.SetTrigger("Stab Attack");
         }
     }
 
