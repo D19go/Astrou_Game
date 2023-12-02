@@ -10,6 +10,10 @@ public class CampoDetect : MonoBehaviour
         if(colisao.gameObject.tag == "Player"){
             bezoro.SetTrigger("Stab Attack");
         }
+
+        if(colisao.gameObject.tag == "ArvoreMae"){
+            bezoro.SetTrigger("Stab Attack");
+        }
     }
 
     
