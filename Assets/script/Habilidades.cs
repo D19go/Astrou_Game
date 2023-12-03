@@ -41,7 +41,7 @@ public class Habilidades : MonoBehaviour
             StartCoroutine(timeSkill());
         }
 
-        if(Input.GetKeyDown(KeyCode.F) && Skill2){
+        if(Input.GetKeyDown(KeyCode.Q) && Skill2){
             //escudo
             escudo.SetActive(true);
             StartCoroutine(timeSkill2());
@@ -53,29 +53,23 @@ public class Habilidades : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.E) ){
             //Teleporte
             if(!LancaTP && Skill3){
-                // Obter a direção olhando para o ponto em que a câmera está apontando
                 Vector3 direcao = playerCamera.transform.forward;
-                // Configurar a posição desejada para a bola
                 TpOBJ.transform.position = SaidaTP.transform.position;
                 TpOBJ.GetComponent<Rigidbody>().isKinematic = false;
                 TpOBJ.GetComponent<MeshRenderer>().enabled = true;
-                // Reinicializar a velocidade para garantir que não haja influência anterior
                 TpOBJ.GetComponent<Rigidbody>().velocity = Vector3.zero;
-                // Adicionar força para lançar a bola na direção da câmera
                 TpOBJ.GetComponent<Rigidbody>().AddForce(direcao * Forca);
                 StartCoroutine(timeSkill3());
                 LancaTP = true; 
             }else if(LancaTP){
-                    // Obter a direção olhando para o ponto em que a câmera está apontando
                     Vector3 direcao = playerCamera.transform.forward;
-                    // Configurar a posição desejada para a bola
                     portal.transform.position = gameObject.transform.position;
                     LancaTP = false;
                 }
           
         }
 
-        if(Input.GetKeyDown(KeyCode.Q)){
+        if(Input.GetKeyDown(KeyCode.F)){
          
 
         }

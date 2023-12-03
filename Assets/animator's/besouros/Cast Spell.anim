@@ -61710,7 +61710,7 @@ AnimationClip:
   - time: 0.3
     functionName: atk
     data: 
-    objectReferenceParameter: {fileID: 9100000, guid: af15794722803914b830271a113b4a6d, type: 2}
+    objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 1
     messageOptions: 0
