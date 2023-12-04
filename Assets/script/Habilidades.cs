@@ -9,7 +9,7 @@ public class Habilidades : MonoBehaviour
     private bool Skill2 = true;
     private bool Skill3 = true;
     [SerializeField] private GameObject  escudo;
-    [SerializeField] private float escudoLIFE = 10;
+    // [SerializeField] private float escudoLIFE = 10;
     [SerializeField] private GameObject  TpOBJ;
     private bool LancaTP = false;
     [SerializeField] private GameObject  portal;
@@ -20,6 +20,7 @@ public class Habilidades : MonoBehaviour
     private CharacterController controller;
     [SerializeField] private float jumpSpeed = 8.0f; // Velocidade de salto adicionada
     private Vector3 moveDirection = Vector3.zero;
+    bool sim = true;
         
     public Camera playerCamera;
 
@@ -45,8 +46,9 @@ public class Habilidades : MonoBehaviour
             //escudo
             escudo.SetActive(true);
             StartCoroutine(timeSkill2());
-            
-
+            GetComponent<VidaPlayer>().EscAtivo(sim);
+            // sim = false
+            sim =! sim;
 
         }
 
@@ -86,6 +88,10 @@ public class Habilidades : MonoBehaviour
         yield return new WaitForSeconds(5f);
         escudo.SetActive(false);    
         Skill2 = true;
+        GetComponent<VidaPlayer>().EscAtivo(sim);
+        // sim = true
+        sim =! sim;
+
     }
 
     IEnumerator timeSkill3(){

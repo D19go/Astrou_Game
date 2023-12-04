@@ -49,14 +49,11 @@ public class MissoesP1 : MonoBehaviour
             textoTela.text = "<b>Proteja a Árvore</b>\nWaves "+Waves_Total+"/"+Waves_objetivo;
             if(Waves_Total >= Waves_objetivo){
                 spanwEnemy.SetActive(false);
-                Waves_Total =+ 1;
-                if(Waves_Total == 7){
-                    textoTela.text = "<b>PARABÉNS VOCÊ CONSEGUIU</b>";
-                }
+                textoTela.text = "<b>PARABÉNS VOCÊ CONSEGUIU</b>\nMate a ultima wave";
             }
 
         }
-    }
+    }   
 
     public void pegaPedras(){
         Pedras_pegas += 1;

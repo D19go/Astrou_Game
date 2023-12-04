@@ -8,8 +8,10 @@ public class nhao : MonoBehaviour
     public GameObject bolaForte;
     public bool CanhaoPronto = false;
     public int Forca = 15000000;
+    bool CamAtual = true;
 
-    Camera mainCamera;
+    [SerializeField] private Camera mainCamera;
+    [SerializeField] private Camera mainCamera2;
 
     // Variáveis para controle de disparos
     public float timeBetweenShotsMouse0 = 0.5f;  // Ajuste o tempo entre os disparos para o botão do mouse 0
@@ -20,7 +22,7 @@ public class nhao : MonoBehaviour
     {
         CanhaoPronto = false;
         mainCamera = Camera.main; // Obtém a câmera principal
-
+        // mainCamera2 = Camera.main;
         // Inicializar contadores de tempo
         timeSinceLastShotMouse0 = 0f;
         timeSinceLastShotMouse1 = 0f;
@@ -49,31 +51,47 @@ public class nhao : MonoBehaviour
     }
 
     void CriarBolaELancar()
-    {
-        GameObject nova_bola = Instantiate(bola, transform.position, Quaternion.identity);
+    {   
+        if(CamAtual){ 
+            GameObject nova_bola = Instantiate(bola, transform.position, Quaternion.identity);
+            // Obter a direção olhando para o ponto em que a câmera está apontando
+            Vector3 direcao = mainCamera.transform.forward;
+            // Rotacionar a bola para que ela aponte para a direção correta
+            Quaternion rotacao = Quaternion.LookRotation(direcao);
+            nova_bola.transform.rotation = rotacao * Quaternion.Euler(90, 0, 0);
+            nova_bola.GetComponent<Rigidbody>().AddForce(direcao * Forca); // Ajuste a força conforme necessário
+        }else{
+            GameObject nova_bola = Instantiate(bola, transform.position, Quaternion.identity);
+            // Obter a direção olhando para o ponto em que a câmera está apontando
+            Vector3 direcao = mainCamera2.transform.forward;
+            // Rotacionar a bola para que ela aponte para a direção correta
+            Quaternion rotacao = Quaternion.LookRotation(direcao);
+            nova_bola.transform.rotation = rotacao * Quaternion.Euler(90, 0, 0);
+            nova_bola.GetComponent<Rigidbody>().AddForce(direcao * Forca); // Ajuste a força conforme necessário
+        }
 
-        // Obter a direção olhando para o ponto em que a câmera está apontando
-        Vector3 direcao = mainCamera.transform.forward;
 
-        // Rotacionar a bola para que ela aponte para a direção correta
-        Quaternion rotacao = Quaternion.LookRotation(direcao);
-        nova_bola.transform.rotation = rotacao * Quaternion.Euler(90, 0, 0);
-
-        nova_bola.GetComponent<Rigidbody>().AddForce(direcao * Forca); // Ajuste a força conforme necessário
     }
 
     void CriarBolaForteELancar()
-    {
-        GameObject nova_bola = Instantiate(bolaForte, transform.position, Quaternion.identity);
-
-        // Obter a direção olhando para o ponto em que a câmera está apontando
-        Vector3 direcao = mainCamera.transform.forward;
-
-        // Rotacionar a bola para que ela aponte para a direção correta
-        Quaternion rotacao = Quaternion.LookRotation(direcao);
-        nova_bola.transform.rotation = rotacao * Quaternion.Euler(90, 0, 0);
-
-        nova_bola.GetComponent<Rigidbody>().AddForce(direcao * Forca); // Ajuste a força conforme necessário
+    {   
+        if(CamAtual){
+            GameObject nova_bola = Instantiate(bolaForte, transform.position, Quaternion.identity);
+            // Obter a direção olhando para o ponto em que a câmera está apontando
+            Vector3 direcao = mainCamera.transform.forward;
+            // Rotacionar a bola para que ela aponte para a direção correta
+            Quaternion rotacao = Quaternion.LookRotation(direcao);
+            nova_bola.transform.rotation = rotacao * Quaternion.Euler(90, 0, 0);
+            nova_bola.GetComponent<Rigidbody>().AddForce(direcao * Forca); // Ajuste a força conforme necessário
+        }else{
+            GameObject nova_bola = Instantiate(bolaForte, transform.position, Quaternion.identity);
+            // Obter a direção olhando para o ponto em que a câmera está apontando
+            Vector3 direcao = mainCamera2.transform.forward;
+            // Rotacionar a bola para que ela aponte para a direção correta
+            Quaternion rotacao = Quaternion.LookRotation(direcao);
+            nova_bola.transform.rotation = rotacao * Quaternion.Euler(90, 0, 0);
+            nova_bola.GetComponent<Rigidbody>().AddForce(direcao * Forca); // Ajuste a força conforme necessário
+        }
     }
 
     public void M0Concluida(bool ok)
@@ -84,5 +102,9 @@ public class nhao : MonoBehaviour
     public void M1Concluida(bool ok)
     {
         CanhaoPronto = true;
+    }
+
+    public void CamMain(bool cams){
+        CamAtual = cams;
     }
 }

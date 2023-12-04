@@ -8,11 +8,11 @@ public class CampoDetectboss : MonoBehaviour
 
     void OnTriggerStay(Collider colisao){
         if(colisao.gameObject.tag == "Player"){
-            bezoro.SetTrigger("Smash Attack");
+            bezoro.SetTrigger("bate");
         }
 
         if(colisao.gameObject.tag == "ArvoreMae"){
-            bezoro.SetTrigger("Smash Attack");
+            bezoro.SetTrigger("bate");
         }
     }
 
