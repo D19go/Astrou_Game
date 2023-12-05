@@ -22,8 +22,6 @@ public class nhao : MonoBehaviour
     {
         CanhaoPronto = false;
         mainCamera = Camera.main; // Obtém a câmera principal
-        // mainCamera2 = Camera.main;
-        // Inicializar contadores de tempo
         timeSinceLastShotMouse0 = 0f;
         timeSinceLastShotMouse1 = 0f;
     }

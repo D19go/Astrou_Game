@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class FocoPlayer : MonoBehaviour
@@ -28,6 +27,9 @@ public class FocoPlayer : MonoBehaviour
                 {
                     navMesh.speed = 0;
                 }
+
+                // Ajuste para alinhar o objeto pai com o jogador
+                transform.LookAt(player.transform);
             }
             else
             {

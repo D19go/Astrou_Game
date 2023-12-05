@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using Cinemachine;
+using Unity.Services.Lobbies.Models;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -15,9 +16,9 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject cam1p;
     [SerializeField] private GameObject cam3p;
     [SerializeField] private GameObject canhao;
+    [SerializeField] private GameObject Hplayer;
 
     bool cams = true;
-    bool camsAct = true;
 
     // public static int porcentagem = 0;
 
@@ -46,16 +47,17 @@ public class GameManager : MonoBehaviour
         // }
         if(Input.GetKeyDown(KeyCode.O)){
            if (cams){
-            // Desativar a câmera em terceira pessoa e o segundo display
                 cam3p.SetActive(false);
                 cam1p.SetActive(true);        
                 cams = !cams;
                 canhao.GetComponent<nhao>().CamMain(cams);
+                Hplayer.GetComponent<Habilidades>().camTrade(cams);
             }else{
                 cam3p.SetActive(true);
                 cam1p.SetActive(false);  
                 cams =! cams; 
                 canhao.GetComponent<nhao>().CamMain(cams);
+                Hplayer.GetComponent<Habilidades>().camTrade(cams);
             }
 
         }
