@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using NUnit.Framework.Constraints;
 using UnityEngine;
 
 public class nhao : MonoBehaviour
@@ -7,7 +8,7 @@ public class nhao : MonoBehaviour
     public GameObject bola;
     public GameObject bolaForte;
     public bool CanhaoPronto = false;
-    public int Forca = 15000000;
+    public int Forca = 150000;
     bool CamAtual = true;
 
     [SerializeField] private Camera mainCamera;
