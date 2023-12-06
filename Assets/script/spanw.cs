@@ -53,14 +53,14 @@ public class spanw : MonoBehaviour
             canvas.GetComponent<MissoesP1>().Wave();
             // spawnNewMob();
         }
-        if(total >= 9 && Wave>= 3){
+        /*if(total >= 9 && Wave>= 3){
 
             for(int i = 0; i < 3; i++){
                 SpawnEnemy(inimigoV2, i);
                 SpawnEnemy(inimigo2V2, i);
                 SpawnEnemy(inimigo3V2, i);
             }
-        }
+        }*/
         
         total = 0;
         // if(Wave == 3){
