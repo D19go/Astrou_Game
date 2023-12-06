@@ -42,13 +42,27 @@ public class spanw : MonoBehaviour
                 SpawnEnemy(inimigo, i);
                 SpawnEnemy(inimigo2, i);
                 SpawnEnemy(inimigo3, i);
+                // SpawnEnemy(inimigoV2, i);
+                // SpawnEnemy(inimigo2V2, i);
+                // SpawnEnemy(inimigo3V2, i);
             }
+           
+
             Wave += 1;
-            total = 0;
+           
             canvas.GetComponent<MissoesP1>().Wave();
             // spawnNewMob();
         }
+        if(total >= 9 && Wave>= 3){
+
+            for(int i = 0; i < 3; i++){
+                SpawnEnemy(inimigoV2, i);
+                SpawnEnemy(inimigo2V2, i);
+                SpawnEnemy(inimigo3V2, i);
+            }
+        }
         
+        total = 0;
         // if(Wave == 3){
         //     CriarBoss();
         // }
@@ -77,26 +91,25 @@ public class spanw : MonoBehaviour
             newEnemy.GetComponent<Rigidbody>().AddForce(Vector3.up * 2000);
         }
 
-        if(total > 9 && Wave > 4){
-            GameObject newEnemy3v2 = Instantiate(inimigo3V2, transform.position, Quaternion.identity);
-            GameObject newEnemy2v2 = Instantiate(inimigo2V2, transform.position, Quaternion.identity);
-            GameObject newEnemyv2 = Instantiate(inimigoV2, transform.position, Quaternion.identity);
-
-            // Ajuste as coordenadas de deslocamento
-            float offsetX = Random.Range(20f, 980f); // Altere conforme necessário
-            float offsetZ = Random.Range(20f, 980f); // Altere conforme necessário
-
-            newEnemyv2.transform.position = new Vector3(offsetX, 11, offsetZ);
-            newEnemy2v2.transform.position = new Vector3(offsetX, 11, offsetZ);
-            newEnemy3v2.transform.position = new Vector3(offsetX, 11, offsetZ);
-
-            // Adicione a força
-            newEnemyv2.GetComponent<Rigidbody>().AddForce(Vector3.up * 200000);
-            newEnemy2v2.GetComponent<Rigidbody>().AddForce(Vector3.up * 200000);
-            newEnemy3v2.GetComponent<Rigidbody>().AddForce(Vector3.up * 200000);
-        }
+        
     }
 
+    void SpawnEnemy2(GameObject enemyPrefab2, int positionIndex){
+
+        if(total > 9){
+                GameObject newEnemy = Instantiate(enemyPrefab2, transform.position, Quaternion.identity);
+                
+
+                // Ajuste as coordenadas de deslocamento
+                float offsetX = Random.Range(20f, 980f); // Altere conforme necessário
+                float offsetZ = Random.Range(20f, 980f); // Altere conforme necessário
+
+                newEnemy.transform.position = new Vector3(offsetX, 11, offsetZ);
+
+                // Adicione a força
+                newEnemy.GetComponent<Rigidbody>().AddForce(Vector3.up * 200);
+            }
+    }
     // IEnumerator timeSpanw(){
     //     yield return new WaitForSeconds(1f);
     //     if(total >= 9){

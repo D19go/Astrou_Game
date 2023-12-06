@@ -26,7 +26,6 @@ public class ATKbomb : MonoBehaviour
             // Verificar se o raio atingiu um objeto com a tag "Inimigo"
             if (hit.collider.CompareTag("Player"))
             {
-                Debug.Log("ray ok");
                 bomber.enabled = false;
                 StartCoroutine(cabooom());
             }
