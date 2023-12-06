@@ -78,16 +78,22 @@ public class spanw : MonoBehaviour
         }
 
         if(total > 9 && Wave > 4){
-            GameObject newEnemy = Instantiate(enemyPrefab, transform.position, Quaternion.identity);
+            GameObject newEnemy3v2 = Instantiate(inimigo3V2, transform.position, Quaternion.identity);
+            GameObject newEnemy2v2 = Instantiate(inimigo2V2, transform.position, Quaternion.identity);
+            GameObject newEnemyv2 = Instantiate(inimigoV2, transform.position, Quaternion.identity);
 
             // Ajuste as coordenadas de deslocamento
             float offsetX = Random.Range(20f, 980f); // Altere conforme necessário
             float offsetZ = Random.Range(20f, 980f); // Altere conforme necessário
 
-            newEnemy.transform.position = new Vector3(offsetX, 11, offsetZ);
+            newEnemyv2.transform.position = new Vector3(offsetX, 11, offsetZ);
+            newEnemy2v2.transform.position = new Vector3(offsetX, 11, offsetZ);
+            newEnemy3v2.transform.position = new Vector3(offsetX, 11, offsetZ);
 
             // Adicione a força
-            newEnemy.GetComponent<Rigidbody>().AddForce(Vector3.up * 2000);
+            newEnemyv2.GetComponent<Rigidbody>().AddForce(Vector3.up * 200000);
+            newEnemy2v2.GetComponent<Rigidbody>().AddForce(Vector3.up * 200000);
+            newEnemy3v2.GetComponent<Rigidbody>().AddForce(Vector3.up * 200000);
         }
     }
 
@@ -110,7 +116,7 @@ public class spanw : MonoBehaviour
             Boss1.SetActive(true);
 
         }
-        if(Wave == 4){
+        if(Wave == 5){
             Boss2.SetActive(true);
 
         }

@@ -34,7 +34,7 @@ public class AtkRange : MonoBehaviour
             PlayerAlvo = (alvo.transform.position - transform.position).normalized;
             Quaternion rotacao = Quaternion.LookRotation(PlayerAlvo);
             dardo_.transform.rotation = rotacao * Quaternion.Euler(90, 0, 0);
-            dardo_.GetComponent<Rigidbody>().AddForce(PlayerAlvo * Forca);
+            dardo_.GetComponent<Rigidbody>().AddForce(PlayerAlvo * Forca * Time.deltaTime);
         }
     }
 
