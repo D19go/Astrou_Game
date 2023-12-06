@@ -5,7 +5,12 @@ using UnityEngine;
 public class ATKbomb : MonoBehaviour
 {
 
+    [SerializeField] private UnityEngine.AI.NavMeshAgent bomber;
+    [SerializeField] private GameObject particulas;
     [SerializeField] private float raycastDistance = 50f;
+    [SerializeField] private Rigidbody rb;
+    [SerializeField] private int seg;
+    [SerializeField] private SkinnedMeshRenderer mesha;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,13 +26,17 @@ public class ATKbomb : MonoBehaviour
             // Verificar se o raio atingiu um objeto com a tag "Inimigo"
             if (hit.collider.CompareTag("Player"))
             {
-                
+                Debug.Log("ray ok");
+                bomber.enabled = false;
+                StartCoroutine(cabooom());
             }
-            /*else
-            {
-                // Lógica para lidar com outras colisões detectadas pelo raycast
-                Debug.Log("Colisão detectada!");
-            }*/
         }
+    }
+
+    IEnumerator cabooom(){
+        particulas.SetActive(true);
+        mesha.enabled = false;
+        yield return new WaitForSeconds(seg);
+        Destroy(gameObject);
     }
 }
