@@ -1,0 +1,277 @@
+[33mcommit 77b1571cef15ab26eb31d2914e1588a39ce20d03[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m
+Author: D19go <diogo.s.costa19@gmail.com>
+Date:   Thu Dec 7 19:32:38 2023 -0300
+
+    g
+
+[33mcommit e2006ac22138aec1b492f4e2ab41b21a423dae2f[m
+Merge: cefbeb2 8a5a3c3
+Author: D19go <diogo.s.costa19@gmail.com>
+Date:   Thu Dec 7 19:32:22 2023 -0300
+
+    arrumei
+
+[33mcommit cefbeb281dfb3dc646274cb918e7f82c6cbea518[m
+Author: D19go <diogo.s.costa19@gmail.com>
+Date:   Thu Dec 7 18:31:44 2023 -0300
+
+    att
+
+[33mcommit 8a5a3c30d2b7d94be9dcdd1be10d5f6d137cd1e5[m
+Author: D19go <94071152+D19go@users.noreply.github.com>
+Date:   Thu Dec 7 16:31:33 2023 -0300
+
+    só importei algumas coisa
+
+[33mcommit fa2ce0d22b35418a410bb13702a7fb3d2acb3f3e[m
+Author: D19go <94071152+D19go@users.noreply.github.com>
+Date:   Wed Dec 6 17:24:11 2023 -0300
+
+    exploção
+
+[33mcommit 7f7e7d6be1386b04de2ddf6c4b4cdb92ac9e526a[m
+Author: D19go <94071152+D19go@users.noreply.github.com>
+Date:   Wed Dec 6 15:35:49 2023 -0300
+
+    SPANW OK
+
+[33mcommit 3b5b48395bd916f911f00867e8e426070f89debc[m
+Author: D19go <94071152+D19go@users.noreply.github.com>
+Date:   Wed Dec 6 14:47:25 2023 -0300
+
+    bomber feito, dano x2
+
+[33mcommit 03f13c1015a194d5f26a5dc2f0c2b8e65d4a6f33[m
+Author: D19go <diogo.s.costa19@gmail.com>
+Date:   Wed Dec 6 00:17:03 2023 -0300
+
+    tem que configurar o bomber
+
+[33mcommit dec2ae6e81939d01390b4488d2a79d360fc58f1e[m
+Author: D19go <diogo.s.costa19@gmail.com>
+Date:   Tue Dec 5 23:15:37 2023 -0300
+
+    jumper pronto e deltatime no jogo
+
+[33mcommit 5db1b76edc964c0c6f76676c43b3f6f25831b924[m
+Author: D19go <94071152+D19go@users.noreply.github.com>
+Date:   Tue Dec 5 16:59:24 2023 -0300
+
+    está pulando e dando dano
+
+[33mcommit 893a66b0f7487960ea0ad6938f54dc3dd41adf59[m
+Author: D19go <diogo.s.costa19@gmail.com>
+Date:   Tue Dec 5 00:21:27 2023 -0300
+
+    novos inimigos falta configurar
+
+[33mcommit f670e0de6a7b93581664ee7eb4d22dd03a0d4cf0[m
+Author: D19go <diogo.s.costa19@gmail.com>
+Date:   Mon Dec 4 12:39:27 2023 -0300
+
+    câmeras em 3p e 1p, canhão ok p/ duas falta o tp
+
+[33mcommit f63b1ec3f897d046918c6144264332fca29a27cd[m
+Author: D19go <diogo.s.costa19@gmail.com>
+Date:   Sun Dec 3 02:35:12 2023 -0300
+
+    boss está atirando, mas a precisão ta meio ruim
+
+[33mcommit 482a873ecbc82dfed34e35777ac0f17ed156c70b[m
+Author: D19go <diogo.s.costa19@gmail.com>
+Date:   Sat Dec 2 01:36:22 2023 -0300
+
+    falta o atkRange funcionar
+
+[33mcommit 5805970dd3545ad6c22fee7482d5e467eaf6c1c3[m
+Author: D19go <diogo.s.costa19@gmail.com>
+Date:   Fri Dec 1 12:29:03 2023 -0300
+
+    o combate dos besouros ok, falta fazer para todos
+
+[33mcommit 58e5c9687d2b103f4b62bae75bd3e0228f0f0d8a[m
+Author: D19go <diogo.s.costa19@gmail.com>
+Date:   Wed Nov 29 13:21:33 2023 -0300
+
+    mudei nada
+
+[33mcommit 9839e4ded0861b5973fffdd5b4daadab9a253c8c[m
+Author: D19go <diogo.s.costa19@gmail.com>
+Date:   Wed Nov 29 00:19:11 2023 -0300
+
+    disparo com delay
+
+[33mcommit 2ebb8fd1705fec55816753953e043b5fa39be255[m
+Author: D19go <diogo.s.costa19@gmail.com>
+Date:   Mon Nov 27 22:20:43 2023 -0300
+
+    escudo quase pronto
+
+[33mcommit 102e40102af875a465f7db24789394bc8dd431ef[m
+Author: D19go <diogo.s.costa19@gmail.com>
+Date:   Wed Nov 22 01:16:42 2023 -0300
+
+    jogo pronto para apresentar
+
+[33mcommit 07afdea0b63e83c9ccdb722b39c4047551a92b2b[m
+Author: D19go <94071152+D19go@users.noreply.github.com>
+Date:   Tue Nov 21 17:34:57 2023 -0300
+
+    p
+
+[33mcommit b91d1be189afd0325d2e65d692cb367950bbf77c[m
+Author: D19go <diogo.s.costa19@gmail.com>
+Date:   Mon Nov 20 20:55:04 2023 -0300
+
+    tirei todo o multiplayer e tentei colocar a moto
+
+[33mcommit a574ddb4281c49da9a8e826160616068ffa60a46[m
+Author: D19go <diogo.s.costa19@gmail.com>
+Date:   Thu Nov 16 00:41:54 2023 -0300
+
+    multiplayer Quase pronto
+
+[33mcommit a7787673234ff9479a6b8c48b1588275911dddf1[m
+Merge: b0f945e 67df2a0
+Author: D19go <diogo.s.costa19@gmail.com>
+Date:   Tue Nov 14 19:24:08 2023 -0300
+
+    foi
+
+[33mcommit b0f945e35b03d7d5cb79ff8d57bf3880c4e18a72[m
+Author: D19go <diogo.s.costa19@gmail.com>
+Date:   Tue Nov 14 18:46:18 2023 -0300
+
+    realGame
+
+[33mcommit 67df2a0008806e355dca5137cd2b517edcdd6099[m
+Author: D19go <94071152+D19go@users.noreply.github.com>
+Date:   Mon Nov 13 17:27:53 2023 -0300
+
+    corrigir tudo
+
+[33mcommit af91c83d5cae9d83321203e6db6cff7ab6c11c09[m
+Author: D19go <94071152+D19go@users.noreply.github.com>
+Date:   Mon Nov 13 16:17:03 2023 -0300
+
+    f
+
+[33mcommit fe05eee3213f295a8aae2f893afb9a8ed2cb6d13[m
+Author: D19go <94071152+D19go@users.noreply.github.com>
+Date:   Mon Nov 13 15:04:52 2023 -0300
+
+    PRONTO
+
+[33mcommit 002e9110f6bbc5c70f8aa1fa642698dc5fb61059[m
+Author: D19go <diogo.s.costa19@gmail.com>
+Date:   Sun Nov 12 21:37:23 2023 -0300
+
+    jogo pronto só fazer os dialogos
+
+[33mcommit 2af919b2d1e68747832121576503ed32d094300b[m
+Author: D19go <diogo.s.costa19@gmail.com>
+Date:   Sun Nov 12 19:55:51 2023 -0300
+
+    falta alguns ajustes na cidade, de resto tudo ok
+
+[33mcommit 3803249a8e0d586eb1f1636895fc8224575b96d2[m
+Author: D19go <diogo.s.costa19@gmail.com>
+Date:   Sun Nov 12 02:20:17 2023 -0300
+
+    Planeta1 feito, falta a cidade
+
+[33mcommit a8020ba5995e00f71c10a7d9ae3f2a5c6c11494f[m
+Author: D19go <diogo.s.costa19@gmail.com>
+Date:   Sun Nov 12 02:19:46 2023 -0300
+
+    Missão do p1 pronta! Falta a cidade
+
+[33mcommit 263fd92e24f37d9720c0755f80fb11b7bd030fdc[m
+Author: D19go <diogo.s.costa19@gmail.com>
+Date:   Sat Nov 11 19:12:25 2023 -0300
+
+    Missões do p1 prontas e do p0 quase
+
+[33mcommit 63f9361160969d5d0c44ea3d975b720c27b45f6c[m
+Author: D19go <94071152+D19go@users.noreply.github.com>
+Date:   Fri Nov 10 17:45:02 2023 -0300
+
+    arrumar a camera da nave no espaço, missoes
+
+[33mcommit e59a42c2ceab74629e03262a3999124684605e45[m
+Author: D19go <diogo.s.costa19@gmail.com>
+Date:   Thu Nov 9 23:27:23 2023 -0300
+
+    Terminar as missoes, olhar o carro e a camera nave
+
+[33mcommit 701326435ad7526c9728948e17cbc9355231a659[m
+Author: D19go <94071152+D19go@users.noreply.github.com>
+Date:   Thu Nov 9 17:32:23 2023 -0300
+
+    arrumar o navMesh
+
+[33mcommit c97f88ac08cd7332e797e03b34e85a3583029f12[m
+Author: D19go <diogo.s.costa19@gmail.com>
+Date:   Wed Nov 8 23:47:58 2023 -0300
+
+    inimigos "arrumados" e carro desvira
+
+[33mcommit 0b7a1a8e03493713331740947a462345c4ac14c5[m
+Author: D19go <diogo.s.costa19@gmail.com>
+Date:   Wed Nov 8 23:38:13 2023 -0300
+
+    inimigos spawnam bosses funcionando
+
+[33mcommit 43186fe6a8af2044ce1c4ae6b5b7c8b8060a662b[m
+Author: D19go <94071152+D19go@users.noreply.github.com>
+Date:   Wed Nov 8 18:37:21 2023 -0300
+
+    canhao arrumar
+
+[33mcommit 0bd755e352bb17e1e54c2490389aefffecaebd75[m
+Author: D19go <94071152+D19go@users.noreply.github.com>
+Date:   Wed Nov 8 18:36:35 2023 -0300
+
+    canhao arrumar
+
+[33mcommit 9ca5c3bcffe56bfdd48ec6bee36541061151fc5f[m
+Author: D19go <diogo.s.costa19@gmail.com>
+Date:   Wed Nov 8 06:02:27 2023 -0300
+
+    disparo e dano Funcionando
+
+[33mcommit f7c1ad28a8f38393cd8e265a005bd4e726df7ee6[m
+Author: D19go <94071152+D19go@users.noreply.github.com>
+Date:   Tue Nov 7 17:33:58 2023 -0300
+
+    spanw Pronto
+
+[33mcommit 2d4af0693bf93994d1a905b3119c5a67505b3a22[m
+Author: D19go <94071152+D19go@users.noreply.github.com>
+Date:   Tue Nov 7 16:44:00 2023 -0300
+
+    Mapa pronto
+
+[33mcommit 5c0a80e28dd28cccca7fb9c344ced60cf0027ea9[m
+Author: D19go <94071152+D19go@users.noreply.github.com>
+Date:   Mon Nov 6 17:49:07 2023 -0300
+
+    alguns ajustes
+
+[33mcommit e95dbc3df70b8c68ee41ab6388482e2f65be21d6[m
+Author: D19go <diogo.s.costa19@gmail.com>
+Date:   Mon Nov 6 02:35:26 2023 -0300
+
+    02:35 refazer o planeta
+
+[33mcommit 32a2dadc9073f24fd0c3e34a84766475d09facc0[m
+Author: D19go <diogo.s.costa19@gmail.com>
+Date:   Sun Nov 5 23:33:20 2023 -0300
+
+    jogo atualizado até 23:33
+
+[33mcommit 1bdea3055f230eb4f2c0cf22def0294a3ce901ff[m
+Author: D19go <diogo.s.costa19@gmail.com>
+Date:   Mon Oct 30 22:57:36 2023 -0300
+
+    atualizado

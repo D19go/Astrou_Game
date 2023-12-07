@@ -43,8 +43,6 @@ public class spanw : MonoBehaviour
                 SpawnEnemy(inimigo2, i);
                 SpawnEnemy(inimigo3, i);
                 // SpawnEnemy(inimigoV2, i);
-                // SpawnEnemy(inimigo2V2, i);
-                // SpawnEnemy(inimigo3V2, i);
             }
            
 
@@ -94,33 +92,8 @@ public class spanw : MonoBehaviour
         
     }
 
-    void SpawnEnemy2(GameObject enemyPrefab2, int positionIndex){
-
-        if(total > 9){
-                GameObject newEnemy = Instantiate(enemyPrefab2, transform.position, Quaternion.identity);
-                
-
-                // Ajuste as coordenadas de deslocamento
-                float offsetX = Random.Range(20f, 980f); // Altere conforme necessário
-                float offsetZ = Random.Range(20f, 980f); // Altere conforme necessário
-
-                newEnemy.transform.position = new Vector3(offsetX, 11, offsetZ);
-
-                // Adicione a força
-                newEnemy.GetComponent<Rigidbody>().AddForce(Vector3.up * 200);
-            }
-    }
-    // IEnumerator timeSpanw(){
-    //     yield return new WaitForSeconds(1f);
-    //     if(total >= 9){
-    //         for (int i = 0; i < 3; i++){
-    //             SpawnEnemy(inimigo, i);
-    //             SpawnEnemy(inimigo2, i);
-    //             SpawnEnemy(inimigo3, i);
-    //         }
-    //     }
-       
-    // }
+    
+  
 
     void CriarBoss()
     {   
@@ -150,8 +123,4 @@ public class spanw : MonoBehaviour
         total += menos1;
     }
 
-    void spawnNewMob()
-    {
-        // Não é mais necessário ajustar a posição do transform
-    }
 }
