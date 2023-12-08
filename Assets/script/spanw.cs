@@ -23,7 +23,7 @@ public class spanw : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        spawnNewMob();
+
     }
 
     // Update is called once per frame
