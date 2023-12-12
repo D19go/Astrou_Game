@@ -15,7 +15,7 @@ public class CanhaoSCam : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.K)){
+        if(Input.GetKeyDown(KeyCode.Space)){
             lancarBola();
         }
     }
@@ -25,7 +25,7 @@ public class CanhaoSCam : MonoBehaviour
         Vector3 direcao = transform.forward;
         Quaternion rotacao = Quaternion.LookRotation(direcao);
         nova_bola.transform.rotation = rotacao * Quaternion.Euler(90, 0, 0);
-        nova_bola.GetComponent<Rigidbody>().AddForce(direcao * Forca * Time.deltaTime); // Ajuste a força conforme necessário
+        nova_bola.GetComponent<Rigidbody>().AddForce(direcao * Forca * Time.deltaTime, ForceMode.VelocityChange); // Ajuste a força conforme necessário
         
     }
 }
