@@ -14,14 +14,19 @@ public class cAstronautThirdPersonCamera : MonoBehaviour
 
     private float currentX = 0.0f;
     private float currentY = 0f;
+    [SerializeField] private float mouseScroll = 1f;
 
     private void Start()
     {
         camTransform = transform;
+        
     }
 
     private void Update()
     {
+    
+        
+
         currentX += Input.GetAxis("Mouse X");
         currentY -= Input.GetAxis("Mouse Y"); 
 
