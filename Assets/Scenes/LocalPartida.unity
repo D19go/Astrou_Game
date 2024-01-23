@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.08979659, g: 0.084328875, b: 0.060829062, a: 1}
+  m_IndirectSpecularColor: {r: 0.089796215, g: 0.08432853, b: 0.060828857, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2593,7 +2593,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 570933013}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.34345287, y: -3e-45, z: -1e-45, w: 0.93916994}
+  m_LocalRotation: {x: -0.34345287, y: 1e-45, z: 1e-45, w: 0.93916994}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -5006,6 +5006,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7caa8b7532e80264881b8a2747059940, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cam1p: {fileID: 0}
+  cam3p: {fileID: 0}
+  canhao: {fileID: 0}
+  Hplayer: {fileID: 0}
+  menuPortatil: {fileID: 0}
 --- !u!4 &1169067134
 Transform:
   m_ObjectHideFlags: 0
@@ -8665,7 +8670,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2077823975}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.34345287, y: -0.000000039583057, z: -0.000000014475457, w: 0.93916994}
+  m_LocalRotation: {x: -0.34345287, y: 0.000000039583057, z: 0.000000014475457, w: 0.93916994}
   m_LocalPosition: {x: -13.025818, y: 22.656698, z: -41.137695}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0

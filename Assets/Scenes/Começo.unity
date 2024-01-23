@@ -577,6 +577,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afdf8571702333c469a1254fb5d7063b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  escudo: 0
   vidaT: {fileID: 424329279}
   vida: 10
 --- !u!114 &10288152
@@ -1334,6 +1335,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afdf8571702333c469a1254fb5d7063b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  escudo: 0
   vidaT: {fileID: 424329279}
   vida: 10
 --- !u!114 &40919630
@@ -2199,6 +2201,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afdf8571702333c469a1254fb5d7063b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  escudo: 0
   vidaT: {fileID: 424329279}
   vida: 10
 --- !u!114 &65284409
@@ -2473,7 +2476,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6008600372554642209, guid: b2788c42126f14248ab2fdd78705c4d0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 146.18
+      value: 148.39
       objectReference: {fileID: 0}
     - target: {fileID: 6008600372554642209, guid: b2788c42126f14248ab2fdd78705c4d0, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2481,7 +2484,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6008600372554642209, guid: b2788c42126f14248ab2fdd78705c4d0, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 271.80023
+      value: 272.08
       objectReference: {fileID: 0}
     - target: {fileID: 6008600372554642209, guid: b2788c42126f14248ab2fdd78705c4d0, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2534,7 +2537,7 @@ PrefabInstance:
     - target: {fileID: 8140329869308982937, guid: b2788c42126f14248ab2fdd78705c4d0, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: c0383fb7e63f0a04683319b0974d6828, type: 2}
+      objectReference: {fileID: 2100000, guid: 07917877d60841e4dbb11178271e4ca8, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2608,6 +2611,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afdf8571702333c469a1254fb5d7063b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  escudo: 0
   vidaT: {fileID: 424329279}
   vida: 10
 --- !u!114 &74306865
@@ -4170,111 +4174,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 914517763}
   m_SourcePrefab: {fileID: 100100000, guid: 0ee37198b24b2164fbbccfbe92fe5d35, type: 3}
---- !u!1 &121723723
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 121723724}
-  - component: {fileID: 121723727}
-  - component: {fileID: 121723726}
-  - component: {fileID: 121723725}
-  m_Layer: 0
-  m_Name: CarBody (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &121723724
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 121723723}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0.00000003774895, y: 0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.66641873, y: 1.0856227, z: -14.983399}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1513523576}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &121723725
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 121723723}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 2.958062, y: 2.1295998, z: 6.3205423}
-  m_Center: {x: -0.0006904602, y: 0.25, z: -0.30544758}
---- !u!23 &121723726
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 121723723}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 0
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 24c20333a6b79874298a79151051f9fa, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &121723727
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 121723723}
-  m_Mesh: {fileID: 4300008, guid: 76eea54e4cf71bf4dac0e3ef48ee32b7, type: 3}
 --- !u!1 &124434687 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 8b680e0f7699a254c84ed6737b7eb53d, type: 3}
@@ -6603,6 +6502,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afdf8571702333c469a1254fb5d7063b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  escudo: 0
   vidaT: {fileID: 424329279}
   vida: 10
 --- !u!1001 &189070810
@@ -7817,6 +7717,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afdf8571702333c469a1254fb5d7063b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  escudo: 0
   vidaT: {fileID: 424329279}
   vida: 10
 --- !u!114 &223974242
@@ -7893,6 +7794,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afdf8571702333c469a1254fb5d7063b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  escudo: 0
   vidaT: {fileID: 424329279}
   vida: 10
 --- !u!1001 &228652265
@@ -9159,6 +9061,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afdf8571702333c469a1254fb5d7063b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  escudo: 0
   vidaT: {fileID: 424329279}
   vida: 10
 --- !u!114 &254772910
@@ -10180,6 +10083,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afdf8571702333c469a1254fb5d7063b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  escudo: 0
   vidaT: {fileID: 424329279}
   vida: 10
 --- !u!1 &298701473
@@ -13248,6 +13152,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Car
       objectReference: {fileID: 0}
+    - target: {fileID: 8986347248440606181, guid: 40b5728c9a8fc364cbfbaadcdeb1af64, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 84fe6ecf68a340549a4935fc921a166b, type: 2}
     m_RemovedComponents:
     - {fileID: 5812044886078207924, guid: 40b5728c9a8fc364cbfbaadcdeb1af64, type: 3}
     - {fileID: 6556772005218470040, guid: 40b5728c9a8fc364cbfbaadcdeb1af64, type: 3}
@@ -13414,6 +13322,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afdf8571702333c469a1254fb5d7063b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  escudo: 0
   vidaT: {fileID: 424329279}
   vida: 10
 --- !u!1001 &397040511
@@ -19603,7 +19512,7 @@ PrefabInstance:
     - target: {fileID: 8140329869308982937, guid: b2788c42126f14248ab2fdd78705c4d0, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: c0383fb7e63f0a04683319b0974d6828, type: 2}
+      objectReference: {fileID: 2100000, guid: d733cd3fd3687bd42b3c42a68af36ebe, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -19677,6 +19586,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afdf8571702333c469a1254fb5d7063b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  escudo: 0
   vidaT: {fileID: 424329279}
   vida: 10
 --- !u!114 &597508994
@@ -19920,7 +19830,7 @@ PrefabInstance:
     - target: {fileID: 8140329869308982937, guid: b2788c42126f14248ab2fdd78705c4d0, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: c0383fb7e63f0a04683319b0974d6828, type: 2}
+      objectReference: {fileID: 2100000, guid: 1fdab8cd655c2cc4ebffdd7043f7b628, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -19994,6 +19904,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afdf8571702333c469a1254fb5d7063b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  escudo: 0
   vidaT: {fileID: 424329279}
   vida: 10
 --- !u!114 &600429536
@@ -24032,6 +23943,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afdf8571702333c469a1254fb5d7063b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  escudo: 0
   vidaT: {fileID: 424329279}
   vida: 10
 --- !u!1 &731880597 stripped
@@ -24960,6 +24872,10 @@ PrefabInstance:
       propertyPath: m_SidewaysFriction.m_ExtremumValue
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 6788405951390336228, guid: 788f99c0acce4384a91a6c213fb34068, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: d733cd3fd3687bd42b3c42a68af36ebe, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -25776,6 +25692,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7caa8b7532e80264881b8a2747059940, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cam1p: {fileID: 0}
+  cam3p: {fileID: 0}
+  canhao: {fileID: 0}
+  Hplayer: {fileID: 0}
+  menuPortatil: {fileID: 0}
 --- !u!4 &782628377
 Transform:
   m_ObjectHideFlags: 0
@@ -25946,6 +25867,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afdf8571702333c469a1254fb5d7063b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  escudo: 0
   vidaT: {fileID: 424329279}
   vida: 10
 --- !u!4 &787138822 stripped
@@ -26641,6 +26563,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afdf8571702333c469a1254fb5d7063b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  escudo: 0
   vidaT: {fileID: 424329279}
   vida: 10
 --- !u!114 &802980420
@@ -27019,6 +26942,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afdf8571702333c469a1254fb5d7063b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  escudo: 0
   vidaT: {fileID: 424329279}
   vida: 10
 --- !u!1001 &807738461
@@ -27624,7 +27548,7 @@ PrefabInstance:
     - target: {fileID: 8986347248440606181, guid: 40b5728c9a8fc364cbfbaadcdeb1af64, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 6635f2e276b1e904bb60b1e67d0853da, type: 2}
+      objectReference: {fileID: 2100000, guid: d733cd3fd3687bd42b3c42a68af36ebe, type: 2}
     m_RemovedComponents:
     - {fileID: 5812044886078207924, guid: 40b5728c9a8fc364cbfbaadcdeb1af64, type: 3}
     - {fileID: 6556772005218470040, guid: 40b5728c9a8fc364cbfbaadcdeb1af64, type: 3}
@@ -27714,6 +27638,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afdf8571702333c469a1254fb5d7063b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  escudo: 0
   vidaT: {fileID: 424329279}
   vida: 10
 --- !u!114 &819247433
@@ -28390,7 +28315,7 @@ PrefabInstance:
     - target: {fileID: 8140329869308982937, guid: b2788c42126f14248ab2fdd78705c4d0, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: c0383fb7e63f0a04683319b0974d6828, type: 2}
+      objectReference: {fileID: 2100000, guid: 1fdab8cd655c2cc4ebffdd7043f7b628, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -28464,6 +28389,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afdf8571702333c469a1254fb5d7063b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  escudo: 0
   vidaT: {fileID: 424329279}
   vida: 10
 --- !u!114 &834188151
@@ -29988,6 +29914,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afdf8571702333c469a1254fb5d7063b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  escudo: 0
   vidaT: {fileID: 424329279}
   vida: 10
 --- !u!114 &880121010
@@ -33102,7 +33029,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6008600372554642209, guid: b2788c42126f14248ab2fdd78705c4d0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 146.18
+      value: 123.4
       objectReference: {fileID: 0}
     - target: {fileID: 6008600372554642209, guid: b2788c42126f14248ab2fdd78705c4d0, type: 3}
       propertyPath: m_LocalPosition.y
@@ -33110,7 +33037,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6008600372554642209, guid: b2788c42126f14248ab2fdd78705c4d0, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 271.80023
+      value: 276.3
       objectReference: {fileID: 0}
     - target: {fileID: 6008600372554642209, guid: b2788c42126f14248ab2fdd78705c4d0, type: 3}
       propertyPath: m_LocalRotation.w
@@ -33163,7 +33090,7 @@ PrefabInstance:
     - target: {fileID: 8140329869308982937, guid: b2788c42126f14248ab2fdd78705c4d0, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: c0383fb7e63f0a04683319b0974d6828, type: 2}
+      objectReference: {fileID: 2100000, guid: 0793360b32993ba479fa3cdeb5beb5e5, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -33237,6 +33164,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afdf8571702333c469a1254fb5d7063b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  escudo: 0
   vidaT: {fileID: 424329279}
   vida: 10
 --- !u!114 &963793624
@@ -34512,7 +34440,7 @@ PrefabInstance:
     - target: {fileID: 8140329869308982937, guid: b2788c42126f14248ab2fdd78705c4d0, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: c0383fb7e63f0a04683319b0974d6828, type: 2}
+      objectReference: {fileID: 2100000, guid: 1fdab8cd655c2cc4ebffdd7043f7b628, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -34586,6 +34514,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afdf8571702333c469a1254fb5d7063b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  escudo: 0
   vidaT: {fileID: 424329279}
   vida: 10
 --- !u!114 &992948513
@@ -34822,6 +34751,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afdf8571702333c469a1254fb5d7063b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  escudo: 0
   vidaT: {fileID: 424329279}
   vida: 10
 --- !u!4 &998504101 stripped
@@ -36741,6 +36671,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afdf8571702333c469a1254fb5d7063b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  escudo: 0
   vidaT: {fileID: 424329279}
   vida: 10
 --- !u!1001 &1064243116
@@ -37591,6 +37522,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afdf8571702333c469a1254fb5d7063b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  escudo: 0
   vidaT: {fileID: 424329279}
   vida: 10
 --- !u!1001 &1091808047
@@ -38110,6 +38042,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afdf8571702333c469a1254fb5d7063b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  escudo: 0
   vidaT: {fileID: 424329279}
   vida: 10
 --- !u!114 &1095751275
@@ -39694,6 +39627,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afdf8571702333c469a1254fb5d7063b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  escudo: 0
   vidaT: {fileID: 424329279}
   vida: 10
 --- !u!1 &1135729369
@@ -40207,7 +40141,7 @@ PrefabInstance:
     - target: {fileID: 8140329869308982937, guid: b2788c42126f14248ab2fdd78705c4d0, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: c0383fb7e63f0a04683319b0974d6828, type: 2}
+      objectReference: {fileID: 2100000, guid: 0793360b32993ba479fa3cdeb5beb5e5, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -40281,6 +40215,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afdf8571702333c469a1254fb5d7063b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  escudo: 0
   vidaT: {fileID: 424329279}
   vida: 10
 --- !u!114 &1141078345
@@ -40975,6 +40910,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afdf8571702333c469a1254fb5d7063b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  escudo: 0
   vidaT: {fileID: 424329279}
   vida: 10
 --- !u!146 &1157664473
@@ -43504,6 +43440,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afdf8571702333c469a1254fb5d7063b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  escudo: 0
   vidaT: {fileID: 424329279}
   vida: 10
 --- !u!1 &1247005717 stripped
@@ -43715,6 +43652,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afdf8571702333c469a1254fb5d7063b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  escudo: 0
   vidaT: {fileID: 0}
   vida: 10
 --- !u!1 &1255290606 stripped
@@ -43791,6 +43729,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afdf8571702333c469a1254fb5d7063b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  escudo: 0
   vidaT: {fileID: 424329279}
   vida: 10
 --- !u!1001 &1259964023
@@ -45914,7 +45853,7 @@ PrefabInstance:
     - target: {fileID: 8986347248440606181, guid: 40b5728c9a8fc364cbfbaadcdeb1af64, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 6635f2e276b1e904bb60b1e67d0853da, type: 2}
+      objectReference: {fileID: 2100000, guid: 0793360b32993ba479fa3cdeb5beb5e5, type: 2}
     m_RemovedComponents:
     - {fileID: 5812044886078207924, guid: 40b5728c9a8fc364cbfbaadcdeb1af64, type: 3}
     - {fileID: 6556772005218470040, guid: 40b5728c9a8fc364cbfbaadcdeb1af64, type: 3}
@@ -46004,6 +45943,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afdf8571702333c469a1254fb5d7063b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  escudo: 0
   vidaT: {fileID: 424329279}
   vida: 10
 --- !u!114 &1332427466
@@ -47539,7 +47479,7 @@ PrefabInstance:
     - target: {fileID: 8140329869308982937, guid: b2788c42126f14248ab2fdd78705c4d0, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: c0383fb7e63f0a04683319b0974d6828, type: 2}
+      objectReference: {fileID: 2100000, guid: 1fdab8cd655c2cc4ebffdd7043f7b628, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -47638,6 +47578,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afdf8571702333c469a1254fb5d7063b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  escudo: 0
   vidaT: {fileID: 424329279}
   vida: 10
 --- !u!1001 &1382818000
@@ -48056,6 +47997,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afdf8571702333c469a1254fb5d7063b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  escudo: 0
   vidaT: {fileID: 424329279}
   vida: 10
 --- !u!146 &1390958812
@@ -51645,13 +51587,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 400008, guid: fba5e236738a7c940b3a8d031c307794, type: 3}
-      insertIndex: 1
-      addedObject: {fileID: 121723724}
-    - targetCorrespondingSourceObject: {fileID: 400008, guid: fba5e236738a7c940b3a8d031c307794, type: 3}
-      insertIndex: 2
-      addedObject: {fileID: 1519888142}
+    m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 100010, guid: fba5e236738a7c940b3a8d031c307794, type: 3}
       insertIndex: -1
@@ -51844,6 +51780,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afdf8571702333c469a1254fb5d7063b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  escudo: 0
   vidaT: {fileID: 424329279}
   vida: 10
 --- !u!114 &1513523591
@@ -52167,111 +52104,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400002, guid: 0b6fafa63b69b174584365f2641586a4, type: 3}
   m_PrefabInstance: {fileID: 1519751604}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1519888141
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1519888142}
-  - component: {fileID: 1519888145}
-  - component: {fileID: 1519888144}
-  - component: {fileID: 1519888143}
-  m_Layer: 0
-  m_Name: CarBody (2)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1519888142
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1519888141}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0.00000003774895, y: 0, z: -0, w: 1}
-  m_LocalPosition: {x: -96.000244, y: 1.0856248, z: 12.349936}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1513523576}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1519888143
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1519888141}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 2.958062, y: 2.1295998, z: 6.3205423}
-  m_Center: {x: -0.0006904602, y: 0.25, z: -0.30544758}
---- !u!23 &1519888144
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1519888141}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 0
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 24c20333a6b79874298a79151051f9fa, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &1519888145
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1519888141}
-  m_Mesh: {fileID: 4300008, guid: 76eea54e4cf71bf4dac0e3ef48ee32b7, type: 3}
 --- !u!1 &1521027367 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100002, guid: 11a57a102cdb5e642899ceab079f1938, type: 3}
@@ -53312,6 +53144,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afdf8571702333c469a1254fb5d7063b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  escudo: 0
   vidaT: {fileID: 424329279}
   vida: 10
 --- !u!114 &1546971703
@@ -54403,6 +54236,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afdf8571702333c469a1254fb5d7063b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  escudo: 0
   vidaT: {fileID: 424329279}
   vida: 10
 --- !u!114 &1567525772
@@ -58455,6 +58289,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afdf8571702333c469a1254fb5d7063b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  escudo: 0
   vidaT: {fileID: 424329279}
   vida: 10
 --- !u!1001 &1693578081
@@ -59388,6 +59223,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afdf8571702333c469a1254fb5d7063b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  escudo: 0
   vidaT: {fileID: 424329279}
   vida: 10
 --- !u!1 &1731882032 stripped
@@ -61709,6 +61545,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afdf8571702333c469a1254fb5d7063b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  escudo: 0
   vidaT: {fileID: 424329279}
   vida: 10
 --- !u!1 &1792985082 stripped
@@ -62323,6 +62160,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afdf8571702333c469a1254fb5d7063b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  escudo: 0
   vidaT: {fileID: 424329279}
   vida: 10
 --- !u!4 &1805497243 stripped
@@ -62394,6 +62232,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afdf8571702333c469a1254fb5d7063b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  escudo: 0
   vidaT: {fileID: 424329279}
   vida: 10
 --- !u!4 &1805835673 stripped
@@ -63309,6 +63148,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afdf8571702333c469a1254fb5d7063b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  escudo: 0
   vidaT: {fileID: 424329279}
   vida: 10
 --- !u!114 &1828601351
@@ -64512,6 +64352,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afdf8571702333c469a1254fb5d7063b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  escudo: 0
   vidaT: {fileID: 424329279}
   vida: 10
 --- !u!114 &1859512568
@@ -64974,6 +64815,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2300008, guid: d267fbb9e36c6e4458c9a8756d725a79, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 7485f4823a3ce3b4481b1fd9df144d41, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -65221,6 +65066,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afdf8571702333c469a1254fb5d7063b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  escudo: 0
   vidaT: {fileID: 424329279}
   vida: 10
 --- !u!1001 &1869363687
@@ -65662,6 +65508,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Car
       objectReference: {fileID: 0}
+    - target: {fileID: 8140329869308982937, guid: b2788c42126f14248ab2fdd78705c4d0, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 1fdab8cd655c2cc4ebffdd7043f7b628, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -66111,6 +65961,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afdf8571702333c469a1254fb5d7063b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  escudo: 0
   vidaT: {fileID: 424329279}
   vida: 10
 --- !u!1 &1891856387 stripped
@@ -67794,6 +67645,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afdf8571702333c469a1254fb5d7063b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  escudo: 0
   vidaT: {fileID: 424329279}
   vida: 10
 --- !u!1001 &1940041670
@@ -69244,7 +69096,7 @@ PrefabInstance:
     - target: {fileID: 8986347248440606181, guid: 40b5728c9a8fc364cbfbaadcdeb1af64, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 6635f2e276b1e904bb60b1e67d0853da, type: 2}
+      objectReference: {fileID: 2100000, guid: 07917877d60841e4dbb11178271e4ca8, type: 2}
     m_RemovedComponents:
     - {fileID: 5812044886078207924, guid: 40b5728c9a8fc364cbfbaadcdeb1af64, type: 3}
     - {fileID: 6556772005218470040, guid: 40b5728c9a8fc364cbfbaadcdeb1af64, type: 3}
@@ -69334,6 +69186,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afdf8571702333c469a1254fb5d7063b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  escudo: 0
   vidaT: {fileID: 424329279}
   vida: 10
 --- !u!114 &1980808368
@@ -72003,6 +71856,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afdf8571702333c469a1254fb5d7063b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  escudo: 0
   vidaT: {fileID: 424329279}
   vida: 10
 --- !u!1 &2045027221 stripped
@@ -74144,6 +73998,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afdf8571702333c469a1254fb5d7063b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  escudo: 0
   vidaT: {fileID: 424329279}
   vida: 10
 --- !u!1001 &2110730319

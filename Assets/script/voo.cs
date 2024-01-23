@@ -65,7 +65,7 @@ public class voo : MonoBehaviour
             Vector3 forwardDirection = transform.forward;
             rb.AddForce(forwardDirection * forcaAtual, ForceMode.Force);
         } else{
-                forcaAtual = forca;
+            forcaAtual = forca;
         }
 
         
