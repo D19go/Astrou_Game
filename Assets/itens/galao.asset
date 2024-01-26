@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 192323f4e8600e0458682bd6ce91202c, type: 3}
   m_Name: galao
   m_EditorClassIdentifier: 
-  ItemName: 
+  ItemName: "Gal\xE3o de Combustivel"
   ItemSprite: {fileID: 0}
