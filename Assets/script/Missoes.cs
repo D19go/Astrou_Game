@@ -5,19 +5,16 @@ using UnityEngine;
 
 public class Missoes : MonoBehaviour
 {
-
     public TextMeshProUGUI textoTela;
 
     bool missao_pegar_moedas = true;
     bool missaoo_dar_pulos = false;
     // bool missao_chegar_final = false;
 
-    // int moedas_pegas = 0;
-    // int moedas_objetivo = 5;
+    int chave_pegas = 0;
+    int chave_objetivo = 1;
 
-    int pulos_dados = 0;
-    int pulos_objetivo = 3;
-
+    int galoes_dados = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -27,23 +24,29 @@ public class Missoes : MonoBehaviour
 
     public void checarMissoes(){
         if( missao_pegar_moedas == true ){
-            textoTela.text = "<b>Escolha um carro e ache o tunel!\n Caso o carro capote você pode desvirar o carro apertando R, mas isso ira custar uma vida</b>";
-            // if( moedas_pegas >= moedas_objetivo ){
-            //     missao_pegar_moedas = false;
-            //     missaoo_dar_pulos = true;
-            // }
+            textoTela.text = "<b>Procure uma chave!\n Está na frente de uma casa azul com dois carros na garagem</b>";
+            if( chave_pegas >= chave_objetivo ){
+                missao_pegar_moedas = false;
+                missaoo_dar_pulos = true;
+            }
+            
         }
         if( missaoo_dar_pulos == true ){
-            textoTela.text = "<b>Dê três pulinhos!</b>\nPulos "+pulos_dados+"/"+pulos_objetivo;
+            textoTela.text = "<b>Ache alguns galões de gasolina para o seu carro!</b>\nGalões "+galoes_dados;
         }
         // if( missao_chegar_final == true ){
 
         // }
     }
 
-    // public void pegaMoeda(){
-    //     moedas_pegas += 1;
-    //     checarMissoes();
-    // }
+    public void pegaChave(){
+        chave_pegas += 1;
+        checarMissoes();
+    }
+
+    public void pegaGalao(){
+        galoes_dados += 1;
+        checarMissoes();
+    }
 
 }

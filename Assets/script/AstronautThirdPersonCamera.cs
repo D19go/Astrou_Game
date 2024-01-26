@@ -11,7 +11,7 @@ public class cAstronautThirdPersonCamera : MonoBehaviour
     public Transform camTransform;
     public float distance = 5.0f;
     public float heightOffset = 1.0f;
-
+    
     private float currentX = 0.0f;
     private float currentY = 0f;
 

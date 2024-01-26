@@ -21,6 +21,7 @@ TagManager:
   - Aranha
   - TestOBJ
   - Teleport
+  - combustivel
   layers:
   - Default
   - TransparentFX

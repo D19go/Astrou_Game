@@ -1,10 +1,10 @@
-using UnityEngine;
+using System.Collections;
 using System.Collections.Generic;
-using Cinemachine;
+using UnityEngine;
 
-public class TrdaePlayerCamTheSpace : MonoBehaviour
+public class GameManagerCams : MonoBehaviour
 {
-
+    
     public class CarData
     {
         public Transform carTransform;
@@ -14,15 +14,14 @@ public class TrdaePlayerCamTheSpace : MonoBehaviour
     private CarData currentCar; // Adicione uma variável para rastrear o carro atual
     private List<CarData> cars = new List<CarData>();
     private GameObject player;
-    private CinemachineFreeLook freeLook;
-    public Transform Perso;
-    public GameObject demoinho;
+    private Transform playerTransform;
     public bool CarroEstaAtivo = false;
+    [SerializeField] private float offset;
 
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
-
+        playerTransform = player.transform;
         GameObject[] carObjects = GameObject.FindGameObjectsWithTag("Car");
         foreach (var carObject in carObjects)
         {
@@ -35,7 +34,7 @@ public class TrdaePlayerCamTheSpace : MonoBehaviour
         }
 
         CarroEstaAtivo = false;
-        freeLook = GetComponent<CinemachineFreeLook>();
+        
     }
 
     void Update()
@@ -48,12 +47,12 @@ public class TrdaePlayerCamTheSpace : MonoBehaviour
         }
 
         // Verifica se o jogador quer sair do carro a qualquer momento
-        if (Input.GetKeyDown(KeyCode.G) && CarroEstaAtivo)
-        {
-            CarroEstaAtivo = false;
-            demoinho.SetActive(true);
-            SwitchCameraToPlayer();
-        }
+        // if (Input.GetKeyDown(KeyCode.G) && CarroEstaAtivo)
+        // {
+        //     CarroEstaAtivo = false;
+        //     player.SetActive(true);
+        //     SwitchCameraToPlayer();
+        // }
     }
 
     void ToggleCar()
@@ -61,7 +60,6 @@ public class TrdaePlayerCamTheSpace : MonoBehaviour
         if (CarroEstaAtivo)
         {
             CarroEstaAtivo = false;
-            demoinho.SetActive(true);
             SwitchCameraToPlayer();
         }
         else
@@ -71,9 +69,9 @@ public class TrdaePlayerCamTheSpace : MonoBehaviour
             if (closestCar != null)
             {
                 CarroEstaAtivo = true;
-
+                
                 // Entrar no carro
-                demoinho.SetActive(false);
+                player.SetActive(false);
                 SwitchCameraToCar(closestCar);
             }
         }
@@ -81,22 +79,25 @@ public class TrdaePlayerCamTheSpace : MonoBehaviour
 
     void SwitchCameraToCar(CarData carData)
     {
-        freeLook.Follow = carData.carTransform;
-        freeLook.LookAt = carData.carTransform;
         carData.carGameObject.GetComponent<CarController>().CarroAtivo(CarroEstaAtivo);
+        carData.carGameObject.transform.Find("Cam3P").gameObject.SetActive(true);
         currentCar = carData; // Atualiza o carro atual
         Debug.Log("Entrou no carro");
     }
 
     void SwitchCameraToPlayer()
     {
-        freeLook.Follow = Perso;
-        freeLook.LookAt = Perso;
-        if (currentCar != null)
-        {
+        if (currentCar != null){
             currentCar.carGameObject.GetComponent<CarController>().CarroAtivo(CarroEstaAtivo);
-            currentCar = null; // Limpa o carro atual
+            currentCar.carGameObject.transform.Find("Cam3P").gameObject.SetActive(false);
+            Vector3 PosiCar = currentCar.carGameObject.transform.position;
+            // offset é para colocar o jogador para o lado esquerdo do carro
+            Vector3 PosiPlayer = PosiCar - currentCar.carGameObject.transform.right * offset;
+            playerTransform.position = PosiPlayer;
+            currentCar = null;
+            player.SetActive(true);
         }
+
         Debug.Log("Saiu do carro");
     }
 
@@ -118,4 +119,5 @@ public class TrdaePlayerCamTheSpace : MonoBehaviour
 
         return closestCar;
     }
+
 }

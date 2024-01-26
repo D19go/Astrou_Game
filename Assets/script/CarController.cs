@@ -7,7 +7,9 @@ using UnityEngine.UIElements;
 
 public class CarController : MonoBehaviour
 {
-    
+    [SerializeField] private int combustivel = 0, galao = 20, gasto = 5;
+    float timerGasolina = 5;
+
     private float horizontalInput, verticalInput;
     private float currentSteerAngle, currentBrakeForce;
     private bool isBraking;
@@ -24,16 +26,22 @@ public class CarController : MonoBehaviour
     [SerializeField] private Transform frontLeftWheelTransform, frontRightWheelTransform;
     [SerializeField] private Transform rearLeftWheelTransform, rearRightWheelTransform;
 
+    
+
     private void Start()
     {
         UnityEngine.Cursor.lockState = CursorLockMode.Locked;
         UnityEngine.Cursor.visible = false;
         rb = GetComponent<Rigidbody>();
+        StartCoroutine(tanque_G()); 
     }
 
     public void CarroAtivo(bool CarroEstaAtivo)
     {
         ativo = CarroEstaAtivo;
+        if(ativo){
+            StartCoroutine(tanque_G());
+        }
     }
 
     private void Update()
@@ -78,10 +86,36 @@ public class CarController : MonoBehaviour
 
     private void UpdateSingleWheel(WheelCollider wheelCollider, Transform wheelTransform)
     {
-        Vector3 pos;
-        Quaternion rot;
-        wheelCollider.GetWorldPose(out pos, out rot);
-        wheelTransform.rotation = rot;
-        wheelTransform.position = pos;
+        if(ativo){
+            Vector3 pos;
+            Quaternion rot;
+            wheelCollider.GetWorldPose(out pos, out rot);
+            wheelTransform.rotation = rot;
+            wheelTransform.position = pos;
+        }
     }
+
+    IEnumerator tanque_G(){
+
+        while (ativo){
+            yield return new WaitForSeconds(timerGasolina);
+
+            if (combustivel >= 0){
+                combustivel -= gasto;
+            }
+
+            if (combustivel <= 0){
+                ativo = false;
+            }/*
+            else if (combustivel > 0){
+                ativo = true;
+            }*/
+        }
+    }
+
+    public void gasolina(){
+        combustivel =+ 10;    
+        
+    }
+
 }

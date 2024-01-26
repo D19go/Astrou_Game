@@ -33,6 +33,7 @@ public class kBUM : MonoBehaviour
     }
 
     IEnumerator kbom(){
+        rb = null;
         gameObject.GetComponent<MeshRenderer>().enabled = false;
         bum.SetActive(true);
         area.SetActive(true);
@@ -40,12 +41,13 @@ public class kBUM : MonoBehaviour
         area.SetActive(false);
         yield return new WaitForSeconds(1.0f);
         bum.SetActive(false);
-        yield return new WaitForSeconds(3f);
+        
+        yield return new WaitForSeconds(2f);
         Destroy(gameObject);
     }
 
     /*void kbom(){
-        bum.SetActive(true);
+        bum.SetActive(true);wwwwwww
         area.SetActive(true);
         Invoke("desKBUM", 1.5f);
     }

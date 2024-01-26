@@ -30,6 +30,7 @@ public class GameManager : MonoBehaviour
     }
 
     void Update(){
+        
         if(Input.GetKeyDown(KeyCode.P)){
             if(Input.GetKeyDown(KeyCode.O)){
                 if(Input.GetKeyDown(KeyCode.I)){
@@ -37,18 +38,7 @@ public class GameManager : MonoBehaviour
                 }
             }
         }
-        // if(Input.GetKeyDown(KeyCode.O)){
-        //     SceneManager.LoadScene("Lvl2");
-        // }
-        // if(Input.GetKeyDown(KeyCode.I)){
-        //     SceneManager.LoadScene("RealLevel");
-        // }
-        // if(Input.GetKeyDown(KeyCode.L)){
-        //     SceneManager.LoadScene("mundoTest");
-        // }
-        // if(Input.GetKeyDown(KeyCode.K)){
-        //     SceneManager.LoadScene("InfSpace");
-        // }
+        
         if(Input.GetKeyDown(KeyCode.O)){
            if (cams){
                 cam3p.SetActive(false);
@@ -76,3 +66,4 @@ public class GameManager : MonoBehaviour
     }
     
 }
+
