@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class cAstronautThirdPersonCamera : MonoBehaviour
 {
-    private const float Y_ANGLE_MIN = -180.0f;
-    private const float Y_ANGLE_MAX = 180.0f;
+    private const float Y_ANGLE_MIN = -90.0f;
+    private const float Y_ANGLE_MAX = 90.0f;
 
     public Transform lookAt;
     public Transform camTransform;
@@ -14,6 +14,7 @@ public class cAstronautThirdPersonCamera : MonoBehaviour
     
     private float currentX = 0.0f;
     private float currentY = 0f;
+    bool TabOK = true;
 
     private void Start()
     {
@@ -22,14 +23,14 @@ public class cAstronautThirdPersonCamera : MonoBehaviour
     }
 
     private void Update()
-    {
-    
-        
+    {      
+        if(TabOK){
 
-        currentX += Input.GetAxis("Mouse X");
-        currentY -= Input.GetAxis("Mouse Y"); 
+            currentX += Input.GetAxis("Mouse X");
+            currentY -= Input.GetAxis("Mouse Y"); 
 
-        currentY = Mathf.Clamp(currentY, Y_ANGLE_MIN, Y_ANGLE_MAX);
+            currentY = Mathf.Clamp(currentY, Y_ANGLE_MIN, Y_ANGLE_MAX);
+        }
     }
 
     public void ChangeCameraFocus(Transform newFocus)
@@ -39,9 +40,15 @@ public class cAstronautThirdPersonCamera : MonoBehaviour
 
     private void LateUpdate()
     {
-        Vector3 dir = new Vector3(0, heightOffset, -distance);
-        Quaternion rotation = Quaternion.Euler(currentY, currentX, 0);
-        camTransform.position = lookAt.position + rotation * dir;
-        camTransform.LookAt(lookAt.position + Vector3.up * heightOffset);
+        if(TabOK){
+            
+            Vector3 dir = new Vector3(0, heightOffset, -distance);
+            Quaternion rotation = Quaternion.Euler(currentY, currentX, 0);
+            camTransform.position = lookAt.position + rotation * dir;
+            camTransform.LookAt(lookAt.position + Vector3.up * heightOffset);
+        }
+    }
+    public void invAtivo(bool tabOK){
+        TabOK = tabOK;
     }
 }

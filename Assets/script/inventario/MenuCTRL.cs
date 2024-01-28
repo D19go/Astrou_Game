@@ -1,14 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MenuCTRL : MonoBehaviour
 {
     [SerializeField] private GameObject Painel;
     bool PainelAct;
+    public Text ItemText;
     void Start()
     {
-        
+        ItemText.text = null;
     }
 
     
@@ -20,6 +22,9 @@ public class MenuCTRL : MonoBehaviour
         }
         if(PainelAct){
             Cursor.lockState = CursorLockMode.None;
+        }else if(!PainelAct){
+            Cursor.lockState = CursorLockMode.Locked;
+
         }
     }
 }

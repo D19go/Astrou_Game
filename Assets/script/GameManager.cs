@@ -46,14 +46,14 @@ public class GameManager : MonoBehaviour
                 cams = !cams;
                 canhao.GetComponent<nhao>().CamMain(cams);
                 Hplayer.GetComponent<Habilidades>().camTrade(cams);
-                Hplayer.GetComponent<Inventario>().camTrade(cams);
+                // Hplayer.GetComponent<InventarioCTRL>().camTrade(cams);
             }else{
                 cam3p.SetActive(true);
                 cam1p.SetActive(false);  
                 cams =! cams; 
                 canhao.GetComponent<nhao>().CamMain(cams);
                 Hplayer.GetComponent<Habilidades>().camTrade(cams);
-                Hplayer.GetComponent<Inventario>().camTrade(cams);
+                // Hplayer.GetComponent<InventarioCTRL>().camTrade(cams);
             }
 
         }

@@ -9,7 +9,6 @@ TagManager:
   - PeRadio1
   - PeRadio2
   - PeRadio3
-  - PeRadio4
   - EnemyPurple
   - EnemyRed
   - EnemyGreen
@@ -21,7 +20,6 @@ TagManager:
   - Aranha
   - TestOBJ
   - Teleport
-  - combustivel
   layers:
   - Default
   - TransparentFX

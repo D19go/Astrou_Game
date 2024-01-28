@@ -4,5 +4,5 @@ using UnityEngine;
 
 public class ObjectType : MonoBehaviour
 {
-    [SerializeField] private Objects objectType;
+    public Objects objectType;
 }

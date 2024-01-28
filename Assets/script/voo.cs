@@ -63,7 +63,7 @@ public class voo : MonoBehaviour
     
         if(forcaAtual < velocidadeMaxima){                
             Vector3 forwardDirection = transform.forward;
-            rb.AddForce(forwardDirection * forcaAtual, ForceMode.Force);
+            rb.AddForce(forwardDirection * forcaAtual, ForceMode.VelocityChange);
         } else{
             forcaAtual = forca;
         }

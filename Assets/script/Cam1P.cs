@@ -10,6 +10,7 @@ public class Cam1P : MonoBehaviour
 
     private float currentX = 0.0f;
     private float currentY = 0.0f;
+    bool TabOK = true;
 
     private void Start()
     {
@@ -19,15 +20,25 @@ public class Cam1P : MonoBehaviour
 
     private void Update()
     {
-        currentX += Input.GetAxis("Mouse X") * sensitivityX * Time.deltaTime;
-        currentY -= Input.GetAxis("Mouse Y") * sensitivityY * Time.deltaTime;
+        if(TabOK){
 
-        currentY = Mathf.Clamp(currentY, Y_ANGLE_MIN, Y_ANGLE_MAX);
+            currentX += Input.GetAxis("Mouse X") * sensitivityX * Time.deltaTime;
+            currentY -= Input.GetAxis("Mouse Y") * sensitivityY * Time.deltaTime;
+
+            currentY = Mathf.Clamp(currentY, Y_ANGLE_MIN, Y_ANGLE_MAX);
+        }
     }
 
     private void LateUpdate()
     {
-        Quaternion rotation = Quaternion.Euler(currentY, currentX, 0);
-        transform.rotation = rotation;
+        if(TabOK){
+
+            Quaternion rotation = Quaternion.Euler(currentY, currentX, 0);
+            transform.rotation = rotation;
+        }
+    }
+
+    public void invAtivo(bool tabOK){
+        TabOK = tabOK;
     }
 }

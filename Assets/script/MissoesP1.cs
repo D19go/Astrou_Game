@@ -11,7 +11,8 @@ public class MissoesP1 : MonoBehaviour
 
     public GameObject spanwEnemy;
     public GameObject Enemy;    
-
+    public bool Mincompleta = true; 
+    private InventarioCTRL slots;
 
     public GameObject Arma;
     bool missao_pegar_moedas = true;
@@ -30,26 +31,34 @@ public class MissoesP1 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        slots = FindAnyObjectByType<InventarioCTRL>(); 
         Enemy.SetActive(false);
         ListaMissoes();
     }
 
     public void ListaMissoes(){
-        if( missao_pegar_moedas == true ){
-            textoTela.text = "<b>Ache 4 Pedras espalhadas próximas a grande árvore \n Ache as pedras para poder ligar o canhão acima de você</b>\nPedras "+Pedras_pegas+"/"+Pedras_objetivo;
-            if( Pedras_pegas >= Pedras_objetivo ){
-                missaoo_dar_pulos = true;
-                spanwEnemy.GetComponent<spanw>().Comeca(missaoo_dar_pulos);
-                bool ok = true;
-                Arma.GetComponent<nhao>().M1Concluida(ok);
-                Enemy.SetActive(true);
+        while(Mincompleta){
+            if( missao_pegar_moedas == true ){
+                string nomeObj = "Pedra";
+                textoTela.text = "<b>Ache 4 Pedras espalhadas próximas a grande árvore \n Ache as pedras para poder ligar o canhão acima de você</b>\nPedras "+Pedras_pegas+"/"+Pedras_objetivo;
+                if( Pedras_pegas >= Pedras_objetivo ){
+                    missaoo_dar_pulos = true;
+                    spanwEnemy.GetComponent<spanw>().Comeca(missaoo_dar_pulos);
+                    bool ok = true;
+                    Arma.GetComponent<nhao>().M1Concluida(ok);
+                    Enemy.SetActive(true);
+                }
+                if(slots.name == nomeObj){
+                    Pedras_pegas++;
+                }
             }
-        }
-        if( missaoo_dar_pulos == true ){
-            textoTela.text = "<b>Proteja a Árvore</b>\nWaves "+Waves_Total+"/"+Waves_objetivo;
-            if(Waves_Total >= Waves_objetivo){
-                spanwEnemy.SetActive(false);
-                textoTela.text = "<b>PARABÉNS VOCÊ CONSEGUIU</b>\nMate a ultima wave";
+            if( missaoo_dar_pulos == true ){
+                textoTela.text = "<b>Proteja a Árvore</b>\nWaves "+Waves_Total+"/"+Waves_objetivo;
+                if(Waves_Total >= Waves_objetivo){
+                    spanwEnemy.SetActive(false);
+                    textoTela.text = "<b>PARABÉNS VOCÊ CONSEGUIU</b>\nMate a ultima wave";
+                }
+
             }
 
         }
