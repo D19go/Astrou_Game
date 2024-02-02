@@ -8,18 +8,21 @@ public class InventarioCTRL : MonoBehaviour
     [SerializeField] public Objects[] slots;
     [SerializeField] private Image[] slotsImage;
     [SerializeField] private int[] slotsAmount; 
-    [SerializeField]private int distancia = 3;
-    [SerializeField]private Camera cam1;
-    private MissoesP1 M1;
+    [SerializeField] private int distancia = 3;
+    [SerializeField] private Camera cam1;
+    [SerializeField] private Missoes M0;
+    [SerializeField] private MissoesP1 M1;  
 
     private MenuCTRL IController;
 
     void Start(){
+        M0 = FindAnyObjectByType<Missoes>();
         M1 = FindAnyObjectByType<MissoesP1>();
         IController = FindAnyObjectByType<MenuCTRL>();
         cam1 = Camera.main;
     }
     void Update(){
+        Debug.Log(slots.Length);
         cam1 = Camera.main;
         RaycastHit hit;
         Ray ray = cam1.ScreenPointToRay(new Vector3(Screen.width/2, Screen.height/2));
@@ -32,7 +35,8 @@ public class InventarioCTRL : MonoBehaviour
                             slots[i] = hit.transform.GetComponent<ObjectType>().objectType;
                             slotsAmount[i]++;
                             slotsImage[i].sprite = slots[i].ItemSprite;
-
+                            M0.GetComponent<Missoes>().checarMissoes();
+                            M1.GetComponent<MissoesP1>().ListaMissoes();
                             Destroy(hit.transform.gameObject);
                             break;
                         }

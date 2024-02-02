@@ -34,7 +34,7 @@ public class Habilidades : MonoBehaviour
     }
     void Update(){
         
-        if (Input.GetKeyDown(KeyCode.F) && Skill1)
+        if (Input.GetKeyDown(KeyCode.G) && Skill1)
         {   // Dash para trás
             if(camAtual){
             Vector3 cameraDirection = playerCamera.transform.forward; /* Obtém a direção para a qual a câmera está olhando*/            

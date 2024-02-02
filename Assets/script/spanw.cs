@@ -1,24 +1,23 @@
-using System.Collections;
 using UnityEngine;
 
 public class spanw : MonoBehaviour
 {
-    public GameObject inimigo;
-    public GameObject inimigo2;
-    public GameObject inimigo3;
+    [SerializeField] private GameObject inimigo;
+    [SerializeField] private GameObject inimigo2;
+    [SerializeField] private GameObject inimigo3;
 
-    public GameObject inimigoV2;
-    public GameObject inimigo2V2;
-    public GameObject inimigo3V2;
+    [SerializeField] private GameObject inimigoV2;
+    [SerializeField] private GameObject inimigo2V2;
+    [SerializeField] private GameObject inimigo3V2;
 
-    public GameObject Boss1;
-    public GameObject Boss2;
-    public GameObject Boss3;
-    public GameObject canvas;
+    [SerializeField] private GameObject Boss1;
+    [SerializeField] private GameObject Boss2;
+    [SerializeField] private GameObject Boss3;
+    [SerializeField] private GameObject canvas;
 
-    public bool PodeWave = false;
-    public int Wave = 0;
-    public int total = 0;
+    [SerializeField] private bool PodeWave = false;
+    [SerializeField] private int Wave = 0;
+    [SerializeField] private int total = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -32,8 +31,8 @@ public class spanw : MonoBehaviour
         if (!PodeWave)
         {
             return;
+        
         }
-
         if (total >= 9)  // Alterado para gerar 9 inimigos no total
         {
             // timeSpanw();
@@ -42,7 +41,6 @@ public class spanw : MonoBehaviour
                 SpawnEnemy(inimigo, i);
                 SpawnEnemy(inimigo2, i);
                 SpawnEnemy(inimigo3, i);
-                // SpawnEnemy(inimigoV2, i);
             }
            
 
@@ -91,8 +89,6 @@ public class spanw : MonoBehaviour
 
         
     }
-
-    
   
 
     void CriarBoss()

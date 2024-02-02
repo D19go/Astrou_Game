@@ -7,8 +7,9 @@ public class Missoes : MonoBehaviour
 {
     public TextMeshProUGUI textoTela;
 
-    bool missao_pegar_moedas = true;
-    bool missaoo_dar_pulos = false;
+    private InventarioCTRL slots;
+    bool pegar_Chave = true;
+    bool fuja_dos_aliens = false;
     // bool missao_chegar_final = false;
 
     int chave_pegas = 0;
@@ -19,34 +20,31 @@ public class Missoes : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        slots = FindAnyObjectByType<InventarioCTRL>();
         checarMissoes();
     }
 
     public void checarMissoes(){
-        if( missao_pegar_moedas == true ){
-            textoTela.text = "<b>Procure uma chave!\n Está na frente de uma casa azul com dois carros na garagem</b>";
-            if( chave_pegas >= chave_objetivo ){
-                missao_pegar_moedas = false;
-                missaoo_dar_pulos = true;
+        for(int i = 0; i < 8; i++ ){
+            if( pegar_Chave == true ){
+                string nomeObj = "Chave Mestra";
+                textoTela.text = "<b>Procure uma chave!\n Está na frente de uma casa azul com dois carros na garagem</b>";
+                if( chave_pegas == chave_objetivo ){
+                    pegar_Chave = false;
+                    fuja_dos_aliens = true;
+                }
+                if(slots.name == nomeObj){
+                    chave_pegas++;
+                }
             }
-            
-        }
-        if( missaoo_dar_pulos == true ){
-            textoTela.text = "<b>Ache alguns galões de gasolina para o seu carro!</b>\nGalões "+galoes_dados;
+            if( fuja_dos_aliens == true ){
+                textoTela.text = "<b>Ache alguns galões de gasolina para o seu carro!</b>\nGalões "+galoes_dados;
+            }
         }
         // if( missao_chegar_final == true ){
 
         // }
     }
 
-    public void pegaChave(){
-        chave_pegas += 1;
-        checarMissoes();
-    }
-
-    public void pegaGalao(){
-        galoes_dados += 1;
-        checarMissoes();
-    }
-
+   
 }

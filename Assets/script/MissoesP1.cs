@@ -33,12 +33,12 @@ public class MissoesP1 : MonoBehaviour
     {
         slots = FindAnyObjectByType<InventarioCTRL>(); 
         Enemy.SetActive(false);
-        ListaMissoes();
+        
     }
 
     public void ListaMissoes(){
-        while(Mincompleta){
-            if( missao_pegar_moedas == true ){
+        for(int i = 0; i < 8; i++){
+            if( missao_pegar_moedas){
                 string nomeObj = "Pedra";
                 textoTela.text = "<b>Ache 4 Pedras espalhadas próximas a grande árvore \n Ache as pedras para poder ligar o canhão acima de você</b>\nPedras "+Pedras_pegas+"/"+Pedras_objetivo;
                 if( Pedras_pegas >= Pedras_objetivo ){
@@ -47,6 +47,7 @@ public class MissoesP1 : MonoBehaviour
                     bool ok = true;
                     Arma.GetComponent<nhao>().M1Concluida(ok);
                     Enemy.SetActive(true);
+                    missao_pegar_moedas = false;
                 }
                 if(slots.name == nomeObj){
                     Pedras_pegas++;
@@ -63,11 +64,6 @@ public class MissoesP1 : MonoBehaviour
 
         }
     }   
-
-    public void pegaPedras(){
-        Pedras_pegas += 1;
-        ListaMissoes();
-    }
 
     public void Wave(){
         Waves_Total += 1;

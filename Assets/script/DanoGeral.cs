@@ -4,9 +4,13 @@ using UnityEngine;
 
 public class DanoGeral : MonoBehaviour
 {
+    
     void Start(){
+        StartCoroutine(zaz());
     }
+
     public int dano = 10;
+
     void OnCollisionEnter(Collision colidiu)
     {   
         
@@ -45,5 +49,7 @@ public class DanoGeral : MonoBehaviour
         Destroy(gameObject);
     }
 
-    
+    IEnumerator zaz(){
+        yield return new WaitForSeconds(1f);
+    }
 }

@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class Coletor : MonoBehaviour
 {
-    void OnTriggerEnter(Collider collider){
+    /*void OnTriggerEnter(Collider collider){
         if(collider.gameObject.tag == "PeRadio1"){
             GameObject.Find("Canvas").GetComponent<MissoesP1>().pegaPedras();                  
             Destroy(transform.gameObject);
         }
         if(collider.gameObject.name == "chave"){
-            GameObject.Find("Canvas").GetComponent<Missoes>().pegaChave(); 
+            GameObject.Find("Canvas").GetComponent<Missoes>().(); 
             Debug.Log("tocou");
         }
         if(collider.gameObject.tag == "combustivel"){
@@ -18,6 +18,6 @@ public class Coletor : MonoBehaviour
             
             Debug.Log("tocou");
         }
-    }
+    }*/
 
 }
