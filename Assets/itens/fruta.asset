@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: fruta
   m_EditorClassIdentifier: 
   ItemName: "Ma\xE7a"
-  ItemSprite: {fileID: 0}
+  Item3D: {fileID: 919132149155446097, guid: fdb5ef2e754e16c4394eef65bdfdc936, type: 3}

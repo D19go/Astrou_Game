@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: chave
   m_EditorClassIdentifier: 
   ItemName: Chave Mestra
-  ItemSprite: {fileID: 21300000, guid: 3dd26dcc78702604f9bcba9020de2f74, type: 3}
+  Item3D: {fileID: 919132149155446097, guid: 1e413407083599c4a8650fa983114c4c, type: 3}

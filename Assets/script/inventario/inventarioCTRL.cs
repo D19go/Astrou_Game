@@ -1,18 +1,16 @@
-using TMPro;
-using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class InventarioCTRL : MonoBehaviour
 {
     [SerializeField] public Objects[] slots;
-    [SerializeField] private Image[] slotsImage;
+    [SerializeField] public GameObject[] slots3D;
     [SerializeField] private int[] slotsAmount; 
     [SerializeField] private int distancia = 3;
     [SerializeField] private Camera cam1;
     [SerializeField] private Missoes M0;
     [SerializeField] private MissoesP1 M1;  
-
+    int loop;
     private MenuCTRL IController;
 
     void Start(){
@@ -22,7 +20,6 @@ public class InventarioCTRL : MonoBehaviour
         cam1 = Camera.main;
     }
     void Update(){
-        Debug.Log(slots.Length);
         cam1 = Camera.main;
         RaycastHit hit;
         Ray ray = cam1.ScreenPointToRay(new Vector3(Screen.width/2, Screen.height/2));
@@ -30,13 +27,13 @@ public class InventarioCTRL : MonoBehaviour
             if(hit.collider.tag == "objeto"){
                 IController.ItemText.text = "perssione (E) para coletar " +  hit.transform.GetComponent<ObjectType>().objectType.name;
                 if(Input.GetKeyDown(KeyCode.E)){
-                    for(int i =0; i < slots.Length; i++){
+                    for(int i =0; i <= slots.Length; i++){
                         if(slots[i] == null || slots[i].name == hit.transform.GetComponent<ObjectType>().objectType.name){
                             slots[i] = hit.transform.GetComponent<ObjectType>().objectType;
                             slotsAmount[i]++;
-                            slotsImage[i].sprite = slots[i].ItemSprite;
+                            slots3D[i] = slots[i].Item3D;
                             M0.GetComponent<Missoes>().checarMissoes();
-                            M1.GetComponent<MissoesP1>().ListaMissoes();
+                            // M1.GetComponent<MissoesP1>().ListaMissoes();
                             Destroy(hit.transform.gameObject);
                             break;
                         }

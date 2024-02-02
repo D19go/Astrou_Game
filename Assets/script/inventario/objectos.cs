@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 
@@ -7,5 +5,5 @@ using UnityEngine;
 public class Objects : ScriptableObject
 {
     public string ItemName;
-    public Sprite ItemSprite;
+    public GameObject Item3D;
 }
