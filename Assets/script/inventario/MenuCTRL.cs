@@ -8,6 +8,7 @@ public class MenuCTRL : MonoBehaviour
 {
     [SerializeField] private GameObject Painel;
     bool PainelAct;
+    bool alo = true;
     public Text ItemText;
     public List<Button> TelaInv;
     public InventarioCTRL invPlayer;
@@ -35,15 +36,15 @@ public class MenuCTRL : MonoBehaviour
             Cursor.visible = false;
         }
         for (int i = 0; i < TelaInv.Count; i++)
-                {
-                    int slotIndex = i;  // Armazena o índice para evitar o problema do closure
-                    TelaInv[i].onClick.AddListener(() => OnSlotClick(slotIndex));
-                }
+        {
+            int slotIndex = i;  // Armazena o índice para evitar o problema do closure
+            TelaInv[i].onClick.AddListener(() => OnSlotClick(slotIndex));
+        }
     }
     void OnSlotClick(int slotIndex){
         int slotss = slotIndex;
         int slotsAmounti = slotIndex;
-        Bau_Slots.bauTrade(slotss, slotsAmounti);
+        Bau_Slots.bauTrade(slotss, slotsAmounti, alo);
     }
     public void bau(){
         PainelAct =! PainelAct;

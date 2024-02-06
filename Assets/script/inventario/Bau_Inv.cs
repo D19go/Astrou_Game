@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -11,7 +12,7 @@ public class Bau_Inv : MonoBehaviour
     public InventarioCTRL invPlayer;
     [SerializeField] private TextMeshProUGUI nome;
     [SerializeField] private TextMeshProUGUI descricao;
-    bool mouse = false;
+    public bool mouse = false;
     public List<Button> TelaInv;
 
     // Start is called before the first frame update
@@ -36,11 +37,25 @@ public class Bau_Inv : MonoBehaviour
         descricao.text = slots_Bau[slotIndex].Description;
     }
 
-    public void bauTrade(int Slots, int slotsAmount){
+    public void bauTrade(int Slots, int slotsAmount, bool ola){       
+        for(int i = 0; i < slots_Bau.Count; i++){
+
+            if(slots3D_Bau[i].sprite == null && mouse){
+                Debug.Log("Entrou"+i);
+                slots_Bau[i] = invPlayer.slots[Slots];
+                slotsAmount_Bau[i] = invPlayer.slotsAmount[slotsAmount];
+                slots3D_Bau[i].sprite = invPlayer.slots[Slots].Item3D;
+                StartCoroutine(time());
+                break;
+            }
+            
+        }
         
-        slots_Bau[Slots] = invPlayer.slots[Slots];
-        slotsAmount_Bau[Slots] = invPlayer.slotsAmount[slotsAmount];
-        slots3D_Bau[Slots].sprite = invPlayer.slots[Slots].Item3D;
+        
     }
     
+    IEnumerator time(){
+        yield return new WaitForSeconds(0.2f);
+        mouse = true;
+    }
 }
