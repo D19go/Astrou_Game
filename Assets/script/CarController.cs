@@ -8,12 +8,11 @@ using UnityEngine.UIElements;
 public class CarController : MonoBehaviour
 {
     [SerializeField] private int combustivel = 0, galao = 20, gasto = 5;
-    float timerGasolina = 5;
+    float timerGasolina = 10;
 
     private float horizontalInput, verticalInput;
     private float currentSteerAngle, currentBrakeForce;
     private bool isBraking;
-    public int dano = 1;
     Rigidbody rb;
 
     public bool ativo = false;
@@ -52,7 +51,6 @@ public class CarController : MonoBehaviour
         }
         if(Input.GetKeyDown(KeyCode.R)){
             transform.rotation = new  Quaternion(0,transform.rotation.y,0, transform.rotation.w);
-            gameObject.GetComponent<VidaPlayer>().TomaToma(dano);
         }
         // Steering Input
         horizontalInput = Input.GetAxis("Horizontal");
@@ -114,7 +112,7 @@ public class CarController : MonoBehaviour
     }
 
     public void gasolina(){
-        combustivel =+ 10;    
+        combustivel += galao;    
         
     }
 

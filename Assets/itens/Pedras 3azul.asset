@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Pedras 3azul
   m_EditorClassIdentifier: 
   ItemName: Pedra Azul
-  ItemSprite: {fileID: 21300000, guid: 3849f32ffa53a834b8cceeab66532777, type: 3}
+  Item3D: {fileID: 21300000, guid: 3849f32ffa53a834b8cceeab66532777, type: 3}

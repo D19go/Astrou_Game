@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Pedras 1preta
   m_EditorClassIdentifier: 
   ItemName: Pedra Preta
-  ItemSprite: {fileID: 21300000, guid: d309bbe3b7630794cb3463879a138a1f, type: 3}
+  Item3D: {fileID: 21300000, guid: d309bbe3b7630794cb3463879a138a1f, type: 3}

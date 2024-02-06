@@ -65,7 +65,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1128758269040250, guid: f88c6ad57910d8648807bcf0c131f49d, type: 3}
       propertyPath: m_TagString
-      value: BossEnemy
+      value: EnemyV2
       objectReference: {fileID: 0}
     - target: {fileID: 1130806907750044, guid: f88c6ad57910d8648807bcf0c131f49d, type: 3}
       propertyPath: m_Layer
@@ -2124,7 +2124,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92fb4fcaf3774e64bb221b956131522c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  navMesh: {fileID: 0}
+  navMesh: {fileID: 4382502613976048193}
   velocidadeInimigo: 25
 --- !u!114 &4252325548678912553
 MonoBehaviour:

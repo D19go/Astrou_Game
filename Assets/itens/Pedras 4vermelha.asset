@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Pedras 4vermelha
   m_EditorClassIdentifier: 
   ItemName: Pedra Vermelha
-  ItemSprite: {fileID: 21300000, guid: 9bbdf53ffcedc9147aea725c587bb7dc, type: 3}
+  Item3D: {fileID: 21300000, guid: 9bbdf53ffcedc9147aea725c587bb7dc, type: 3}

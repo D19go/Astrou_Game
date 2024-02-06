@@ -21,7 +21,7 @@ public class nhao : MonoBehaviour
 
     void Start()
     {
-        CanhaoPronto = false;
+        
         mainCamera = Camera.main; // Obtém a câmera principal
         timeSinceLastShotMouse0 = 0f;
         timeSinceLastShotMouse1 = 0f;

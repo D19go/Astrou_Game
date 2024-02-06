@@ -43,31 +43,34 @@ public class spanw : MonoBehaviour
                 SpawnEnemy(inimigo3, i);
             }
            
-
+            for(int i = 0; i < 3; i++){
+                SpawnEnemy(inimigoV2, i);
+                SpawnEnemy(inimigo2V2, i);
+                SpawnEnemy(inimigo3V2, i);
+            }
+                
             Wave += 1;
-           
-            canvas.GetComponent<MissoesP1>().Wave();
+            total = 0;
             // spawnNewMob();
         }
-        /*if(total >= 9 && Wave>= 3){
+        if(total >= 9 && Wave>= 3){
 
             for(int i = 0; i < 3; i++){
                 SpawnEnemy(inimigoV2, i);
                 SpawnEnemy(inimigo2V2, i);
                 SpawnEnemy(inimigo3V2, i);
             }
-        }*/
+            total = 0;
+        }
         
-        total = 0;
-        // if(Wave == 3){
-        //     CriarBoss();
-        // }
-        if(Wave == 5){
+        
+        
+        /*if(Wave == 5){
             CriarBoss();
         }
         if(Wave == 6){
             CriarBoss();
-        }
+        }*/
         
     }
     void SpawnEnemy(GameObject enemyPrefab, int positionIndex)

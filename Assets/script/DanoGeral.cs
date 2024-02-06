@@ -17,13 +17,12 @@ public class DanoGeral : MonoBehaviour
         if(colidiu.gameObject.tag == "Enemy"){
             colidiu.gameObject.GetComponent<LigaSpanw>().TomaToma2(dano);
             Destroy(gameObject);
-        
         }   
-        // if(colidiu.gameObject.tag == "EnemyRed"){
-        //     colidiu.gameObject.GetComponent<LigaSpanw>().TomaToma2(dano);
-        //     Destroy(gameObject);
+        if(colidiu.gameObject.tag == "EnemyV2"){
+            colidiu.gameObject.GetComponent<VidaGeral>().TomaToma(dano);
+            Destroy(gameObject);
 
-        // }
+        }
         // if(colidiu.gameObject.tag == "EnemyGreen"){
         //     colidiu.gameObject.GetComponent<LigaSpanw>().TomaToma2(dano);
         //     Destroy(gameObject);
@@ -50,6 +49,7 @@ public class DanoGeral : MonoBehaviour
     }
 
     IEnumerator zaz(){
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(2f);
+        Destroy(gameObject);
     }
 }

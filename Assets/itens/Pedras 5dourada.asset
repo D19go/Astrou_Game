@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Pedras 5dourada
   m_EditorClassIdentifier: 
   ItemName: Pedra Dourada
-  ItemSprite: {fileID: 21300000, guid: 561ee65a92578b0489654b9afc3d5f5a, type: 3}
+  Item3D: {fileID: 21300000, guid: 561ee65a92578b0489654b9afc3d5f5a, type: 3}

@@ -1,9 +1,11 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 
 [CreateAssetMenu(fileName = "New Objects", menuName = "Inventory Objects / Create New")]
-public class Objects : ScriptableObject
+public class Objectos : ScriptableObject
 {
     public string ItemName;
-    public GameObject Item3D;
+    public Sprite Item3D;
+    public string Description;
 }

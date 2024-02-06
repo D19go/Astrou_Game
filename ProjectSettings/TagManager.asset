@@ -6,12 +6,6 @@ TagManager:
   tags:
   - Car
   - nave
-  - PeRadio1
-  - PeRadio2
-  - PeRadio3
-  - EnemyPurple
-  - EnemyRed
-  - EnemyGreen
   - ArvoreMae
   - piso
   - Enemy
@@ -20,6 +14,9 @@ TagManager:
   - Aranha
   - TestOBJ
   - Teleport
+  - EnemyV2
+  - Armazenamento
+  - EnemyRed
   layers:
   - Default
   - TransparentFX

@@ -79,7 +79,7 @@ public class GameManagerCams : MonoBehaviour
 
     void SwitchCameraToCar(CarData carData)
     {
-        carData.carGameObject.GetComponent<CarController>().CarroAtivo(CarroEstaAtivo);
+        carData.carGameObject.GetComponentInParent<CarController>().CarroAtivo(CarroEstaAtivo);
         carData.carGameObject.transform.Find("Cam3P").gameObject.SetActive(true);
         currentCar = carData; // Atualiza o carro atual
         Debug.Log("Entrou no carro");
