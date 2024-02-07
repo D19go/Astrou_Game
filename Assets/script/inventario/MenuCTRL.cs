@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -35,16 +36,27 @@ public class MenuCTRL : MonoBehaviour
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
         }
-        for (int i = 0; i < TelaInv.Count; i++)
-        {
-            int slotIndex = i;  // Armazena o índice para evitar o problema do closure
-            TelaInv[i].onClick.AddListener(() => OnSlotClick(slotIndex));
-        }
     }
-    void OnSlotClick(int slotIndex){
-        int slotss = slotIndex;
-        int slotsAmounti = slotIndex;
-        Bau_Slots.bauTrade(slotss, slotsAmounti, alo);
+    public void OnSlotClick(string nome){
+        Debug.Log("chamou o click");  
+        for(int i = 0; i < TelaInv.Count; i++){
+            if(TelaInv[i].name == nome){
+                if(invPlayer.slots3D[i].sprite != null){
+                    
+                    Debug.Log("dentro do if do for no click"); 
+                    Bau_Slots.bauTrade(i,i);
+                    Bau_Slots.mouse = true;
+                    invPlayer.slotsAmount[i]--;
+                    if(invPlayer.slotsAmount[i] <= 0){
+                        invPlayer.slots[i] = null;
+                        invPlayer.slots3D = null;
+                    }
+                    break;
+                } 
+            }
+
+        }
+        
     }
     public void bau(){
         PainelAct =! PainelAct;

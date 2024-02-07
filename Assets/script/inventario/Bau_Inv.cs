@@ -37,15 +37,16 @@ public class Bau_Inv : MonoBehaviour
         descricao.text = slots_Bau[slotIndex].Description;
     }
 
-    public void bauTrade(int Slots, int slotsAmount, bool ola){       
+    public void bauTrade(int Slots, int slotsAmount){     
+        Debug.Log("chamou o bau trade");  
         for(int i = 0; i < slots_Bau.Count; i++){
-
-            if(slots3D_Bau[i].sprite == null && mouse){
-                Debug.Log("Entrou"+i);
+            Debug.Log("for do bautrade");  
+            if(slots3D_Bau[i].sprite == null){
+                Debug.Log("if do for no bautrde");
                 slots_Bau[i] = invPlayer.slots[Slots];
                 slotsAmount_Bau[i] = invPlayer.slotsAmount[slotsAmount];
                 slots3D_Bau[i].sprite = invPlayer.slots[Slots].Item3D;
-                StartCoroutine(time());
+                mouse = false;
                 break;
             }
             
@@ -54,8 +55,4 @@ public class Bau_Inv : MonoBehaviour
         
     }
     
-    IEnumerator time(){
-        yield return new WaitForSeconds(0.2f);
-        mouse = true;
-    }
 }
