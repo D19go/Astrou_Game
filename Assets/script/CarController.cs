@@ -15,6 +15,7 @@ public class CarController : MonoBehaviour
     private bool isBraking;
     Rigidbody rb;
 
+    [SerializeField] private Interacao_tudo info_Gas;
     public bool ativo = false;
 
     [SerializeField] private float motorForce, brakeForce, maxSteerAngle;
@@ -113,7 +114,7 @@ public class CarController : MonoBehaviour
 
     public void gasolina(){
         combustivel += galao;    
-        
+        info_Gas.carGas = combustivel;
     }
 
 }

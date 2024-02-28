@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Interacao_tudo : MonoBehaviour
 {
+
+    public int carGas;
     [SerializeField] private int distancia = 3;
     [SerializeField] private Camera cam1;
     public bool reabastece = false;
@@ -31,9 +33,11 @@ public class Interacao_tudo : MonoBehaviour
         Ray ray = cam1.ScreenPointToRay(new Vector3(Screen.width/2, Screen.height/2));
         if(Physics.Raycast(ray, out hit, distancia)){
             if(hit.collider.tag == "Car"){
+                
                 IController.ItemText.text = "pressione (E) para abastercer o carro ";
                 for(int i =0; i < inv.slots.Count; i++){
                     if(inv.slots[i].ItemName == "Galão de Combustivel"){
+                        
                         reabastece = true;
                         loop = i;
                         break;
@@ -44,6 +48,7 @@ public class Interacao_tudo : MonoBehaviour
                     if(reabastece){
                         hit.collider.GetComponentInParent<CarController>().gasolina();
                         inv.slotsAmount[loop]--;
+                        ToastNotification.Show("Carro abastecido \n Nivel do combustivel: " + carGas);
                         if(inv.slotsAmount[loop] == 0){
                             inv.slots[loop] = null;
                             inv.slots3D[loop].sprite = null;
