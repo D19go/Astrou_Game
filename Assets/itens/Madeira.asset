@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ItemName: Madeira
   Item3D: {fileID: 21300000, guid: be2049b9a35a47d4d948440833d057b0, type: 3}
+  Description: "Madeira... \xC9 madeira, s\xF3 isso e sem utilidade."

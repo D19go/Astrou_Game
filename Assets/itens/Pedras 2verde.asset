@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ItemName: Pedra Verde
   Item3D: {fileID: 21300000, guid: 7f3020787fac8ae41b254f51dfb06694, type: 3}
+  Description: "Min\xE9rio usado para fabricar as baterias."

@@ -24,7 +24,6 @@ public class DropItem : MonoBehaviour
         yield return new WaitForSeconds(1f);
         gameObject.GetComponentInChildren<SkinnedMeshRenderer>().enabled = false;
         int obj = Random.Range(1, 21 +1 ); // Gera um número inteiro aleatório no intervalo [min, max]
-        Debug.Log(obj);
         if(obj == num1){
             GameObject pedra_ = Instantiate(pedra, transform.position, Quaternion.identity);
         }else if(obj == num2){

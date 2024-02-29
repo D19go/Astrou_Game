@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ItemName: Pedra Rosa
   Item3D: {fileID: 21300000, guid: b936e7fc0bda12447803dc0a5f9a71a7, type: 3}
+  Description: "\xC9 bonita, igual a madeira  essa aqui n\xE3o tem fun\xE7\xE3o nenhuma!"

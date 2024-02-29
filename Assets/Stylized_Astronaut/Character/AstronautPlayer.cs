@@ -62,7 +62,7 @@ void Start()
             }
             if (Input.GetKey("w")){
                 anim.SetInteger("AnimationPar", 1);
-                if((Input.GetKey(KeyCode.LeftShift) && Input.GetKey("w"))){
+                if(( Input.GetKey("w") && Input.GetKey(KeyCode.LeftShift))){
                     anim.SetInteger("AnimationPar", 2);
                 }else{
                     anim.SetInteger("AnimationPar", 1);

@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ItemName: Pedra Vermelha
   Item3D: {fileID: 21300000, guid: 9bbdf53ffcedc9147aea725c587bb7dc, type: 3}
+  Description: Cuidado! essa pedra pode explodir facilmente.

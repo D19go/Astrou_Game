@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ItemName: Pedra Preta
   Item3D: {fileID: 21300000, guid: d309bbe3b7630794cb3463879a138a1f, type: 3}
+  Description: "Um min\xE9rio importante para fabricar alguns projeteis."

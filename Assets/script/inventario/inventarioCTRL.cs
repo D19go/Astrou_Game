@@ -37,6 +37,7 @@ public class InventarioCTRL : MonoBehaviour
                     if(Input.GetKeyDown(KeyCode.E)){
                         for(int i =0; i <= slots.Count; i++){
                             if(slots[i] == null || slots[i].name == hit.transform.GetComponent<ObjectType>().objectType.name){
+                                ToastNotification.Show("Item adicionado ao inventário!");
                                 slots[i] = hit.transform.GetComponent<ObjectType>().objectType;
                                 slotsAmount[i]++;
                                 slots3D[i].sprite = slots[i].Item3D;

@@ -8,4 +8,8 @@ public class Objectos : ScriptableObject
     public string ItemName;
     public Sprite Item3D;
     public string Description;
+    void funcao(){
+        
+    }
+
 }
