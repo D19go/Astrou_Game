@@ -1595,6 +1595,9 @@ PrefabInstance:
       addedObject: {fileID: 7109628948524302003}
     - targetCorrespondingSourceObject: {fileID: 1783563462218004, guid: 7f931d4b5c97d194d8726ddf5acdd440, type: 3}
       insertIndex: -1
+      addedObject: {fileID: 7617342293435174624}
+    - targetCorrespondingSourceObject: {fileID: 1783563462218004, guid: 7f931d4b5c97d194d8726ddf5acdd440, type: 3}
+      insertIndex: -1
       addedObject: {fileID: 7874974031759638857}
   m_SourcePrefab: {fileID: 100100000, guid: 7f931d4b5c97d194d8726ddf5acdd440, type: 3}
 --- !u!1 &8657977881267292587 stripped
@@ -1726,6 +1729,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bezoro: {fileID: 8751518476119812911}
+--- !u!114 &7617342293435174624
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8657977881267292587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6821537c8232b6f4e82e20378e0c3288, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pedra: {fileID: 717369739883293778, guid: e1e0b032c164e8a4bbd9a5259946b72f, type: 3}
+  pedra2: {fileID: 3464194993649519452, guid: 59e2a1f2f6ab50f48b70dcbbc8435738, type: 3}
+  pedra3: {fileID: 1197971422922472215, guid: 312f2be8c0b1d3b43be70632e659c78d, type: 3}
+  pedra4: {fileID: 2358851843423805327, guid: 24ea32c323966d44ea6f7e958b9e9632, type: 3}
+  pedra5: {fileID: 968342509565932853, guid: 7ef96acae9e6ffa44960aa37416bf8d1, type: 3}
+  pedra6: {fileID: 3799091501969893410, guid: 7afb23a512c44a34da07ac2b7a4b680c, type: 3}
+  fruta: {fileID: 5246867637859169985, guid: 8098d4ba28229244e872e25e3c2c871e, type: 3}
 --- !u!195 &7874974031759638857
 NavMeshAgent:
   m_ObjectHideFlags: 0

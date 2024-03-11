@@ -24,6 +24,7 @@ public class ATKjumper : MonoBehaviour
 
     void Start(){
         rb = GetComponent<Rigidbody>();
+        Jogador = GameObject.FindGameObjectWithTag("Player");
     }
 
     void OnTriggerEnter(Collider outro){
