@@ -58,7 +58,7 @@ public class nhao : MonoBehaviour
             // Rotacionar a bola para que ela aponte para a direção correta
             Quaternion rotacao = Quaternion.LookRotation(direcao);
             nova_bola.transform.rotation = rotacao * Quaternion.Euler(90, 0, 0);
-            nova_bola.GetComponent<Rigidbody>().AddForce(direcao * Forca * Time.deltaTime); // Ajuste a força conforme necessário
+            nova_bola.GetComponent<Rigidbody>().AddForce(direcao * Forca); // Ajuste a força conforme necessário
         }else{
             GameObject nova_bola = Instantiate(bola, transform.position, Quaternion.identity);
             // Obter a direção olhando para o ponto em que a câmera está apontando
@@ -66,7 +66,7 @@ public class nhao : MonoBehaviour
             // Rotacionar a bola para que ela aponte para a direção correta
             Quaternion rotacao = Quaternion.LookRotation(direcao);
             nova_bola.transform.rotation = rotacao * Quaternion.Euler(90, 0, 0);
-            nova_bola.GetComponent<Rigidbody>().AddForce(direcao * Forca * Time.deltaTime); // Ajuste a força conforme necessário
+            nova_bola.GetComponent<Rigidbody>().AddForce(direcao * Forca); // Ajuste a força conforme necessário
         }
 
 
@@ -81,7 +81,7 @@ public class nhao : MonoBehaviour
             // Rotacionar a bola para que ela aponte para a direção correta
             Quaternion rotacao = Quaternion.LookRotation(direcao);
             nova_bola.transform.rotation = rotacao * Quaternion.Euler(90, 0, 0);
-            nova_bola.GetComponent<Rigidbody>().AddForce(direcao * Forca * Time.deltaTime); // Ajuste a força conforme necessário
+            nova_bola.GetComponent<Rigidbody>().AddForce(direcao * Forca); // Ajuste a força conforme necessário
         }else{
             GameObject nova_bola = Instantiate(bolaForte, transform.position, Quaternion.identity);
             // Obter a direção olhando para o ponto em que a câmera está apontando
@@ -89,7 +89,7 @@ public class nhao : MonoBehaviour
             // Rotacionar a bola para que ela aponte para a direção correta
             Quaternion rotacao = Quaternion.LookRotation(direcao);
             nova_bola.transform.rotation = rotacao * Quaternion.Euler(90, 0, 0);
-            nova_bola.GetComponent<Rigidbody>().AddForce(direcao * Forca * Time.deltaTime); // Ajuste a força conforme necessário
+            nova_bola.GetComponent<Rigidbody>().AddForce(direcao * Forca); // Ajuste a força conforme necessário
         }
     }
 

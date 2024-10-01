@@ -14,6 +14,10 @@ public class cAstronautThirdPersonCamera : MonoBehaviour
     
     private float currentX = 0.0f;
     private float currentY = 0f;
+
+    public float sensitivityX = 2.0f;
+    public float sensitivityY = 2.0f;
+
     bool TabOK = true;
 
     private void Start()
@@ -26,16 +30,11 @@ public class cAstronautThirdPersonCamera : MonoBehaviour
     {      
         if(TabOK){
 
-            currentX += Input.GetAxis("Mouse X");
-            currentY -= Input.GetAxis("Mouse Y"); 
+            currentX += Input.GetAxis("Mouse X") * sensitivityX;
+            currentY -= Input.GetAxis("Mouse Y") * sensitivityY;
 
             currentY = Mathf.Clamp(currentY, Y_ANGLE_MIN, Y_ANGLE_MAX);
         }
-    }
-
-    public void ChangeCameraFocus(Transform newFocus)
-    {
-        lookAt = newFocus;
     }
 
     private void LateUpdate()
@@ -48,6 +47,12 @@ public class cAstronautThirdPersonCamera : MonoBehaviour
             camTransform.LookAt(lookAt.position + Vector3.up * heightOffset);
         }
     }
+
+    public void ChangeCameraFocus(Transform newFocus)
+    {
+        lookAt = newFocus;
+    }
+
     public void invAtivo(bool tabOK){
         TabOK = tabOK;
     }

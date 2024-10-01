@@ -22,8 +22,8 @@ public class Cam1P : MonoBehaviour
     {
         if(TabOK){
 
-            currentX += Input.GetAxis("Mouse X") * sensitivityX * Time.deltaTime;
-            currentY -= Input.GetAxis("Mouse Y") * sensitivityY * Time.deltaTime;
+            currentX += Input.GetAxis("Mouse X") * sensitivityX;
+            currentY -= Input.GetAxis("Mouse Y") * sensitivityY;
 
             currentY = Mathf.Clamp(currentY, Y_ANGLE_MIN, Y_ANGLE_MAX);
         }

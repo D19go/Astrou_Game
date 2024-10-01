@@ -17,14 +17,15 @@ public class NaveCtrl : MonoBehaviour
         rb.freezeRotation = true;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
-
+        voando = false;
         // Calcula o offset inicial da câmera em relação à nave
     }
 
-    void FixedUpdate()
+    void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
+            Debug.Log("m");
             voando = !voando;
         }
 

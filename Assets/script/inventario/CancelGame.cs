@@ -5,9 +5,9 @@ using UnityEngine.UIElements.Experimental;
 
 public class CancelGame : MonoBehaviour
 {
-    private cAstronautThirdPersonCamera cam3P;
-    private Cam1P cam1P;
-    private AstronautPlayer player;
+    [SerializeField]private cAstronautThirdPersonCamera cam3P;
+    [SerializeField]private Cam1P cam1P;
+    [SerializeField] private AstronautPlayer player;
 
     void OnEnable(){
         cam1P = FindAnyObjectByType<Cam1P>();

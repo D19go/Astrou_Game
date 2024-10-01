@@ -24,7 +24,7 @@ public class ATKjumper : MonoBehaviour
 
     void Start(){
         rb = GetComponent<Rigidbody>();
-        Jogador = GameObject.FindGameObjectWithTag("Player");
+        
     }
 
     void OnTriggerEnter(Collider outro){
@@ -48,7 +48,18 @@ public class ATKjumper : MonoBehaviour
         Debug.Log("vezes 3");
         yield return new WaitForSeconds(SpeedMESH);
         rb.AddForce(Vector3.back * ForceBackDash * Time.deltaTime, ForceMode.Impulse);
-        Jogador.GetComponent<VidaPlayer>().TomaToma(dano);
         bixinho.enabled = true;
+        if (Jogador != null)
+        {
+            Jogador.GetComponent<VidaPlayer>().TomaToma(dano);
+        }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            Jogador = collision.gameObject;
+        }
     }
 }

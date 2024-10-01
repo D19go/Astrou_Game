@@ -7,7 +7,6 @@ public class MissoesP1 : MonoBehaviour
 {
 
     public TextMeshProUGUI textoTela;
-    public TextMeshProUGUI Instrucoes;
 
     public GameObject spanwEnemy;
     public GameObject Enemy;    
@@ -49,9 +48,6 @@ public class MissoesP1 : MonoBehaviour
                     Enemy.SetActive(true);
                     missao_pegar_moedas = false;
                 }
-                if(slots.name == nomeObj){
-                    Pedras_pegas++;
-                }
             }
             if( missaoo_dar_pulos == true ){
                 textoTela.text = "<b>Proteja a Árvore</b>\nWaves "+Waves_Total+"/"+Waves_objetivo;
@@ -64,6 +60,12 @@ public class MissoesP1 : MonoBehaviour
 
         }
     }   
+
+    public void Pedras()
+    {
+        Pedras_pegas++;
+        ListaMissoes();
+    }
 
     public void Wave(){
         Waves_Total += 1;

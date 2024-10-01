@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Text;
 using UnityEngine;
 
 public class Habilidades : MonoBehaviour
@@ -23,6 +24,7 @@ public class Habilidades : MonoBehaviour
     public Camera mainCamera;
     public Camera playerCamera;
     bool camAtual = true;
+    bool test = false;
 
     void Start()
     {
@@ -96,8 +98,20 @@ public class Habilidades : MonoBehaviour
           
         }
 
-        if(Input.GetKeyDown(KeyCode.F)){
-         
+        if(Input.GetKeyDown(KeyCode.M)){
+            
+            if (test)
+            {
+                /*Time.fixedDeltaTime = */Time.timeScale = 0.1f;
+                test =! test;
+                Debug.Log("slow");
+            }
+            else
+            {
+                /*Time.fixedDeltaTime = */ Time.timeScale = 1.5f;
+                test =! test;
+                Debug.Log("acelerado");
+            }
 
         }
     }

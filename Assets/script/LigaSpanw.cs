@@ -10,10 +10,12 @@ public class LigaSpanw : MonoBehaviour
     public int vida = 10;
     Rigidbody rb;
     public int menos1 = 2;
-    
+    bool ch = false;
     DropItem drop;
     NavMeshAgent IAnav;
     Animator ani;
+    FocoPlayer fp;
+    FocoArvore fa;
     public GameObject Spawner;
     void Start()
     {
@@ -22,6 +24,16 @@ public class LigaSpanw : MonoBehaviour
         drop = GetComponent<DropItem>();
         Spawner = GameObject.Find("Spawner");
         rb = GetComponent<Rigidbody>();
+        if(TryGetComponent<FocoArvore>( out FocoArvore f))
+        {
+            fa = GetComponent<FocoArvore>();
+            fp = null;
+        }
+        else
+        {
+            fp = GetComponent<FocoPlayer>();
+            fa = null;
+        }
     }
 
     public void chamas(int i){
@@ -37,18 +49,22 @@ public class LigaSpanw : MonoBehaviour
     {
         Debug.Log("tomou");
         vida -= dano;
-        if(vida <= 0){
-            Spawner.GetComponent<spanw>().Quantos(menos1);
+        if(vida <= 0 && !ch)
+        {
+            Debug.Log("morreu");
+            //StartCoroutine(drop.dropRate());
             StartCoroutine(Morto());
-            StartCoroutine(drop.dropRate());
+            Spawner.GetComponent<spanw>().Quantos(menos1);
+            ch = true;
+               
         }
 
     }
 
     IEnumerator Morto(){
         yield return new WaitForSeconds(0.5f);
-        GetComponent<NavMeshAgent>().enabled = false;
-        GetComponent<FocoPlayer>().enabled = false;
+        Destroy(gameObject);
+        
     }
 
     public void Explosioon(){
@@ -59,7 +75,14 @@ public class LigaSpanw : MonoBehaviour
     void OnCollisionEnter(Collision coli){
         if(coli.gameObject.tag == "piso"){
             IAnav.enabled = true;
-            GetComponent<FocoPlayer>().enabled = true;
+            if (fp == null)
+            {
+                fa.enabled = true;
+            }
+            else
+            {
+                fp.enabled = true;
+            }
             ani.enabled = true;
         }
     }

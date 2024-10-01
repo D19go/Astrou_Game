@@ -1,17 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class FocoArvore : MonoBehaviour
 {
-    public UnityEngine.AI.NavMeshAgent navMesh;
+    public NavMeshAgent navMesh;
     GameObject player;
     public float velocidadeInimigo;
 
     // Start is called before the first frame update
     void Start()
     {
-        navMesh = GetComponent<UnityEngine.AI.NavMeshAgent>();
+        navMesh = gameObject.GetComponent<NavMeshAgent>();
         player = GameObject.FindGameObjectWithTag("ArvoreMae");
         
         if (navMesh == null)

@@ -27,6 +27,7 @@ public class GameManager : MonoBehaviour
     // public static int porcentagem = 0;
 
     void Start(){
+        GetComponent<MissoesP1>().ListaMissoes();
     }
 
     void Update(){
@@ -46,22 +47,20 @@ public class GameManager : MonoBehaviour
                 cams = !cams;
                 canhao.GetComponent<nhao>().CamMain(cams);
                 Hplayer.GetComponent<Habilidades>().camTrade(cams);
-                // Hplayer.GetComponent<InventarioCTRL>().camTrade(cams);
             }else{
                 cam3p.SetActive(true);
                 cam1p.SetActive(false);  
                 cams =! cams; 
                 canhao.GetComponent<nhao>().CamMain(cams);
                 Hplayer.GetComponent<Habilidades>().camTrade(cams);
-                // Hplayer.GetComponent<InventarioCTRL>().camTrade(cams);
             }
 
         }
 
-        if(Input.GetKeyDown(KeyCode.Tab)){
+        /*if(Input.GetKeyDown(KeyCode.Tab)){
             OkMenu =! OkMenu;
             menuPortatil.SetActive(OkMenu);
-        }        
+        }*/   
 
     }
     
