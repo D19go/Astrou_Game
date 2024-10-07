@@ -12,7 +12,6 @@ public class Habilidades : MonoBehaviour
     [SerializeField] private GameObject  escudo;
     [SerializeField] private GameObject  TpOBJ;
     private bool LancaTP = false;
-    [SerializeField] private GameObject  portal;
     [SerializeField] private GameObject  SaidaTP;
     private Animator anim;
     [SerializeField] private int Forca = 5;
@@ -55,7 +54,7 @@ public class Habilidades : MonoBehaviour
             //escudo
             escudo.SetActive(true);
             StartCoroutine(timeSkill2());
-            GetComponent<VidaPlayer>().EscAtivo(sim);
+            GetComponent<VidaPlayer>().Escudo_Ativo(sim);
             // sim = false
             sim =! sim;
 
@@ -75,7 +74,9 @@ public class Habilidades : MonoBehaviour
                     LancaTP = true; 
                 }else if(LancaTP){
                     Vector3 direcao = playerCamera.transform.forward;
-                    portal.transform.position = gameObject.transform.position;
+                    GetComponent<CharacterController>().enabled = false;
+                    transform.position = TpOBJ.transform.position;
+                    GetComponent<CharacterController>().enabled = true;
                     LancaTP = false;
                 }
             }else{
@@ -90,7 +91,9 @@ public class Habilidades : MonoBehaviour
                     LancaTP = true; 
                 }else if(LancaTP){
                     Vector3 direcao = mainCamera.transform.forward;
-                    portal.transform.position = gameObject.transform.position;
+                    GetComponent<CharacterController>().enabled = false;
+                    transform.position = TpOBJ.transform.position;
+                    GetComponent<CharacterController>().enabled = true;
                     LancaTP = false;
                 }
             }
@@ -104,13 +107,11 @@ public class Habilidades : MonoBehaviour
             {
                 /*Time.fixedDeltaTime = */Time.timeScale = 0.1f;
                 test =! test;
-                Debug.Log("slow");
             }
             else
             {
                 /*Time.fixedDeltaTime = */ Time.timeScale = 1.5f;
                 test =! test;
-                Debug.Log("acelerado");
             }
 
         }
@@ -127,7 +128,7 @@ public class Habilidades : MonoBehaviour
         yield return new WaitForSeconds(5f);
         escudo.SetActive(false);    
         Skill2 = true;
-        GetComponent<VidaPlayer>().EscAtivo(sim);
+        GetComponent<VidaPlayer>().Escudo_Ativo(sim);
         // sim = true
         sim =! sim;
 

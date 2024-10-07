@@ -53,6 +53,12 @@ public class cAstronautThirdPersonCamera : MonoBehaviour
         lookAt = newFocus;
     }
 
+    public void Sensi(float sensibilidade)
+    {
+        sensitivityX = sensibilidade;
+        sensitivityY = sensibilidade;
+    }
+
     public void invAtivo(bool tabOK){
         TabOK = tabOK;
     }

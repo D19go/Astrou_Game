@@ -9,7 +9,6 @@ public class MenuCTRL : MonoBehaviour
 {
     [SerializeField] private GameObject Painel;
     bool PainelAct;
-    bool alo = true;
     public Text ItemText;
     public List<Button> TelaInv;
     public InventarioCTRL invPlayer;
@@ -24,10 +23,10 @@ public class MenuCTRL : MonoBehaviour
     
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Tab)){
+        /*if(Input.GetKeyDown(KeyCode.Tab)){
             PainelAct = !PainelAct;
             Painel.SetActive(PainelAct);
-        }
+        }*/
 
         if(PainelAct){
             Cursor.lockState = CursorLockMode.None;

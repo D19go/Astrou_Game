@@ -37,7 +37,6 @@ public class LigaSpanw : MonoBehaviour
     }
 
     public void chamas(int i){
-        Debug.Log("tomou2");
         vida -= i;
         if(vida <= 0){
             Spawner.GetComponent<spanw>().Quantos(menos1);
@@ -47,11 +46,9 @@ public class LigaSpanw : MonoBehaviour
     // Start is called before the first frame update
     public void TomaToma2(int dano)
     {
-        Debug.Log("tomou");
         vida -= dano;
         if(vida <= 0 && !ch)
         {
-            Debug.Log("morreu");
             //StartCoroutine(drop.dropRate());
             StartCoroutine(Morto());
             Spawner.GetComponent<spanw>().Quantos(menos1);
@@ -69,7 +66,15 @@ public class LigaSpanw : MonoBehaviour
 
     public void Explosioon(){
         IAnav.enabled = false;
-        GetComponent<FocoPlayer>().enabled = false;
+        if (TryGetComponent<FocoArvore>(out FocoArvore f))
+        {
+            GetComponent<FocoArvore>().enabled = false;
+        }
+        else
+        {
+            GetComponent<FocoPlayer>().enabled = false;
+            
+        }
         ani.enabled = false;
     }
     void OnCollisionEnter(Collision coli){

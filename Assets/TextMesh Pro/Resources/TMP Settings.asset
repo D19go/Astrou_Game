@@ -21,23 +21,23 @@ MonoBehaviour:
   m_GetFontFeaturesAtRuntime: 1
   m_missingGlyphCharacter: 0
   m_warningsDisabled: 0
-  m_defaultFontAsset: {fileID: 0}
+  m_defaultFontAsset: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
   m_defaultFontAssetPath: 
-  m_defaultFontSize: 0
-  m_defaultAutoSizeMinRatio: 0
-  m_defaultAutoSizeMaxRatio: 0
+  m_defaultFontSize: 1
+  m_defaultAutoSizeMinRatio: 1
+  m_defaultAutoSizeMaxRatio: 258
   m_defaultTextMeshProTextContainerSize: {x: 0, y: 0}
   m_defaultTextMeshProUITextContainerSize: {x: 0, y: 0}
   m_autoSizeTextContainer: 0
   m_IsTextObjectScaleStatic: 0
   m_fallbackFontAssets: []
   m_matchMaterialPreset: 0
-  m_defaultSpriteAsset: {fileID: 0}
+  m_defaultSpriteAsset: {fileID: 11400000, guid: fbef3c704dce48f08a44612d6c856c8d, type: 2}
   m_defaultSpriteAssetPath: 
   m_enableEmojiSupport: 0
   m_MissingCharacterSpriteUnicode: 0
   m_defaultColorGradientPresetsPath: 
-  m_defaultStyleSheet: {fileID: 0}
+  m_defaultStyleSheet: {fileID: 11400000, guid: f952c082cb03451daed3ee968ac6c63e, type: 2}
   m_StyleSheetsResourcePath: 
   m_leadingCharacters: {fileID: 0}
   m_followingCharacters: {fileID: 0}

@@ -8,7 +8,7 @@ public class DanoRange : MonoBehaviour
    void OnCollisionEnter(Collision colidiu)
     {    
         if(colidiu.gameObject.tag == "Player"){
-            colidiu.gameObject.GetComponent<VidaPlayer>().TomaToma(dano);
+            colidiu.gameObject.GetComponent<VidaPlayer>().Vida_Manager(dano);
             Destroy(gameObject);
         
         }  

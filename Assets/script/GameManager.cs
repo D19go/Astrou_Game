@@ -19,8 +19,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject canhao;
     [SerializeField] private GameObject Hplayer;
     [SerializeField] private GameObject menuPortatil;
-    bool OkMenu = false;
 
+    bool painel = false;
 
     bool cams = true;
 
@@ -33,7 +33,7 @@ public class GameManager : MonoBehaviour
     void Update(){
         
         if(Input.GetKeyDown(KeyCode.P)){
-            if(Input.GetKeyDown(KeyCode.O)){
+            if(Input.GetKeyDown(KeyCode.L)){
                 if(Input.GetKeyDown(KeyCode.I)){
                     SceneManager.LoadScene("Começo");
                 }
@@ -57,10 +57,20 @@ public class GameManager : MonoBehaviour
 
         }
 
-        /*if(Input.GetKeyDown(KeyCode.Tab)){
-            OkMenu =! OkMenu;
-            menuPortatil.SetActive(OkMenu);
-        }*/   
+        if(Input.GetKeyDown(KeyCode.Tab)){
+            painel = !painel;
+            menuPortatil.SetActive(painel);
+            if (painel)
+            {
+                Cursor.lockState = CursorLockMode.None;
+                Cursor.visible = painel;
+            }
+            else
+            {
+                Cursor.lockState = CursorLockMode.Locked;
+                Cursor.visible = painel;
+            }
+        }  
 
     }
     

@@ -19,7 +19,7 @@ public class DanoGeral : MonoBehaviour
             Destroy(gameObject);
         }   
         if(colidiu.gameObject.tag == "EnemyV2"){
-            colidiu.gameObject.GetComponent<VidaGeral>().TomaToma(dano);
+            colidiu.gameObject.GetComponent<LigaSpanw>().TomaToma2(dano);
             Destroy(gameObject);
 
         }

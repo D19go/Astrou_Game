@@ -38,6 +38,12 @@ public class Cam1P : MonoBehaviour
         }
     }
 
+    public void Sensi(float sensibilidade)
+    {
+        sensitivityX = sensibilidade;
+        sensitivityY = sensibilidade;
+    }
+
     public void invAtivo(bool tabOK){
         TabOK = tabOK;
     }

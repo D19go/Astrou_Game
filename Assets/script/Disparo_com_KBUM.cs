@@ -9,7 +9,6 @@ public class Disparo_com_KBUM : MonoBehaviour
     public GameObject Area;
     public int dano;
     public bool sim = true;
-    bool ok = false;
     public Rigidbody rb;
     // --------------------------//
     public float forcaExplo = 200;
@@ -32,8 +31,8 @@ public class Disparo_com_KBUM : MonoBehaviour
             
         }   
         if(colidiu.gameObject.tag == "EnemyV2"){
-            colidiu.gameObject.GetComponent<VidaGeral>().TomaToma(dano);
-            colidiu.gameObject.GetComponent<VidaGeral>().Explosioon();
+            colidiu.gameObject.GetComponent<LigaSpanw>().TomaToma2(dano);
+            colidiu.gameObject.GetComponent<LigaSpanw>().Explosioon();
             rb.isKinematic = true;
             rb.AddExplosionForce(forcaExplo, transform.position, raioExplo);
             Area.transform.localScale = new Vector3 (raioExplo * 3,raioExplo,raioExplo);

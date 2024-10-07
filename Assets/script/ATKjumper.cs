@@ -19,7 +19,6 @@ public class ATKjumper : MonoBehaviour
     [SerializeField] private int dano;
     [SerializeField] private GameObject Jogador;
     
-    private bool atacou = false;
 
 
     void Start(){
@@ -51,7 +50,7 @@ public class ATKjumper : MonoBehaviour
         bixinho.enabled = true;
         if (Jogador != null)
         {
-            Jogador.GetComponent<VidaPlayer>().TomaToma(dano);
+            Jogador.GetComponent<VidaPlayer>().Vida_Manager(dano);
         }
     }
 

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Interacao_tudo : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class Interacao_tudo : MonoBehaviour
     public bool reabastece = false;
     private MenuCTRL IController;
     private InventarioCTRL inv;
+    public Text ItemText;
     private Bau_Inv bau;
     [SerializeField] GameObject Bau_Canvas;
     bool open_close = false;
@@ -102,12 +104,17 @@ public class Interacao_tudo : MonoBehaviour
         {
             if (hit.collider.tag == "objeto")
             {
-                Debug.Log(".");
+                
                 if (Input.GetKeyDown(KeyCode.E))
                 {
                     gm.GetComponent<MissoesP1>().Pedras();
                     Destroy(hit.collider.gameObject);
                 }
+                    ItemText.text = "Press (E) to colect";
+            }
+            else
+            {
+                ItemText.text = null;
             }
         }
     }

@@ -33,7 +33,7 @@ public class FocoPlayer : MonoBehaviour
             }
             else
             {
-                Debug.Log("NavMeshAgent is not on the NavMesh");
+               
             }
         }
     }

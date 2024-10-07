@@ -38,7 +38,6 @@ public class MissoesP1 : MonoBehaviour
     public void ListaMissoes(){
         for(int i = 0; i < 8; i++){
             if( missao_pegar_moedas){
-                string nomeObj = "Pedra";
                 textoTela.text = "<b>Ache 4 Pedras espalhadas próximas a grande árvore \n Ache as pedras para poder ligar o canhão acima de você</b>\nPedras "+Pedras_pegas+"/"+Pedras_objetivo;
                 if( Pedras_pegas >= Pedras_objetivo ){
                     missaoo_dar_pulos = true;
@@ -51,7 +50,7 @@ public class MissoesP1 : MonoBehaviour
             }
             if( missaoo_dar_pulos == true ){
                 textoTela.text = "<b>Proteja a Árvore</b>\nWaves "+Waves_Total+"/"+Waves_objetivo;
-                if(Waves_Total >= Waves_objetivo){
+                if(Waves_Total > Waves_objetivo){
                     spanwEnemy.SetActive(false);
                     textoTela.text = "<b>PARABÉNS VOCÊ CONSEGUIU</b>\nMate a ultima wave";
                 }
