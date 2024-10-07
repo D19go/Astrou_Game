@@ -8,7 +8,7 @@ public class cAstronautThirdPersonCamera : MonoBehaviour
     private const float Y_ANGLE_MAX = 90.0f;
 
     public Transform lookAt;
-    public Transform camTransform;
+    Transform camTransform;
     public float distance = 5.0f;
     public float heightOffset = 1.0f;
     
@@ -27,9 +27,9 @@ public class cAstronautThirdPersonCamera : MonoBehaviour
     }
 
     private void Update()
-    {      
-        if(TabOK){
-
+    {
+        if (TabOK)
+        {
             currentX += Input.GetAxis("Mouse X") * sensitivityX;
             currentY -= Input.GetAxis("Mouse Y") * sensitivityY;
 

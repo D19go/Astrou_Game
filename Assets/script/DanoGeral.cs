@@ -12,7 +12,9 @@ public class DanoGeral : MonoBehaviour
     public int dano = 10;
 
     void OnCollisionEnter(Collision colidiu)
-    {   
+    {
+
+        Debug.Log(GameObject.Find("oiasdijasd").transform.GetChild(123123));
         
         if(colidiu.gameObject.tag == "Enemy"){
             colidiu.gameObject.GetComponent<LigaSpanw>().TomaToma2(dano);

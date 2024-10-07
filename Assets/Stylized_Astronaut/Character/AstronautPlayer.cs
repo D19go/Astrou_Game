@@ -33,7 +33,7 @@ void Start()
             {
                 float currentSpeed = speed;
 
-                if (Input.GetKey(KeyCode.LeftShift) && Input.GetKey("w"))
+                if (Input.GetAxis("Fire3") != 0 && Input.GetAxis("Vertical") != 0 )
                 {
                     currentSpeed *= sprintSpeedMultiplier;
             }
@@ -41,7 +41,7 @@ void Start()
             moveDirection = transform.forward * Input.GetAxis("Vertical") * currentSpeed;
             isJumping = false;
 
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetKeyDown(KeyCode.Space) || Input.GetAxis("Fire1") != 0)
             {
                 moveDirection.y = jumpSpeed;
             }
@@ -60,9 +60,10 @@ void Start()
             {
                 anim.SetInteger("AnimationPar", 2);
             }
-            if (Input.GetKey("w")){
+            if (Input.GetAxis("Vertical") != 0)
+            {
                 anim.SetInteger("AnimationPar", 1);
-                if(( Input.GetKey("w") && Input.GetKey(KeyCode.LeftShift))){
+                if(Input.GetAxis("Vertical") != 0 && Input.GetAxis("Fire3") != 0 ){
                     anim.SetInteger("AnimationPar", 2);
                 }else{
                     anim.SetInteger("AnimationPar", 1);

@@ -25,6 +25,7 @@ public class nhao : MonoBehaviour
         mainCamera = Camera.main; // Obtém a câmera principal
         timeSinceLastShotMouse0 = 0f;
         timeSinceLastShotMouse1 = 0f;
+
     }
 
     void Update()
@@ -36,13 +37,13 @@ public class nhao : MonoBehaviour
         timeSinceLastShotMouse0 += Time.deltaTime;
         timeSinceLastShotMouse1 += Time.deltaTime;
 
-        if (Input.GetMouseButton(0) && timeSinceLastShotMouse0 >= timeBetweenShotsMouse0)
+        if ( (Input.GetMouseButton(0) || Input.GetAxis("Fire3") != 0) && timeSinceLastShotMouse0 >= timeBetweenShotsMouse0)
         {
             CriarBolaELancar();
             timeSinceLastShotMouse0 = 0f;  // Resetar o contador de tempo
         }
 
-        if (Input.GetMouseButtonDown(1) && timeSinceLastShotMouse1 >= timeBetweenShotsMouse1)
+        if ( (Input.GetMouseButtonDown(1) || Input.GetAxis("Fire4") != 0) && timeSinceLastShotMouse1 >= timeBetweenShotsMouse1)
         {
             CriarBolaForteELancar();
             timeSinceLastShotMouse1 = 0f;  // Resetar o contador de tempo
