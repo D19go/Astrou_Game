@@ -35,7 +35,7 @@ public class Habilidades : MonoBehaviour
     }
     void Update(){
         
-        if (Input.GetKeyDown(KeyCode.G) && Skill1)
+        if ( (Input.GetKeyDown(KeyCode.G) || Input.GetAxis("Fire5") != 0 ) && Skill1)
         {   // Dash para trás
             if(camAtual){
             Vector3 cameraDirection = playerCamera.transform.forward; /* Obtém a direção para a qual a câmera está olhando*/            
@@ -50,7 +50,7 @@ public class Habilidades : MonoBehaviour
             }
         }
 
-        if(Input.GetKeyDown(KeyCode.Q) && Skill2){
+        if( (Input.GetKeyDown(KeyCode.Q) || Input.GetAxis("Fire6") != 0) && Skill2){
             //escudo
             escudo.SetActive(true);
             StartCoroutine(timeSkill2());
@@ -60,7 +60,7 @@ public class Habilidades : MonoBehaviour
 
         }
 
-        if(Input.GetKeyDown(KeyCode.R) ){
+        if( ( Input.GetKeyDown(KeyCode.R) || Input.GetAxis("Fire7") != 0) ){
             //Teleporte
             if(camAtual){
                 if(!LancaTP && Skill3){

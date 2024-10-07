@@ -41,9 +41,10 @@ void Start()
             moveDirection = transform.forward * Input.GetAxis("Vertical") * currentSpeed;
             isJumping = false;
 
-            if (Input.GetKeyDown(KeyCode.Space) || Input.GetAxis("Fire1") != 0)
-            {
-                moveDirection.y = jumpSpeed;
+                //if ( Input.GetKeyDown(KeyCode.Space) || Input.GetAxis("Fire1") != 0 )
+                if (Input.GetAxis("Jump") != 0)
+                {
+                    moveDirection.y = jumpSpeed;
             }
             }
 
