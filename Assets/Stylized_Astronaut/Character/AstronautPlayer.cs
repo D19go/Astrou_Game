@@ -36,16 +36,16 @@ void Start()
                 if (Input.GetAxis("Fire3") != 0 && Input.GetAxis("Vertical") != 0 )
                 {
                     currentSpeed *= sprintSpeedMultiplier;
-            }
+                }
 
-            moveDirection = transform.forward * Input.GetAxis("Vertical") * currentSpeed;
-            isJumping = false;
+                moveDirection = transform.forward * Input.GetAxis("Vertical") * currentSpeed;
+                isJumping = false;
 
-                //if ( Input.GetKeyDown(KeyCode.Space) || Input.GetAxis("Fire1") != 0 )
+                // Joystick: A
                 if (Input.GetAxis("Jump") != 0)
                 {
                     moveDirection.y = jumpSpeed;
-            }
+                }
             }
 
             if (!isJumping)

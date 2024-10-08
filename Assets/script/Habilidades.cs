@@ -9,6 +9,7 @@ public class Habilidades : MonoBehaviour
     private bool Skill1 = true;
     private bool Skill2 = true;
     private bool Skill3 = true;
+    private bool Skill3Recast = true;
     [SerializeField] private GameObject  escudo;
     [SerializeField] private GameObject  TpOBJ;
     private bool LancaTP = false;
@@ -34,7 +35,8 @@ public class Habilidades : MonoBehaviour
         playerCamera = Camera.main;
     }
     void Update(){
-        
+
+        // Joystick: RB (superior direito)
         if ( (Input.GetKeyDown(KeyCode.G) || Input.GetAxis("Fire5") != 0 ) && Skill1)
         {   // Dash para trás
             if(camAtual){
@@ -50,7 +52,8 @@ public class Habilidades : MonoBehaviour
             }
         }
 
-        if( (Input.GetKeyDown(KeyCode.Q) || Input.GetAxis("Fire6") != 0) && Skill2){
+        // Joystick: LB (superior esquerdo)
+        if ( (Input.GetKeyDown(KeyCode.Q) || Input.GetAxis("Fire6") != 0) && Skill2){
             //escudo
             escudo.SetActive(true);
             StartCoroutine(timeSkill2());
@@ -60,24 +63,29 @@ public class Habilidades : MonoBehaviour
 
         }
 
-        if( ( Input.GetKeyDown(KeyCode.R) || Input.GetAxis("Fire7") != 0) ){
+
+        // Joystick: B
+        if ( ( Input.GetKeyDown(KeyCode.R) || Input.GetAxis("Fire7") != 0) ){
             //Teleporte
             if(camAtual){
-                if(!LancaTP && Skill3){
-                    Vector3 direcao = playerCamera.transform.forward;
-                    TpOBJ.transform.position = SaidaTP.transform.position;
-                    TpOBJ.GetComponent<Rigidbody>().isKinematic = false;
-                    TpOBJ.GetComponent<MeshRenderer>().enabled = true;
-                    TpOBJ.GetComponent<Rigidbody>().velocity = Vector3.zero;
-                    TpOBJ.GetComponent<Rigidbody>().AddForce(direcao * Forca);
-                    StartCoroutine(timeSkill3());
-                    LancaTP = true; 
-                }else if(LancaTP){
-                    Vector3 direcao = playerCamera.transform.forward;
-                    GetComponent<CharacterController>().enabled = false;
-                    transform.position = TpOBJ.transform.position;
-                    GetComponent<CharacterController>().enabled = true;
-                    LancaTP = false;
+                if(Skill3Recast == true) // Conrado: precisei adicionar isso para que funcionasse no controle
+                {
+                    if(!LancaTP && Skill3){
+                        Vector3 direcao = playerCamera.transform.forward;
+                        TpOBJ.transform.position = SaidaTP.transform.position;
+                        TpOBJ.GetComponent<Rigidbody>().isKinematic = false;
+                        TpOBJ.GetComponent<MeshRenderer>().enabled = true;
+                        TpOBJ.GetComponent<Rigidbody>().velocity = Vector3.zero;
+                        TpOBJ.GetComponent<Rigidbody>().AddForce(direcao * Forca);
+                        StartCoroutine(timeSkill3());
+                        LancaTP = true;
+                    }else if(LancaTP){
+                        Vector3 direcao = playerCamera.transform.forward;
+                        GetComponent<CharacterController>().enabled = false;
+                        transform.position = TpOBJ.transform.position;
+                        GetComponent<CharacterController>().enabled = true;
+                        LancaTP = false;
+                    }
                 }
             }else{
                 if(!LancaTP && Skill3){
@@ -136,7 +144,10 @@ public class Habilidades : MonoBehaviour
 
     IEnumerator timeSkill3(){
         Skill3 = false;
-        yield return new WaitForSeconds(2f);
+        Skill3Recast = false;
+        yield return new WaitForSeconds(0.5f);
+        Skill3Recast = true;
+        yield return new WaitForSeconds(1.5f);
         Skill3 = true;
     }
 

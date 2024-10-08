@@ -37,12 +37,14 @@ public class nhao : MonoBehaviour
         timeSinceLastShotMouse0 += Time.deltaTime;
         timeSinceLastShotMouse1 += Time.deltaTime;
 
+        // Joystick: X
         if ( (Input.GetMouseButton(0) || Input.GetAxis("Fire3") != 0) && timeSinceLastShotMouse0 >= timeBetweenShotsMouse0)
         {
             CriarBolaELancar();
             timeSinceLastShotMouse0 = 0f;  // Resetar o contador de tempo
         }
 
+        // Joystick: Y
         if ( (Input.GetMouseButtonDown(1) || Input.GetAxis("Fire4") != 0) && timeSinceLastShotMouse1 >= timeBetweenShotsMouse1)
         {
             CriarBolaForteELancar();
