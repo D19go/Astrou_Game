@@ -63,6 +63,7 @@ public class MissoesP1 : MonoBehaviour
     public void Pedras()
     {
         Pedras_pegas++;
+        MissoesGeral.pedrasRestantes--;
         ListaMissoes();
     }
 

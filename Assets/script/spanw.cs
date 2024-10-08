@@ -37,6 +37,7 @@ public class spanw : MonoBehaviour
         }
         if (total >= 9)  // Alterado para gerar 9 inimigos no total
         {
+            
             // timeSpanw();
             for (int i = 0; i < 1; i++)
             {
@@ -121,6 +122,11 @@ public class spanw : MonoBehaviour
     public void Quantos(int menos1)
     {
         total += menos1;
+        if( total >= 9)
+        {
+            MissoesGeral.instance.arvoreCompleta = true;
+            MissoesGeral.instance.AlternarMissoes(MissoesGeral.instance.missaoArvore, MissoesGeral.instance.missaoSobreviver);
+        }
     }
 
 }

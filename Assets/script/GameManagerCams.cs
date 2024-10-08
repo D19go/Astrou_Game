@@ -40,9 +40,15 @@ public class GameManagerCams : MonoBehaviour
     void Update()
     {
 
-        
-        if (Input.GetKeyDown(KeyCode.F))
+        if ( (Input.GetKeyDown(KeyCode.F) || Input.GetAxis("Fire7") != 0 ) && Interacao_tudo.podeInteragrir == true )
         {
+            // Desabilita a interação
+            Interacao_tudo.ExibeInteracao(false);
+            // Esconde o botão de pulo
+            GameObject.Find("Canvas").transform.Find("botoes").gameObject.SetActive(false);
+            // Habilita proxima missão
+            MissoesGeral.instance.AlternarMissoes(MissoesGeral.instance.missaoVeiculo, MissoesGeral.instance.missaoEstacao);
+
             ToggleCar();
         }
 

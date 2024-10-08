@@ -36,8 +36,8 @@ public class Habilidades : MonoBehaviour
     }
     void Update(){
 
-        // Joystick: RB (superior direito)
-        if ( (Input.GetKeyDown(KeyCode.G) || Input.GetAxis("Fire5") != 0 ) && Skill1)
+        // Joystick: Y
+        if ( (Input.GetKeyDown(KeyCode.G) || Input.GetAxis("Fire4") != 0) && Skill1)
         {   // Dash para trás
             if(camAtual){
             Vector3 cameraDirection = playerCamera.transform.forward; /* Obtém a direção para a qual a câmera está olhando*/            
@@ -52,8 +52,8 @@ public class Habilidades : MonoBehaviour
             }
         }
 
-        // Joystick: LB (superior esquerdo)
-        if ( (Input.GetKeyDown(KeyCode.Q) || Input.GetAxis("Fire6") != 0) && Skill2){
+        // Joystick: X
+        if ( (Input.GetKeyDown(KeyCode.Q) || Input.GetAxis("Fire3") != 0) && Skill2){
             //escudo
             escudo.SetActive(true);
             StartCoroutine(timeSkill2());
@@ -64,8 +64,9 @@ public class Habilidades : MonoBehaviour
         }
 
 
-        // Joystick: B
-        if ( ( Input.GetKeyDown(KeyCode.R) || Input.GetAxis("Fire7") != 0) ){
+        // Joystick: RT  )
+        if ( Input.GetKeyDown(KeyCode.R) || Input.GetAxis("Fire8") != 0)
+        {
             //Teleporte
             if(camAtual){
                 if(Skill3Recast == true) // Conrado: precisei adicionar isso para que funcionasse no controle

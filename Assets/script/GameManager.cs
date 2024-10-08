@@ -27,7 +27,11 @@ public class GameManager : MonoBehaviour
     // public static int porcentagem = 0;
 
     void Start(){
-        GetComponent<MissoesP1>().ListaMissoes();
+
+        // Conrado: isso aqui tava dando erro em mapa que não tinha missão, como no começo. Já consertei, de nada...
+        MissoesP1 missoes = GetComponent<MissoesP1>();
+        if (missoes)
+            missoes.ListaMissoes();
     }
 
     void Update(){

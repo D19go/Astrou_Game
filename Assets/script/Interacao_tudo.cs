@@ -19,6 +19,10 @@ public class Interacao_tudo : MonoBehaviour
     int loop;
     public GameObject gm;
 
+    public static bool podeInteragrir = false;
+    public CanvasGroup botaoInteragir;
+    public static CanvasGroup _botaoInteragir;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -27,20 +31,28 @@ public class Interacao_tudo : MonoBehaviour
         // IController = FindAnyObjectByType<MenuCTRL>();
         //inv = FindAnyObjectByType<InventarioCTRL>();
         gm = GameObject.Find("GameManager").gameObject;
+        _botaoInteragir = botaoInteragir;
     }
 
     // Update is called once per frame
     void Update()
     {
+
+        
+
+        return;
         cam1 = Camera.main;
         RaycastHit hit;
         Ray ray = cam1.ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height / 2));
         if (Physics.Raycast(ray, out hit, distancia))
         {
-            if (hit.collider.tag == "Car")
+            if (podeInteragrir)
             {
 
-                IController.ItemText.text = "pressione (E) para abastercer o carro ";
+                //botaoInteragir.alpha = 1;
+
+                //IController.ItemText.text = "pressione (E) para abastercer o carro ";
+                /*
                 for (int i = 0; i < inv.slots.Count; i++)
                 {
                     if (inv.slots[i].ItemName == "Galão de Combustivel")
@@ -51,6 +63,7 @@ public class Interacao_tudo : MonoBehaviour
                         break;
                     }
                 }
+                */
 
                 if (Input.GetKeyDown(KeyCode.E))
                 {
@@ -76,6 +89,7 @@ public class Interacao_tudo : MonoBehaviour
         }
         else
         {
+            //botaoInteragir.alpha = 0;
             //IController.ItemText.text = null;
         }
 
@@ -84,7 +98,7 @@ public class Interacao_tudo : MonoBehaviour
 
         if (Physics.Raycast(ray, out hit, distancia))
         {
-            if (hit.collider.tag == "Armazenamento")
+            if (podeInteragrir)
             {
                 IController.ItemText.text = "pressione (E) para abrir o Baú ";
                 if (Input.GetKeyDown(KeyCode.E))
@@ -110,12 +124,64 @@ public class Interacao_tudo : MonoBehaviour
                     gm.GetComponent<MissoesP1>().Pedras();
                     Destroy(hit.collider.gameObject);
                 }
-                    ItemText.text = "Press (E) to colect";
+
+                //botaoInteragir.alpha = 1;
+                //    ItemText.text = "Press (E) to colect";
             }
             else
             {
-                ItemText.text = null;
+                //botaoInteragir.alpha = 0;
+                //ItemText.text = null;
             }
         }
     }
+
+    public static void ExibeInteracao(bool exibir)
+    {
+        podeInteragrir = exibir;
+        _botaoInteragir.alpha = exibir == true ? 1 : 0;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        
+        if (other.gameObject.name == "Interacao")
+        {
+            ExibeInteracao(true);
+
+            // Primeira interação com o carro
+            if (other.transform.parent.Find("SetaCarro"))
+                other.transform.parent.Find("SetaCarro").gameObject.SetActive(false);
+
+            // Remove setas das pedras
+            if (other.transform.parent.Find("SetaPedra"))
+                other.transform.parent.Find("SetaPedra").gameObject.SetActive(false);
+
+            
+
+        }
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.gameObject.name == "Interacao")
+        {
+            if (Input.GetAxis("Fire7") != 0 && podeInteragrir && other.transform.parent.CompareTag("objeto") )
+            {
+                gm.GetComponent<MissoesP1>().Pedras();
+                other.transform.parent.gameObject.SetActive(false);
+                MissoesGeral.instance.AtualizarMissaoPedras();
+                ExibeInteracao(false);
+            }
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.name == "Interacao")
+        {
+            ExibeInteracao(false);
+        }
+    }
+
 }

@@ -23,9 +23,8 @@ public class NaveCtrl : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetAxis("Jump") != 0 )
         {
-            Debug.Log("m");
             voando = !voando;
         }
 
