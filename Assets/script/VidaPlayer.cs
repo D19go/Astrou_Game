@@ -95,6 +95,7 @@ public class VidaPlayer : MonoBehaviour
             if (vida <= 0)
             {
                 Debug.Log("morreu");
+                SceneManager.LoadScene("Começo");
                 IEnumerator revive()
                 {
                     yield return new WaitForSeconds(1);
@@ -125,6 +126,7 @@ public class VidaPlayer : MonoBehaviour
         if (vida_Esc > max_Vida_Escudo)
         {
             vida_Esc = max_Vida_Escudo;
+            
         }
     }
 }

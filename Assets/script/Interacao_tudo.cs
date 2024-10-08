@@ -38,8 +38,6 @@ public class Interacao_tudo : MonoBehaviour
     void Update()
     {
 
-        
-
         return;
         cam1 = Camera.main;
         RaycastHit hit;
