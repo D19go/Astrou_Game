@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.12731715, g: 0.13414735, b: 0.121078536, a: 1}
+  m_IndirectSpecularColor: {r: 0.17276807, g: 0.21589197, b: 0.29782572, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -94,7 +94,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: 119aebb57bb25504cab43fee0a0c0b81, type: 2}
   m_LightingSettings: {fileID: 0}
 --- !u!196 &4
 NavMeshSettings:
@@ -26055,9 +26055,9 @@ Light:
   m_GameObject: {fileID: 852675178}
   m_Enabled: 1
   serializedVersion: 10
-  m_Type: 2
+  m_Type: 1
   m_Shape: 0
-  m_Color: {r: 0.7264151, g: 0.7264151, b: 0.7264151, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 1
   m_Range: 20000
   m_SpotAngle: 30
@@ -26092,12 +26092,12 @@ Light:
   m_Cookie: {fileID: 0}
   m_DrawHalo: 0
   m_Flare: {fileID: 0}
-  m_RenderMode: 0
+  m_RenderMode: 1
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 1
+  m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -26116,13 +26116,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 852675178}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.17663947, y: -0.77646947, z: 0.3308617, w: 0.50638336}
-  m_LocalPosition: {x: 0, y: 150, z: 0}
+  m_LocalRotation: {x: -0.51979405, y: -0.4793893, z: 0.4793893, w: -0.51979405}
+  m_LocalPosition: {x: 49.68, y: 160, z: 43.84}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 145735348}
-  m_LocalEulerAnglesHint: {x: 43.844, y: -26.463, z: -355.166}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!1 &853305076
 GameObject:
   m_ObjectHideFlags: 0
@@ -46322,9 +46322,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5593195909017195379, guid: 4be7a99d429a19840a38df28f88a8680, type: 3}
       insertIndex: -1
       addedObject: {fileID: 179541888}
-    - targetCorrespondingSourceObject: {fileID: 5593195909017195379, guid: 4be7a99d429a19840a38df28f88a8680, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 852675180}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 5593195909017292627, guid: 4be7a99d429a19840a38df28f88a8680, type: 3}
       insertIndex: 3
@@ -56335,6 +56332,7 @@ SceneRoots:
   - {fileID: 13137750}
   - {fileID: 1702605155}
   - {fileID: 689339153}
+  - {fileID: 852675180}
   - {fileID: 1732303397}
   - {fileID: 745834360}
   - {fileID: 699170491}
