@@ -3,6 +3,8 @@
 Jogo 3D de exploração espacial desenvolvido na **Unity**, em que o jogador controla um astronauta que percorre o espaço e planetas, cumpre missões e enfrenta inimigos.
 
 > **Status:** projeto de estudo/portfólio, iniciado durante o curso técnico em Programação de Jogos Digitais (Senac São Carlos).
+>
+> **Destaque:** selecionado, entre os jogos dos alunos da turma, pela qualidade, para ser apresentado na BGS 2024.
 
 
 
